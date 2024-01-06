@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            #nepClock {
+                margin: auto;
+                margin-top: 45vh;
+                display: block;
+                font-size: 5em;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nepClock"></div>
+        <script>
+            const schedule = ["2024-01-04T17:00:00.000+00:00","2024-01-05T17:00:00.000+00:00","2024-01-02T16:00:00.000+00:00","2024-01-03T17:00:00.000+00:00",].sort();
+
+            schedule.slice(0).forEach((stream) => {
+                const streamDate = new Date(stream);
+                const now = new Date();
+
+                if (streamDate.getDay() < now.getDay()) {
+                    schedule.shift();
+                }
+            });
+
+            updateTimer = () => {
+                if (schedule.length > 0) {
+                    const nextDate = new Date(schedule[0]);
+                    const now = new Date();
+                    const timeLeft = nextDate - now;
+
+                    if (timeLeft < 0) {
+                        const timeSince = now - nextDate;
+                        let h = Math.floor((timeSince % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        h = h <= 0 ? '' : `${h} hours and `;
+                        let m = Math.floor((timeSince % (1000 * 60 * 60)) / (1000 * 60));
+                        document.getElementById('nepClock').innerHTML = `Neppie might be live RIGHT NOW!!<br> She went live ${h}${m} minutes ago`;
+                    } else {
+                        let h = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        if (h < 10) {
+                            h = "0" + h.toString();
+                        }
+
+                        let m = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                        if (m < 10) {
+                            m = "0" + m.toString();
+                        }
+
+                        let s = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                        if (s < 10) {
+                            s = "0" + s.toString();
+                        }
+
+                        document.getElementById('nepClock').innerHTML =  h + ":" + m + ":" + s;
+                    }
+
+                    if (nextDate.getDay() < now.getDay()) {
+                        schedule.shift();
+                    }
+                } else {
+                    document.getElementById('nepClock').innerHTML = "Please wait for the schedule to be updated!"
+                }
+            }
+
+            setInterval(updateTimer, 1000);
+            updateTimer();
+        </script>
+    </body>
+</html>
