@@ -1,5 +1,4 @@
 const featuredArtList = [
-    ["1.png", "https://x.com/nepnepu_2", "@nepnepu_2"],
     ["2.jpg", "https://x.com/The_ChosenWoon", "@The_ChosenWoon"],
     ["3.png", "https://x.com/jollepoker", "@jollepoker"],
     ["4.gif", "https://x.com/jollepoker", "@jollepoker"],
