@@ -1,70 +1,101 @@
-<html>
+<!DOCTYPE html>
     <head>
-        <style>
-            #nepClock {
-                margin: auto;
-                margin-top: 45vh;
-                display: block;
-                font-size: 5em;
-                text-align: center;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stream schedule for everyone's favourite bunny vtuber Neppienep">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/styling/nextnepStyle.css">
     </head>
     <body>
-        <div id="nepClock"></div>
-        <script>
-            const schedule = ["2024-01-04T17:00:00.000+00:00","2024-01-05T17:00:00.000+00:00","2024-01-02T16:00:00.000+00:00","2024-01-03T17:00:00.000+00:00",].sort();
-
-            schedule.slice(0).forEach((stream) => {
-                const streamDate = new Date(stream);
-                const now = new Date();
-
-                if (streamDate.getDay() < now.getDay()) {
-                    schedule.shift();
-                }
-            });
-
-            updateTimer = () => {
-                if (schedule.length > 0) {
-                    const nextDate = new Date(schedule[0]);
-                    const now = new Date();
-                    const timeLeft = nextDate - now;
-
-                    if (timeLeft < 0) {
-                        const timeSince = now - nextDate;
-                        let h = Math.floor((timeSince % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        h = h <= 0 ? '' : `${h} hours and `;
-                        let m = Math.floor((timeSince % (1000 * 60 * 60)) / (1000 * 60));
-                        document.getElementById('nepClock').innerHTML = `Neppie might be live RIGHT NOW!!<br> She went live ${h}${m} minutes ago`;
-                    } else {
-                        let h = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        if (h < 10) {
-                            h = "0" + h.toString();
-                        }
-
-                        let m = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                        if (m < 10) {
-                            m = "0" + m.toString();
-                        }
-
-                        let s = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                        if (s < 10) {
-                            s = "0" + s.toString();
-                        }
-
-                        document.getElementById('nepClock').innerHTML =  h + ":" + m + ":" + s;
-                    }
-
-                    if (nextDate.getDay() < now.getDay()) {
-                        schedule.shift();
-                    }
-                } else {
-                    document.getElementById('nepClock').innerHTML = "Please wait for the schedule to be updated!"
-                }
-            }
-
-            setInterval(updateTimer, 1000);
-            updateTimer();
-        </script>
+        <header>
+            <img src="./assets/images/ScheduleLogo.png" alt="Neppienep Weekly Schedule Logo" />
+            <div>
+                <a class="twitch" href="https://twitch.tv/neppienep">twitch.tv/neppienep</a>
+                <p>All times are listed in your current timezone (<span id="nepClock-timeZone"></span>)</p>
+                <div id="nepClock-scheduleDate">
+                    <span id="nepClock-monday-date">
+                        <span class="nepClock-streamMonth"></span>
+                        <span class="nepClock-streamDay"></span>
+                    </span>
+                    <span class="nepClock-dateSeparator"></span>
+                    <span id="nepClock-sunday-date">
+                        <span class="nepClock-streamMonth"></span>
+                        <span class="nepClock-streamDay"></span>
+                    </span>
+                </div>
+            </div>
+        </header>
+        <div id="nepClockApp">
+            <section id="nepClock-schedule">
+                <section id="nepClock-monday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>mon</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-tuesday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>tue</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-wednesday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>wed</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-thursday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>thu</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-friday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>fri</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-saturday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>sat</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+                <section id="nepClock-sunday" class="nepClock-weekDayWrapper">
+                    <div class="nepClock-weekDay"><h3>sun</h3></div>
+                    <div class="nepClock-weekDaySchedule">
+                        <div class="nepClock-scheduleContent"></div>
+                    </div>
+                </section>
+            </section>
+            <section id="nepClock-featuredArt">
+                <a href="#">
+                    <img src="#" />
+                </a>
+                <a class="credit" href="#">art: placeholder</a>
+            </section>
+        </div>
+        <footer>
+            <p><a class="twitch" href="https://twitch.tv/neppienep">twitch.tv/neppienep</a></p>
+            <a class="youtube" href="https://www.youtube.com/@neppienep2021">youtube</a>
+            <a class="youtube" href="https://www.youtube.com/@neppienepvods2522">VODs</a>
+            <a class="youtube" href="https://www.youtube.com/@neppieclips">clips</a>
+            <a class="twitter" href="https://x.com/neppie_nep">@neppie_nep</a>
+            <a class="twitter" href="https://x.com/nepnepu_2">@nepnepu_2</a>
+            <a class="twitter" href="https://x.com/search?q=%23neplive">#nepLIVE</a>
+            <a class="twitter" href="https://x.com/search?q=%23neppics">#neppics</a>
+            <a class="twitter" href="https://x.com/search?q=%23nepflix">#nepflix</a>
+            <a class="marshmallow" href="https://marshmallow-qa.com/neppie_nep">marshmallow</a>
+            <a class="pixiv" href="https://www.pixiv.net/en/users/79293062">pixiv</a>
+            <a class="streamelements" href="https://streamelements.com/neppienep/tip">donations</a>
+            <a class="throne" href="https://throne.com/neppienep">throne</a>
+            <a class="carrd" href="https://neppie.carrd.co/">carrd</a>
+        </footer>
+        <script async src="nepSchedule.js" type="text/javascript"></script>
+        <script async src="featuredart.js" type="text/javascript"></script>
+        <script async src="./assets/scripts/nextNep.js" type="text/javascript"></script>
     </body>
 </html>
