@@ -162,6 +162,22 @@ header > div > p {
     color: #fff;
     border-radius: 13px;
     user-select: none;
+    z-index: 2;
+}
+
+.nepClock-discordStream::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    right: -3px;
+    display: block;
+    background-image: url(../images/icons/discord.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 45px;
+    width: 45px;
+    z-index: 2;
 }
 
 .nepClock-scheduleContent {
@@ -204,6 +220,7 @@ header > div > p {
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 3px solid #c0a092;
+    position: relative;
 }
 
 .nepClock-stream:last-child {
@@ -535,8 +552,8 @@ footer > a:hover {
     }
 
     .nepClock-stream {
-        justify-content: space-between;
         flex-direction: row;
+        justify-content: space-between;
         font-size: 1.2em;
         align-items: center;
         border: none;
@@ -545,6 +562,13 @@ footer > a:hover {
         padding: 0;
         padding-right: 1em;
         text-align: center;
+    }
+
+    .nepClock-stream:has(> h4:first-child:nth-last-child(2)),
+    .nepClock-stream:has(> img:first-child:nth-last-child(2)),
+    .nepClock-stream:has(> div:first-child:nth-last-child(2))
+    {
+        justify-content: space-evenly;
     }
 
     .nepClock-stream:last-child {

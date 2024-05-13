@@ -41,6 +41,9 @@ class Stream {
     initElements() {
         this.streamElement = document.createElement("div");
         this.streamElement.classList.add("nepClock-stream");
+        if (this.streamConfig.discord) {
+            this.streamElement.classList.add("nepClock-discordStream");
+        }
 
         this.streamConfig.layout.forEach((layoutConfig) => {
             switch(layoutConfig.type) {

@@ -254,6 +254,379 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-04-29T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ds2.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuF.png',
+            },
+            {
+                type: 'comment',
+                text: 'DLC',
+            },
+        ]
+    },
+    {
+        time: "2024-04-30T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuScared.png',
+            },
+            {
+                type: 'comment',
+                text: '(AKA fatal frame)',
+            },
+            {
+                type: 'titleLogo',
+                image: 'projectzero.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-01T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'hollowknight.png',
+            },
+            {
+                type: 'comment',
+                text: 'extra stuff!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPeek.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-02T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'onwards!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-03T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'doom2.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-03T21:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'projectzomboid.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-04T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mhworld.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png'
+            },
+        ]
+    },
+    {
+        time: "2024-05-04T22:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'sus tier list',
+            },
+        ]
+    },
+    {
+        time: "2024-05-05T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogoText',
+                image: 'duolingo.svg',
+                text: 'nihongo!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuSweat.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'duolingobird.png',
+            }
+        ]
+    },
+    {
+        time: "2024-05-06T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'hollowknight.png',
+            },
+            {
+                type: 'comment',
+                text: 'path of pain...',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuNotlikethis.png',
+            }
+        ]
+    },
+    {
+        time: "2024-05-07T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuYay.png',
+            },
+            {
+                type: 'comment',
+                text: 'arson is cool!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            }
+        ]
+    },
+    {
+        time: "2024-05-08T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'doom2.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuConfused.png',
+            },
+            {
+                type: 'comment',
+                text: 'try not get lost :D',
+            }
+        ]
+    },
+    {
+        time: "2024-05-09T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'need maid',
+            },
+            {
+                type: 'titleLogo',
+                image: 'nobeta.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCry.png',
+            }
+        ]
+    },
+    {
+        time: "2024-05-10T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogoText',
+                image: 'warhammer40k.png',
+                text: 'handcam!',
+            },
+        ]
+    },
+    {
+        time: "2024-05-10T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuSalute.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mhworld.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-11T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'title',
+                text: 'watchalong: Godzilla (1954) and Shin Godzilla (2016)',
+            },
+        ]
+    },
+    {
+        time: "2024-05-12T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuStraight.png',
+            },
+            {
+                type: 'title',
+                text: 'straightface hunger games!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-13T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'neppieshoppityhop.png',
+            },
+            {
+                type: 'comment',
+                text: 'mum im on tv!!!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-14T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'cute girl death',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlush.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'nobeta.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-15T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+            {
+                type: 'comment',
+                text: 'da darknes...',
+            },
+        ]
+    },
+    {
+        time: "2024-05-16T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'loli hollow knight?',
+            },
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.png',
+            },
+        ]
+    },
+    {
+        time: "2024-05-17T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'new hairstyle reveal + karaoke!',
+            },
+        ]
+    },
+    {
+        time: "2024-05-17T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'watchalong: Shin Godzilla',
+            },
+        ]
+    },
+    {
+        time: "2024-05-18T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'projectzero.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuScared.png',
+            },
+            {
+                type: 'comment',
+                text: 'punishment stream!!! nii nii..',
+            },
+        ]
+    },
+    {
+        time: "2024-05-19T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuHmm.png',
+            },
+            {
+                type: 'comment',
+                text: 'akiramenai!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'shashingo.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
