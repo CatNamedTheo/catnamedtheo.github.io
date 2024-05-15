@@ -159,6 +159,7 @@ header > div > p {
     margin-bottom: -1em;
     padding: 0.2em 0.5em;
     background-color: red;
+    border: 2px solid black;
     color: #fff;
     border-radius: 13px;
     user-select: none;
@@ -498,7 +499,7 @@ footer > a:hover {
 
     .nepClock-streamTitleImage {
         max-width: 50%;
-        max-height: 120px;
+        max-height: 160px;
     }
     
     .nepClock-streamTitleImageText-image {
@@ -540,7 +541,8 @@ footer > a:hover {
 
     .nepClock-scheduleContent {
         flex-direction: row;
-        column-gap: 1em
+        column-gap: 1em;
+        height: 100px;
     }
 
     .nepClock-streamComment {
