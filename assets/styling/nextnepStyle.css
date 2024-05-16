@@ -342,7 +342,7 @@ header > div > p {
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1em;
+    margin: 1em 0;
     justify-content: center;
 }
 
