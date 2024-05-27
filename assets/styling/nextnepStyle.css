@@ -510,6 +510,10 @@ footer > a:hover {
     .nepClock-streamComment {
         font-size: calc(1vw + 1vh);
     }
+    
+    .nepClock-streamTitle {
+        font-size: calc(1vw + 0.7vh);
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -568,12 +572,11 @@ footer > a:hover {
 
     .nepClock-stream:has(> h4:first-child:nth-last-child(2)),
     .nepClock-stream:has(> img:first-child:nth-last-child(2)),
-    .nepClock-stream:has(> div:first-child:nth-last-child(2))
+    .nepClock-stream:has(> div:first-child:nth-last-child(2)),
+    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> h4:first-child:nth-last-child(3)),
+    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> img:first-child:nth-last-child(3)),
+    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> div:first-child:nth-last-child(3))
     {
         justify-content: space-evenly;
-    }
-
-    .nepClock-stream:last-child {
-        border: none;
     }
 }
