@@ -149,7 +149,7 @@ header > div > p {
 }
 
 .nepClock-weekDaySchedule:has(> .nepClock-scheduleContent > .nepClock-live)::before {
-    content: "LIVE?";
+    content: "LIVE";
     display: block;
     position: relative;
     width: fit-content;
@@ -515,6 +515,24 @@ footer > a:hover {
         font-size: calc(1vw + 0.7vh);
     }
 }
+
+.nepClock-liveStatus {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.nepClock-liveStatus a {
+    color: red;
+    text-decoration: none;
+}
+
+.nepClock-liveStatus.nepClock-live a {
+    color: green;
+}
+
+
+
+
 
 @media screen and (min-width: 1440px) {
     header {
