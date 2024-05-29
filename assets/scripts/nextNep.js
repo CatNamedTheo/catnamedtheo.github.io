@@ -1,9 +1,11 @@
 "use strict";
 
 const streams = [];
-const weekDays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
-const streamUrl = "https://twitch.tv/neppienep"
+const weekDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+const streamUrl = "https://twitch.tv/neppienep";
 let today = new Date().getDay();
+const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko"; // Replace this with the client-id you have
+const twitchGqlUrl = "https://gql.twitch.tv/gql";
 
 class Stream {
     constructor(streamConfig) {
@@ -182,6 +184,37 @@ class Stream {
     }
 }
 
+
+// Function to check if the user is streaming
+const checkIfUserIsStreaming = async (username) => {
+    const query = `query {
+        user(login: "${username}") {
+            stream {
+                id
+            }
+        }
+    }`;
+
+    try {
+        const response = await fetch(twitchGqlUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Client-Id": twitchClientId
+            },
+            body: JSON.stringify({ query })
+        });
+
+        const data = await response.json();
+        return data.data.user.stream !== null;
+    } catch (error) {
+        console.error("Error checking stream status:", error);
+        return false;
+    }
+};
+
+
+
 const updateToday = () => {
     const now = new Date();
     if (!document.querySelector(".nepClock-today")) {
@@ -246,6 +279,34 @@ const appTick = () => {
     addWeekDates();
 }
 
+
+// Function to update the stream status
+const updateStreamStatus = async () => {
+    const isLive = await checkIfUserIsStreaming("neppienep");
+
+    streams.forEach(stream => {
+        if (isLive && !stream.live) {
+            // Stream just went live
+            stream.live = true;
+            stream.streamElement.classList.add('nepClock-live');
+            stream.interval = setInterval(() => {
+                stream.printTime(true);
+            }, 1000);
+            stream.updateTimer();
+        } else if (!isLive && stream.live) {
+            // Stream just went offline
+            stream.live = false;
+            clearInterval(stream.interval);
+            stream.streamElement.classList.remove('nepClock-live');
+            stream.timeStamp = stream.getCombinedStartTime();
+            stream.printTime(false);
+        }
+    });
+};
+
+
+
+
 const addFeaturedArt = () => {
     const featuredArt = featuredArtList[0];
     const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
@@ -267,6 +328,9 @@ const startUp = () => {
     addFeaturedArt();
 
     setInterval(appTick, 1000);
+    setInterval(updateStreamStatus, 120000); // Check every 2 minutes (120000 milliseconds)
     appTick();
-}
+    updateStreamStatus(); // Initial check
+};
+
 startUp();
