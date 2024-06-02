@@ -230,10 +230,10 @@ const appTick = () => {
 const addFeaturedArt = () => {
     const featuredArt = featuredArtList[0];
     const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
-    aElements[0].href = `./assets/images/featuredart/${featuredArt[0]}`;
     aElements[0].children[0].src = `./assets/images/featuredart/${featuredArt[0]}`;
-    aElements[1].href = `${featuredArt[1]}`;
-    aElements[1].innerHTML = `art: ${featuredArt[2]}`;
+    aElements[0].href = `${featuredArt[1]}`;
+    aElements[1].href = `${featuredArt[2]}`;
+    aElements[1].innerHTML = `art: ${featuredArt[3]}`;
 };
 
 const setStreamLive = () => {
