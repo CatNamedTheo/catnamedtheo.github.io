@@ -149,7 +149,7 @@ header > div > p {
 }
 
 .nepClock-weekDaySchedule:has(> .nepClock-scheduleContent > .nepClock-live)::before {
-    content: "LIVE?";
+    content: "LIVE";
     display: block;
     position: relative;
     width: fit-content;
@@ -198,6 +198,7 @@ header > div > p {
     text-align: center;
     border-bottom: 3px solid #e1a2ab;
     margin-top: 1.2em;
+    height: calc(47px - 1.2em);
 }
 
 .nepClock-scheduleContent:empty:after {
@@ -210,6 +211,7 @@ header > div > p {
     background-color: #fff;
     width: fit-content;
     box-shadow: -15px 0px 15px 10px rgba(255, 255, 255, 0.9), 15px 0 15px 10px rgba(255, 255, 255, 0.9);
+    height: 50px;
 }
 
 .nepClock-stream {
@@ -222,6 +224,7 @@ header > div > p {
     padding-bottom: 1em;
     border-bottom: 3px solid #c0a092;
     position: relative;
+    height: 100px;
 }
 
 .nepClock-stream:last-child {
@@ -236,6 +239,10 @@ header > div > p {
     align-self: center;
     text-align: center;
     color: #b18073;
+}
+
+.nepClock-streamTitle {
+    align-self: center;
 }
 
 .nepClock-streamTitleImage {
@@ -496,11 +503,6 @@ footer > a:hover {
         text-align: right;
         white-space: nowrap;
     }
-
-    .nepClock-streamTitleImage {
-        max-width: 50%;
-        max-height: 160px;
-    }
     
     .nepClock-streamTitleImageText-image {
         max-width: 100%;
@@ -546,7 +548,6 @@ footer > a:hover {
     .nepClock-scheduleContent {
         flex-direction: row;
         column-gap: 1em;
-        height: 100px;
     }
 
     .nepClock-streamComment {

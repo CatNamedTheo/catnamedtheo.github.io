@@ -1,8 +1,11 @@
 "use strict";
 
 const streams = [];
-const weekDays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
-const streamUrl = "https://twitch.tv/neppienep"
+const weekDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+const streamUrl = "https://twitch.tv/neppienep";
+const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
+const twitchGqlUrl = "https://gql.twitch.tv/gql";
+let lastLive = null;
 let today = new Date().getDay();
 
 class Stream {
@@ -141,44 +144,34 @@ class Stream {
 
     updateTimer() {
         const now = new Date();
-        const timeLeft = this.streamDate - now;
         
-        if (timeLeft < 0) {
-            if (timeLeft > -86400000) {
-                if (!this.live) {
-                    this.live = true;
-                    this.streamElement.classList.add('nepClock-live');
+        if (this.live) {
+            const timeSince = now - lastLive;
+            const h = this.formatClockNumber(this.getHours(timeSince));
+            const m = this.formatClockNumber(this.getMinutes(timeSince));
+            const s = this.formatClockNumber(this.getSeconds(timeSince));
+        
+            this.timeStamp = `<a href=${streamUrl}>[Started ${h}:${m}:${s} ago]</a>`;
+        } else { 
+            const timeLeft = this.streamDate - now;
+            if (timeLeft < -1800000) {
+                this.timeStamp = "<div class='nepClock-streamTime'>" + this.getCombinedStartTime() + "</div>";
+            } else if (timeLeft < 0) {
+                this.timeStamp = `<a href=${streamUrl}>[any minute now...]</a>` + "<div class='nepClock-realTime'>" + this.getCombinedStartTime() + "</div>";
+            } else if (timeLeft < 86400000) {
+                const h = this.formatClockNumber(this.getHours(timeLeft));
+                const m = this.formatClockNumber(this.getMinutes(timeLeft));
+                const s = this.formatClockNumber(this.getSeconds(timeLeft));
+
+                this.timeStamp = "<div class='nepClock-countdown'>" + h + ":" + m + ":" + s + " </div><div class='nepClock-realTime'>" + this.getCombinedStartTime() + "</div>";
+
+                if (timeLeft < 3600000) {
+                    this.timeStamp += `<a href=${streamUrl}>[waiting room]</a>`;
                 }
-                const timeSince = now - this.streamDate;
-                const h = this.formatClockNumber(this.getHours(timeSince));
-                const m = this.formatClockNumber(this.getMinutes(timeSince));
-                const s = this.formatClockNumber(this.getSeconds(timeSince));
-            
-                this.timeStamp = `<a href=${streamUrl}>Started ${h}:${m}:${s} ago</a>`;
             } else {
-                this.forceOffline();
+                this.timeStamp = "<div class='nepClock-streamTime'>" + this.getCombinedStartTime() + "</div>";
             }
-        } else if (timeLeft < 86400000) {
-            const h = this.formatClockNumber(this.getHours(timeLeft));
-            const m = this.formatClockNumber(this.getMinutes(timeLeft));
-            const s = this.formatClockNumber(this.getSeconds(timeLeft));
-
-            this.timeStamp = "<div class='nepClock-countdown'>" + h + ":" + m + ":" + s + " </div><div class='nepClock-realTime'>" + this.getCombinedStartTime() + "</div>";
-
-            if (timeLeft < 3600000) {
-                this.timeStamp += `<a href=${streamUrl}>[waiting room]</a>`;
-            }
-        } else {
-            this.timeStamp = this.getCombinedStartTime();
         }
-    }
-
-    forceOffline() {
-        clearInterval(this.interval);
-        this.live = false;
-        this.timeStamp = "<div class='nepClock-streamTime'>" + this.getCombinedStartTime() + "</div>"
-        this.printTime(false);
-        this.streamElement.classList.remove('nepClock-live');
     }
 }
 
@@ -192,7 +185,7 @@ const updateToday = () => {
         document.querySelector("#nepClock-" + weekDays[now.getDay()]).classList.add("nepClock-today");
         today = now.getDay();
     }
-}
+};
 
 const addWeekDates = () => {
     const now = new Date();
@@ -208,7 +201,7 @@ const addWeekDates = () => {
     monthStr = monthStr.slice(-1) === '.' ? monthStr.slice(0, -1) : monthStr; 
     document.querySelector("#nepClock-sunday-date .nepClock-streamMonth").innerHTML = monthStr.toLowerCase();
     document.querySelector("#nepClock-sunday-date .nepClock-streamDay").innerHTML = date.getDate();
-}
+};
 
 const getFirstDateOfWeek = () => {
     const now = new Date();
@@ -217,7 +210,7 @@ const getFirstDateOfWeek = () => {
     firstDate.setMinutes(0);
     firstDate.setSeconds(0);
     return firstDate;
-}
+};
 
 const getLastDateOfWeek = () => {
     const now = new Date();
@@ -226,25 +219,13 @@ const getLastDateOfWeek = () => {
     lastDate.setMinutes(59);
     lastDate.setSeconds(59);
     return lastDate;
-}
-
-const forceOneLive = () => {
-    let foundLive = false;
-    for(let i = streams.length - 1; i >= 0; i-=1) {
-        if (!foundLive && streams[i].live) {
-            foundLive = true;
-        } else if (foundLive && streams[i].live) {
-            streams[i].forceOffline();
-        }
-    }
-}
+};
 
 const appTick = () => {
     today = new Date().getDay();
     updateToday();
-    forceOneLive();
     addWeekDates();
-}
+};
 
 const addFeaturedArt = () => {
     const featuredArt = featuredArtList[0];
@@ -253,7 +234,59 @@ const addFeaturedArt = () => {
     aElements[0].children[0].src = `./assets/images/featuredart/${featuredArt[0]}`;
     aElements[1].href = `${featuredArt[1]}`;
     aElements[1].innerHTML = `art: ${featuredArt[2]}`;
+};
+
+const setStreamLive = () => {
+    const now = new Date();
+    for(let i = streams.length - 1; i >= 0; i-=1) {
+        if (now > streams[i].streamDate) {
+            streams[i].live = true;
+            streams[i].streamElement?.classList.add('nepClock-live');
+            break;
+        }
+    }
 }
+
+const setAllStreamsOffline = () => {
+    streams.forEach((stream) => {
+        stream.live = false;
+        stream.streamElement?.classList.remove('nepClock-live');
+    });
+};
+
+const checkIfLive = async () => {
+    const query = `query {
+        user(login: "neppienep") {
+            stream {
+                createdAt
+            }
+        }
+    }`;
+
+    try {
+        const response = await fetch(twitchGqlUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Client-Id": twitchClientId
+            },
+            body: JSON.stringify({ query })
+        });
+
+        const data = await response.json();
+        if (data.data.user.stream?.createdAt && !lastLive) {
+            lastLive = new Date(data.data.user.stream?.createdAt);
+
+            setStreamLive();
+        } else if (!data.data.user.stream?.createdAt) {
+            lastLive = null;
+
+            setAllStreamsOffline();
+        }
+    } catch (error) {
+        console.error("Error checking stream status:", error);
+    }
+};
 
 const startUp = () => {
     schedule.slice(0).forEach((stream) => {
@@ -267,6 +300,9 @@ const startUp = () => {
     addFeaturedArt();
 
     setInterval(appTick, 1000);
+    setInterval(checkIfLive, 120000);
     appTick();
-}
+    checkIfLive();
+};
+
 startUp();
