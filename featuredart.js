@@ -6,3 +6,34 @@ const featuredArtList = [
 ].map(value => ({ value, sort: Math.random() }))
 .sort((a, b) => a.sort - b.sort)
 .map(({ value }) => value);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    let currentArtIndex = 0;
+
+    // Preload images
+    const preloadedImages = featuredArtList.map(art => {
+        const img = new Image();
+        img.src = `./assets/images/featuredart/${art[0]}`;
+        return img;
+    });
+
+    const updateFeaturedArt = (direction) => {
+        // Update the current index
+        currentArtIndex = (currentArtIndex + direction + featuredArtList.length) % featuredArtList.length;
+
+        // Update the featured art
+        const featuredArt = featuredArtList[currentArtIndex];
+        const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
+        aElements[0].children[0].src = preloadedImages[currentArtIndex].src;
+        aElements[0].href = `${featuredArt[1]}`;
+        aElements[1].href = `${featuredArt[2]}`;
+        aElements[1].innerHTML = `art: ${featuredArt[3]}`;
+    };
+
+    // Add event listeners to the arrow buttons
+    document.querySelector("#nepClock-featuredArt > .arrow-left").addEventListener('click', () => updateFeaturedArt(-1));
+    document.querySelector("#nepClock-featuredArt > .arrow-right").addEventListener('click', () => updateFeaturedArt(1));
+
+    // Initialize the featured art
+    updateFeaturedArt(0);
+});
