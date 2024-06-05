@@ -329,6 +329,16 @@ header > div > p {
     margin: 0 auto 0.5em auto
 }
 
+#nepClock-featuredArt > .arrow-left, .arrow-right {
+    margin: 0 auto;
+	display: block;
+	z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 #nepClock-featuredArt > .credit {
     margin: 0 auto;
     width: fit-content;
@@ -447,6 +457,34 @@ footer > a:hover {
     margin-left: -22px;
 }
 
+@media screen and (max-width: 879px) {
+    #nepClock-featuredArt {
+        display: flex;
+        align-items: center; /* Vertically center the direct children */
+        justify-content: center; /* Horizontally center the direct children */
+        flex-direction: column; /* Stack the children vertically */
+        position: relative;
+    }
+
+    #nepClock-featuredArt > .credit {
+        order: 2; /* Place the credit below the image and buttons */
+    }
+
+    #nepClock-featuredArt > .arrow-left, #nepClock-featuredArt > .arrow-right {
+        position: absolute;
+        top: 50%; /* Position at the vertical center */
+        transform: translateY(-50%); /* Offset the position by half the height of the element */
+    }
+
+    #nepClock-featuredArt > .arrow-left {
+        margin-left: -55%;
+    }
+
+    #nepClock-featuredArt > .arrow-right {
+        margin-right: -55%;
+    }
+}
+
 @media screen and (min-width: 880px) {
     header, footer {
         margin-left: 40%;
@@ -487,6 +525,7 @@ footer > a:hover {
         margin: 0;
     }
 
+
     #nepClock-featuredArt > .credit {
         position: fixed;
         bottom: 0;
@@ -498,6 +537,25 @@ footer > a:hover {
         letter-spacing: 3px;
         max-width: 25%;
     }
+
+    #nepClock-featuredArt > .arrow-left,     #nepClock-featuredArt >  .arrow-right {
+	z-index: 1;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+    #nepClock-featuredArt > .arrow-left {
+	position: fixed;
+left: 2%;
+}
+
+    #nepClock-featuredArt > .arrow-right {
+	position: fixed;
+    right: 62%;
+}
+
 
     .nepClock-streamTime {
         text-align: right;
@@ -516,6 +574,8 @@ footer > a:hover {
     .nepClock-streamTitle {
         font-size: calc(1vw + 0.7vh);
     }
+	
+	
 }
 
 @media screen and (min-width: 1440px) {
@@ -538,6 +598,7 @@ footer > a:hover {
     #nepClock-schedule {
         max-width: 60%;
     }
+	
 
     .nepClock-weekDayWrapper {
         flex-direction: row;
