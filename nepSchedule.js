@@ -835,6 +835,110 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-06-10T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuLove.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'pokemonmysterydungeonresuceteamdx.png',
+            },
+            {
+                type: 'comment',
+                text: 'bulbasaur love',
+            },
+        ]
+    },
+    {
+        time: "2024-06-11T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.png',
+            },
+            {
+                type: 'comment',
+                text: 'fire!!!!!!!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-06-12T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'comment',
+                text: 'gameing',
+            },
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-13T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'punishment math test',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuSalute.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-14T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'nobeta.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-15T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'watchalong: kizumonogatari (all 3 movies)',
+            },
+        ]
+    },
+    {
+        time: "2024-06-16T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newoutfitreveal.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-17T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
