@@ -939,6 +939,118 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-06-17T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuCheer.png',
+            },
+            {
+                type: 'comment',
+                text: 'for real this time!!',
+            },
+        ]
+    },
+    {
+        time: "2024-06-19T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'grand!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPray.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-20T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'comment',
+                text: 'we end',
+            },
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-21T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'christmas karaoke',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCheer.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-21T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'godzilla watchalong (minus one + final wars)',
+            },
+        ]
+    },
+    {
+        time: "2024-06-22T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuScared.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'dontscream.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-22T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ART!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-06-23T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'yay',
+            },
+            {
+                type: 'titleLogo',
+                image: 'littlefriendsdogsandcats.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuLove.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
