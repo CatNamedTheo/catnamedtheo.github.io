@@ -9,6 +9,8 @@
  * 
  * There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
  * 
+ * More than 2 streams a day is currently NOT supported.
+ * 
  * Examples components:
  * Title
  * Used to show a dedicated stream title
@@ -1049,6 +1051,119 @@ const schedule = [
                 type: 'rEmote',
                 image: 'nepuLove.png',
             },
+        ]
+    },
+    {
+        time: "2024-06-24T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCool.png',
+            },
+            {
+                type: 'comment',
+                text: 'yeaaaaaaaa',
+            },
+        ]
+    },
+    {
+        time: "2024-06-25T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuStare.png',
+            },
+            {
+                type: 'title',
+                text: 'i peel an orange',
+            },
+        ]
+    },
+    {
+        time: "2024-06-26T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: ':DD',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-27T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'our server!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'minecraft.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-28T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-28T24:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ASMR(?) reading WH40K wiki',
+            },
+        ]
+    },
+    {
+        time: "2024-06-29T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-29T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'Watchalong: Alien (1979) & The Lighthouse (2019)',
+            },
+        ]
+    },
+    {
+        time: "2024-06-30T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
         ]
     },
 ].sort((streamA, streamB) => {
