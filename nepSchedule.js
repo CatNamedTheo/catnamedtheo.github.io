@@ -9,6 +9,8 @@
  * 
  * There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
  * 
+ * More than 2 streams a day is currently NOT supported.
+ * 
  * Examples components:
  * Title
  * Used to show a dedicated stream title
@@ -939,6 +941,234 @@ const schedule = [
             },
         ]
     },
+<<<<<<< HEAD
+=======
+    {
+        time: "2024-06-17T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuCheer.png',
+            },
+            {
+                type: 'comment',
+                text: 'for real this time!!',
+            },
+        ]
+    },
+    {
+        time: "2024-06-19T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'grand!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPray.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-20T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'comment',
+                text: 'we end',
+            },
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-21T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'christmas karaoke',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCheer.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-21T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'godzilla watchalong (minus one + final wars)',
+            },
+        ]
+    },
+    {
+        time: "2024-06-22T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuScared.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'dontscream.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-22T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ART!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-06-23T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'yay',
+            },
+            {
+                type: 'titleLogo',
+                image: 'littlefriendsdogsandcats.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuLove.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-24T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCool.png',
+            },
+            {
+                type: 'comment',
+                text: 'yeaaaaaaaa',
+            },
+        ]
+    },
+    {
+        time: "2024-06-25T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuStare.png',
+            },
+            {
+                type: 'title',
+                text: 'i peel an orange',
+            },
+        ]
+    },
+    {
+        time: "2024-06-26T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: ':DD',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-27T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'our server!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'minecraft.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-28T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-28T24:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ASMR(?) reading WH40K wiki',
+            },
+        ]
+    },
+    {
+        time: "2024-06-29T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-06-29T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'Watchalong: Alien (1979) & The Lighthouse (2019)',
+            },
+        ]
+    },
+    {
+        time: "2024-06-30T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
+        ]
+    },
+>>>>>>> master
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

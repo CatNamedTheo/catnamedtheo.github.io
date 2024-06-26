@@ -13,7 +13,7 @@ class Stream {
         const that = this;
         this.streamConfig = streamConfig;
         this.streamDate = new Date(streamConfig.time);
-        this.weekDay = weekDays[this.streamDate.getDay()];
+        this.weekDay = weekDays[this.streamDate.getUTCDay()];
         this.live = false;
         if (this.streamDate >= getFirstDateOfWeek() && this.streamDate <= getLastDateOfWeek()) {
             this.interval = setInterval(() => {
