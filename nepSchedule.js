@@ -941,8 +941,6 @@ const schedule = [
             },
         ]
     },
-<<<<<<< HEAD
-=======
     {
         time: "2024-06-17T18:00:00.000+01:00",
         layout: [
@@ -1168,7 +1166,6 @@ const schedule = [
             }, 
         ]
     },
->>>>>>> master
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
