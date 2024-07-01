@@ -1166,6 +1166,75 @@ const schedule = [
             }, 
         ]
     },
+    {
+        time: "2024-07-01T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
+        ]
+    },
+    {
+        time: "2024-07-02T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
+        ]
+    },
+    {
+        time: "2024-07-03T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
+        ]
+    },
+    {
+        time: "2024-07-04T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'until i finish',
+            }, 
+        ]
+    },
+    {
+        time: "2024-07-05T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuCheer.png',
+            }, 
+            {
+                type: 'title',
+                text: '2nd anniversary stream!!!!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuYay.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
