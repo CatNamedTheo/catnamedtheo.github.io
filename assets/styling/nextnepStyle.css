@@ -339,33 +339,17 @@ header > div > p {
     overflow: hidden;
     margin-top: 1em;
     padding: 0 5%;
-    position: relative; /* Ensure relative positioning for correct overflow behavior */
 }
-
-.image-wrapper {
-    display: flex; /* Flexbox for easier centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    overflow: hidden; /* Hide any overflowing content */
-    position: relative; /* Needed for absolute positioning of the image */
-    height: 100%; /* Ensure wrapper takes full height */
-    width: 100%; /* Ensure wrapper takes full width */
-}
-
 
 #nepClock-featuredArt .image-wrapper > a > img {
     display: block;
-    height: 100vh; /* Full browser height */
-    width: auto; /* Maintain aspect ratio */
-    max-height: none; /* Remove max-height constraint */
-    max-width: none; /* Remove max-width constraint */
-    object-fit: cover; /* Ensure the image covers the container */
+    height: auto;
+    max-height: 600px;
+    max-width: calc(100% - 6px);
     border-radius: 15px;
     border: 3px solid #c0a092;
     margin: 0 auto 0.5em auto;
 }
-
-
 
 .slide-in-left {
     animation: slide-in-left 1s;
@@ -384,40 +368,27 @@ header > div > p {
 }
 
 #nepClock-featuredArt > .arrow-left, .arrow-right {
-    margin: 0 auto;
 	display: block;
+    position: absolute;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 	z-index: 1;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
+    top: calc(50% - 15px);
     background-color: rgba(0, 0, 0, 0);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
-#nepClock-featuredArt > .arrow-left::before {
-    content: "";
-    display: block;
+#nepClock-featuredArt > .arrow-left {
     background-image: url(../images/arrowleft.png);
-    background-size: cover;
-    width: 60px; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-#nepClock-featuredArt > .arrow-right::before {
-    content: "";
-    display: block;
+#nepClock-featuredArt > .arrow-right {
     background-image: url(../images/arrowright.png);
-    background-size: cover;
-    width: 60px; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
-
 
 .credit {
     margin: 0 auto;
@@ -540,37 +511,23 @@ footer > a:hover {
 @media screen and (max-width: 879px) {
     #nepClock-featuredArt {
         display: flex;
-        flex-direction: column; /* Stack children vertically */
-        align-items: center; /* Center items horizontally */
-        justify-content: flex-start; /* Align items to the top */
+        flex-direction: column;
         position: relative;
-        gap: 1em; /* Add space between children */
+        gap: 1em;
     }
 
-    .credit {
-        order: 2; /* Ensure credit appears after the image */
-        width: auto; /* Ensure credit takes full width */
-        text-align: center; /* Center text if necessary */
-        margin-top: 1em; /* Add space above credit */
-    }
-
-    #nepClock-featuredArt > .image-wrapper {
-        order: 1; /* Image comes first */
-        width: 100%; /* Ensure the image-wrapper takes full width */
-    }
-
-    #nepClock-featuredArt > .arrow-left, #nepClock-featuredArt > .arrow-right {
-        position: absolute;
-        top: 50%; /* Position at the vertical center */
-        transform: translateY(-50%); /* Offset by half the height of the element */
+    #nepClock-featuredArt > .image-wrapper > a {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     #nepClock-featuredArt > .arrow-left {
-        left: 15%;
+        left: 60px;
     }
 
     #nepClock-featuredArt > .arrow-right {
-        right: 15%;
+        left: calc(100% - 60px);
     }
 }
 
@@ -601,15 +558,15 @@ footer > a:hover {
     }
 	
     .image-wrapper {
-        position: fixed; /* Ensure fixed positioning for correct overlap behavior */
+        position: fixed;
         top: 0;
         left: 0;
         width: 40%;
-        height: 100%; /* Ensure the wrapper takes up full height */
-        overflow: hidden; /* Ensure overflow is hidden */
+        height: 100%;
+        overflow: hidden;
     }
     
-    #nepClock-featuredArt > a > img {
+    #nepClock-featuredArt .image-wrapper > a > img {
         display: block;
         min-height: 100%;
         max-width: 100%;
@@ -617,13 +574,14 @@ footer > a:hover {
         object-fit: cover;
         border-radius: 0;
         border: none;
-        border-right: 3px solid #c0a092;  
         margin: 0;
-        position: absolute; /* Ensure absolute positioning for correct animation */
     }
 
+    #nepClock-featuredArt .image-wrapper {
+        border-right: 3px solid #c0a092;
+    }
 
-.credit {
+    .credit {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -635,24 +593,15 @@ footer > a:hover {
         max-width: 25%;
     }
 
-    #nepClock-featuredArt > .arrow-left,     #nepClock-featuredArt >  .arrow-right {
-	z-index: 1;
-    top: 50%;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
     #nepClock-featuredArt > .arrow-left {
-	position: fixed;
-left: 2%;
-}
+        position: fixed;
+        left: 3%;
+    }
 
     #nepClock-featuredArt > .arrow-right {
-	position: fixed;
-    right: 62%;
-}
-
+        position: fixed;
+        left: 36%;
+    }
 
     .nepClock-streamTime {
         text-align: right;
@@ -721,8 +670,6 @@ left: 2%;
         justify-content: space-between;
         font-size: 1.2em;
         align-items: center;
-        border: none;
-        border-right: 3px solid #c0a092;
         margin: 0;
         padding: 0;
         padding-right: 1em;
