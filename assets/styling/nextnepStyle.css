@@ -15,8 +15,6 @@
     100% { transform: translateX(0); opacity: 1; }
 }
 
-
-
 * {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
@@ -356,7 +354,7 @@ header > div > p {
 }
 
 .slide-out-left {
-    animation: slide-out-left 1s;
+    animation: slide-out-left 0.5s;
 }
 
 .slide-in-right {
@@ -364,7 +362,7 @@ header > div > p {
 }
 
 .slide-out-right {
-    animation: slide-out-right 1s;
+    animation: slide-out-right 0.5s;
 }
 
 #nepClock-featuredArt > .arrow-left, .arrow-right {

@@ -5,8 +5,11 @@ const weekDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "frida
 const streamUrl = "https://twitch.tv/neppienep";
 const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
 const twitchGqlUrl = "https://gql.twitch.tv/gql";
+const preloadedArt = [];
 let lastLive = null;
 let today = new Date().getDay();
+let currentArtIndex = 0;
+let isAnimating = false;
 
 class Stream {
     constructor(streamConfig) {
@@ -227,13 +230,86 @@ const appTick = () => {
     addWeekDates();
 };
 
-const addFeaturedArt = () => {
-    const featuredArt = featuredArtList[0];
+const preloadImage = (featuredArt, index) => {
+    if (!preloadedArt[index]) {
+        const img = new Image();
+        img.src = `./assets/images/featuredart/${featuredArt[0]}`;
+        preloadedArt[index] = img;
+    }
+};
+
+const initFeaturedArt = () => {
+    // Preload initial images
+    preloadImage(featuredArtList[currentArtIndex], currentArtIndex);
+    preloadImage(featuredArtList[featuredArtList.length - 1], featuredArtList.length - 1);
+    preloadImage(featuredArtList[currentArtIndex + 1], currentArtIndex + 1);
+    // Set the initial featured art without animation
+    const featuredArt = featuredArtList[currentArtIndex];
     const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
-    aElements[0].children[0].src = `./assets/images/featuredart/${featuredArt[0]}`;
+    const artImage = aElements[0].children[0];
+    artImage.src = preloadedArt[currentArtIndex].src;
     aElements[0].href = `${featuredArt[1]}`;
     aElements[1].href = `${featuredArt[2]}`;
     aElements[1].innerHTML = `art: ${featuredArt[3]}`;
+
+    const updateFeaturedArt = (direction) => {
+        if (isAnimating) return; // Prevent animation if one is already in progress
+        isAnimating = true; // Set the animation flag to true
+
+        const oldArt = artImage;
+        const newArtIndex = (currentArtIndex + direction + featuredArtList.length) % featuredArtList.length;
+        const newArt = preloadedArt[newArtIndex];
+
+        // Preload the next image in the same direciton
+        const preloadIndex = (newArtIndex + direction + featuredArtList.length) % featuredArtList.length;
+        preloadImage(featuredArtList[preloadIndex], preloadIndex);
+
+        // Set the appropriate classes for the animation direction
+        if (direction === 1) {
+            oldArt.className = "slide-out-left";
+        } else {
+            oldArt.className = "slide-out-right";
+        }
+
+        // Hide the old image before the slide-out animation completes
+        setTimeout(() => {
+            oldArt.style.visibility = "hidden"; // Hide the old image before animation completes
+        }, 300); // Adjust this to be shorter than the duration of your slide-out animation
+
+        // Wait for the slide-out animation to complete
+        setTimeout(() => {
+            oldArt.src = newArt.src;
+            oldArt.style.visibility = "visible"; // Make the new image visible again
+            if (direction === 1) {
+                oldArt.className = "slide-in-left";
+            } else {
+                oldArt.className = "slide-in-right";
+            }
+            aElements[0].href = `${featuredArtList[newArtIndex][1]}`;
+            aElements[1].href = `${featuredArtList[newArtIndex][2]}`;
+            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex][3]}`;
+
+            // Wait for the slide-in animation to complete before resetting
+            setTimeout(() => {
+                oldArt.className = "";
+                isAnimating = false; // Reset the animation flag
+            }, 1000); // Adjust this to match the duration of your slide-in animation
+        }, 500); // Adjust this to match the duration of your slide-out animation
+
+        currentArtIndex = newArtIndex;
+    };
+
+    // Add event listeners to the arrow buttons
+    document.querySelector("#nepClock-featuredArt > .arrow-left").addEventListener('click', () => {
+        if (!isAnimating) {
+            updateFeaturedArt(-1);
+        } 
+    });
+    document.querySelector("#nepClock-featuredArt > .arrow-right").addEventListener('click', () => {
+        if (!isAnimating) {
+            updateFeaturedArt(1);
+        }
+    });
 };
 
 const setStreamLive = () => {
@@ -297,7 +373,7 @@ const startUp = () => {
     document.querySelector("#nepClock-timeZone").innerHTML = timeZone;
 
     addWeekDates();
-    addFeaturedArt();
+    initFeaturedArt();
 
     setInterval(appTick, 1000);
     setInterval(checkIfLive, 120000);
