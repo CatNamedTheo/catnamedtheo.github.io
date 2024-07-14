@@ -44,7 +44,7 @@ header {
 
 header > img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 header > div > p {
@@ -61,8 +61,8 @@ header > div > p {
 .twitch {
     display: block;
     width: fit-content;
-    padding: 0 2em;
-    margin: 1em auto;
+    padding: 0.5em 2em;
+    margin: 0 auto 1em auto;
     border-radius: 20px;
     background-color: #a47e71;
     text-align: center;
@@ -394,7 +394,7 @@ header > div > p {
     text-align: center;
     color: #fff;
     display: block;
-    padding: 0 2em;
+    padding: 0.5em 2em;
     border-radius: 20px;
     background-color: #dd9fa8;
     text-decoration: none;
@@ -576,7 +576,7 @@ footer > a:hover {
     }
 
     #nepClock-featuredArt .image-wrapper {
-        border-right: 3px solid #c0a092;
+        border-right: 3px solid #a17b6f;
     }
 
     .credit {
@@ -672,6 +672,8 @@ footer > a:hover {
         padding: 0;
         padding-right: 1em;
         text-align: center;
+        border: 0;
+        border-right: 3px solid #c0a092;
     }
 
     .nepClock-stream:has(> h4:first-child:nth-last-child(2)),

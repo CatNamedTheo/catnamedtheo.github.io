@@ -1235,6 +1235,92 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-07-15T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'im back!!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuYay.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-17T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'more...',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPeek.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-18T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'more!!!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-19T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'grandia2.png',
+            },
+            {
+                type: 'comment',
+                text: 'finale!!',
+            },
+        ]
+    },
+    {
+        time: "2024-07-20T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'enderlilies.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-20T24:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ASMR(?) reading WH40K wiki',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
