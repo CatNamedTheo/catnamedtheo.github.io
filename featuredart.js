@@ -40,6 +40,9 @@ const featuredArtList = [
     ["39.jpg", "https://x.com/nepnepu_2/status/1605668689973501963", "@nepnepu_2"],
     ["40.jpg", "https://x.com/nepnepu_2/status/1605668689973501963", "@nepnepu_2"],
     ["41.jpg", "https://x.com/nepnepu_2/status/1605668689973501963", "@nepnepu_2"],
+    ["42.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
+    ["43.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
+    ["44.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
 ].map(value => ({ value, sort: Math.random() }))
 .sort((a, b) => a.sort - b.sort)
 .map(({ value }) => value);
