@@ -43,6 +43,38 @@ const featuredArtList = [
     ["42.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
     ["43.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
     ["44.jpg", "https://x.com/nepnepu_2/status/1582829947626094592", "@nepnepu_2"],
+    ["45.jpg", "https://x.com/kiirokumart/status/1806883386377601176", "@kiirokumart"],
+    ["46.jpg", "https://x.com/kiirokumart/status/1806823973562265695", "@kiirokumart"],
+    ["47.jpg", "https://x.com/kiirokumart/status/1804674482717458780", "@kiirokumart"],
+    ["48.jpg", "https://x.com/kiirokumart/status/1803292156594913315", "@kiirokumart"],
+    ["49.jpg", "https://x.com/kiirokumart/status/1802904228853113242", "@kiirokumart"],
+    ["50.jpg", "https://x.com/kiirokumart/status/1802159624461713527", "@kiirokumart"],
+    ["51.jpg", "https://x.com/kiirokumart/status/1801430077692924124", "@kiirokumart"],
+    ["52.jpg", "https://x.com/kiirokumart/status/1798394371131449611", "@kiirokumart"],
+    ["53.jpg", "https://x.com/kiirokumart/status/1796935663662604550", "@kiirokumart"],
+    ["54.jpg", "https://x.com/kiirokumart/status/1796357010281451869", "@kiirokumart"],
+    ["55.jpg", "https://x.com/kiirokumart/status/1795528963227554194", "@kiirokumart"],
+    ["56.jpg", "https://x.com/kiirokumart/status/1793799354597204394", "@kiirokumart"],
+    ["57.jpg", "https://x.com/kiirokumart/status/1793013805624012839", "@kiirokumart"],
+    ["58.jpg", "https://x.com/kiirokumart/status/1788759289412124752", "@kiirokumart"],
+    ["59.jpg", "https://x.com/kiirokumart/status/1758714889499979998", "@kiirokumart"],
+    ["60.jpg", "https://x.com/kiirokumart/status/1756468590679867678", "@kiirokumart"],
+    ["61.jpg", "https://x.com/kiirokumart/status/1754570936693543395", "@kiirokumart"],
+    ["62.jpg", "https://x.com/kiirokumart/status/1754022541817967006", "@kiirokumart"],
+    ["63.jpg", "https://x.com/kiirokumart/status/1747788613776019752", "@kiirokumart"],
+    ["64.jpg", "https://x.com/kiirokumart/status/1745676667840758142", "@kiirokumart"],
+    ["65.jpg", "https://x.com/kiirokumart/status/1738907097385873726", "@kiirokumart"],
+    ["66.jpg", "https://x.com/kiirokumart/status/1731158412103135467", "@kiirokumart"],
+    ["67.jpg", "https://x.com/kiirokumart/status/1726073732374942046", "@kiirokumart"],
+    ["68.jpg", "https://x.com/kiirokumart/status/1696978319604863159", "@kiirokumart"],
+    ["69.jpg", "https://x.com/kiirokumart/status/1693345447606104151", "@kiirokumart"],
+    ["70.jpg", "https://x.com/kiirokumart/status/1682928831454228482", "@kiirokumart"],
+    ["71.jpg", "https://x.com/kiirokumart/status/1678125526022598658", "@kiirokumart"],
+    ["72.jpg", "https://x.com/kiirokumart/status/1811933861447688451", "@kiirokumart"],
+    ["73.jpg", "https://x.com/kiirokumart/status/1811238946996670956", "@kiirokumart"],
+    ["74.jpg", "https://x.com/kiirokumart/status/1810361471064272898", "@kiirokumart"],
+    ["75.jpg", "https://x.com/kiirokumart/status/1810148394318311924", "@kiirokumart"],
+
 ].map(value => ({ value, sort: Math.random() }))
 .sort((a, b) => a.sort - b.sort)
 .map(({ value }) => value);
@@ -50,5 +82,6 @@ const featuredArtList = [
 const artists = {
     "@nepnepu_2": "https://x.com/nepnepu_2",
     "@The_ChosenWoon": "https://x.com/The_ChosenWoon",
-    "@jollepoker": "https://x.com/jollepoker"
+    "@jollepoker": "https://x.com/jollepoker",
+    "@kiirokumart": "https://x.com/kiirokumart",
 }
