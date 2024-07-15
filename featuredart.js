@@ -74,7 +74,7 @@ const featuredArtList = [
     ["73.jpg", "https://x.com/kiirokumart/status/1811238946996670956", "@kiirokumart"],
     ["74.jpg", "https://x.com/kiirokumart/status/1810361471064272898", "@kiirokumart"],
     ["75.jpg", "https://x.com/kiirokumart/status/1810148394318311924", "@kiirokumart"],
-
+    ["76.jpg", "https://x.com/jollepoker/status/1812842926797389912", "@The_ChosenWoon"],
 ].map(value => ({ value, sort: Math.random() }))
 .sort((a, b) => a.sort - b.sort)
 .map(({ value }) => value);
