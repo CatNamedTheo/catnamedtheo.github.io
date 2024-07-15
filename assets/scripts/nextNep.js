@@ -249,8 +249,8 @@ const initFeaturedArt = () => {
     const artImage = aElements[0].children[0];
     artImage.src = preloadedArt[currentArtIndex].src;
     aElements[0].href = `${featuredArt[1]}`;
-    aElements[1].href = `${featuredArt[2]}`;
-    aElements[1].innerHTML = `art: ${featuredArt[3]}`;
+    aElements[1].href = artists[featuredArt[2]];
+    aElements[1].innerHTML = `art: ${featuredArt[2]}`;
 
     const updateFeaturedArt = (direction) => {
         if (isAnimating) return; // Prevent animation if one is already in progress
@@ -286,8 +286,8 @@ const initFeaturedArt = () => {
                 oldArt.className = "slide-in-right";
             }
             aElements[0].href = `${featuredArtList[newArtIndex][1]}`;
-            aElements[1].href = `${featuredArtList[newArtIndex][2]}`;
-            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex][3]}`;
+            aElements[1].href = artists[featuredArtList[newArtIndex][2]];
+            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex][2]}`;
 
             // Wait for the slide-in animation to complete before resetting
             setTimeout(() => {
