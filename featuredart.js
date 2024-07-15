@@ -65,7 +65,7 @@ const featuredArtList = [
     ["64.jpg", "https://x.com/kiirokumart/status/1745676667840758142", "@kiirokumart"],
     ["65.jpg", "https://x.com/kiirokumart/status/1738907097385873726", "@kiirokumart"],
     ["66.jpg", "https://x.com/kiirokumart/status/1731158412103135467", "@kiirokumart"],
-    ["67.jpg", "https://x.com/kiirokumart/status/1726073732374942046", "@kiirokumart"],
+    ["67.png", "https://x.com/kiirokumart/status/1726073732374942046", "@kiirokumart"],
     ["68.jpg", "https://x.com/kiirokumart/status/1696978319604863159", "@kiirokumart"],
     ["69.jpg", "https://x.com/kiirokumart/status/1693345447606104151", "@kiirokumart"],
     ["70.jpg", "https://x.com/kiirokumart/status/1682928831454228482", "@kiirokumart"],
