@@ -624,6 +624,10 @@ footer > a:hover {
 }
 
 @media screen and (min-width: 1440px) {
+    * {
+        font-size: calc(0.5vw + 0.5vh);
+    }
+
     header {
         flex-direction: row;
         justify-content: space-around;
@@ -631,13 +635,14 @@ footer > a:hover {
 
     header > img {
         margin: 0;
+        object-fit: contain;
     }
 
     header > div {
         margin-right: 8px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     #nepClock-schedule {
@@ -648,6 +653,10 @@ footer > a:hover {
         flex-direction: row;
         align-items: center;
         column-gap: 10px;
+    }
+
+    .nepClock-weekDay {
+        height: unset;
     }
 
     .nepClock-scheduleContent {
@@ -663,6 +672,15 @@ footer > a:hover {
         flex-direction: column;
     }
 
+    .nepClock-scheduleContent:empty:before {
+        height: calc(4vh - 1.2em);
+    }
+
+    .nepClock-scheduleContent:empty:after {
+        height: 4vh;
+        font-size: calc(0.8vw + 0.8vh);
+    }
+
     .nepClock-stream {
         flex-direction: row;
         justify-content: space-between;
@@ -674,11 +692,12 @@ footer > a:hover {
         text-align: center;
         border: 0;
         border-right: 3px solid #c0a092;
+        height: 8vh;
     }
 
     .nepClock-streamTitleImage {
-        max-width: 380px;
-        max-height: 120px;
+        max-width: 25vw;
+        min-height: 11vh;
     }
 
     .nepClock-stream:has(> h4:first-child:nth-last-child(2)),
@@ -689,5 +708,19 @@ footer > a:hover {
     .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> div:first-child:nth-last-child(3))
     {
         justify-content: space-evenly;
+    }
+
+    .nepClock-emote-right, .nepClock-emote-left {
+        height: 8vh;
+        width: 8vh;
+    }
+
+    footer > a, .twitch {
+        padding: 0.4vh 0.8vw;
+        font-size: calc(0.6vw + 0.6vh);
+    }
+
+    .nepClock-streamMonth, .nepClock-streamDay {
+        font-size: calc(1vw + 1vh);
     }
 }
