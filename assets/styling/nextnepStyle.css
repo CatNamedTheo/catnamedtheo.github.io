@@ -266,6 +266,7 @@ header > div > p {
 
 .nepClock-streamTitleImage {
     min-width: 30%;
+    max-width: 75%;
     max-height: 80px;
     filter: drop-shadow(0px 1px 0px #333);
     object-fit: scale-down;
@@ -697,7 +698,6 @@ footer > a:hover {
 
     .nepClock-streamTitleImage {
         width: 25vw;
-        max-width: 75%;
         min-height: 11vh;
     }
 
