@@ -269,7 +269,7 @@ header > div > p {
     max-width: 75%;
     max-height: 80px;
     filter: drop-shadow(0px 1px 0px #333);
-    object-fit: scale-down;
+    object-fit: contain;
     align-self: center;
 }
 
@@ -281,7 +281,7 @@ header > div > p {
     max-width: 140px;
     max-height: 40px;
     filter: drop-shadow(0px 1px 0px #333);
-    object-fit: scale-down;
+    object-fit: contain;
     align-self: center;
 }
 
