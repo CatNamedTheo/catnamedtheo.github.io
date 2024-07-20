@@ -696,7 +696,8 @@ footer > a:hover {
     }
 
     .nepClock-streamTitleImage {
-        max-width: 25vw;
+        width: 25vw;
+        max-width: 75%;
         min-height: 11vh;
     }
 
