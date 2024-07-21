@@ -701,14 +701,14 @@ footer > a:hover {
         min-height: 11vh;
     }
 
-    .nepClock-stream:has(> h4:first-child:nth-last-child(2)),
-    .nepClock-stream:has(> img:first-child:nth-last-child(2)),
-    .nepClock-stream:has(> div:first-child:nth-last-child(2)),
-    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> h4:first-child:nth-last-child(3)),
-    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> img:first-child:nth-last-child(3)),
-    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> div:first-child:nth-last-child(3))
+    .nepClock-stream:has(> *:first-child:nth-last-child(2)),
+    .nepClock-scheduleContent:has(> div:first-child:last-child) > .nepClock-stream:has(> *:first-child:nth-last-child(3))
     {
         justify-content: space-evenly;
+    }
+
+    .nepClock-stream:has(> *:first-child:nth-last-child(5)) .nepClock-streamTitleImage {
+        max-width: 30%;
     }
 
     .nepClock-emote-right, .nepClock-emote-left {

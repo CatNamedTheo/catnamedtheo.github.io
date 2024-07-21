@@ -1321,6 +1321,113 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-07-22T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'comment',
+                text: 'going back to new vegas!!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuCool.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-23T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuLove.png',
+            },
+            {
+                type: 'comment',
+                text: 'WAN WAN',
+            },
+            {
+                type: 'titleLogo',
+                image: 'pupperazzi.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-24T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'thebouncer.png',
+            },
+            {
+                type: 'comment',
+                text: 'PS2',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPeek.png',
+            },
+            {
+                type: 'comment',
+                text: 'pyon pyon',
+            },
+        ]
+    },
+    {
+        time: "2024-07-25T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-26T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mario64.png',
+            },
+        ]
+    },
+    {
+        time: "2024-07-26T22:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'watchalong: nisemonogatari ep 1-5',
+            },
+        ]
+    },
+    {
+        time: "2024-07-27T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'loong',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
