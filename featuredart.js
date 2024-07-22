@@ -75,6 +75,17 @@ const featuredArtList = [
     ["74.jpg", "https://x.com/kiirokumart/status/1810361471064272898", "@kiirokumart"],
     ["75.jpg", "https://x.com/kiirokumart/status/1810148394318311924", "@kiirokumart"],
     ["76.jpg", "https://x.com/jollepoker/status/1812842926797389912", "@The_ChosenWoon"],
+    ["77.jpg", "https://x.com/The_ChosenWoon/status/1813099176785232269", "@The_ChosenWoon"],
+    ["78.jpg", "https://x.com/kiirokumart/status/1813084433202966745", "@kiirokumart"],
+    ["79.jpg", "https://x.com/kiirokumart/status/1814159280066416804", "@kiirokumart"],
+    ["80.jpg", "https://x.com/Belphegoer_/status/1769661917382037684", "@Belphegoer_"],
+    ["81.jpg", "https://x.com/Belphegoer_/status/1783945190710898932", "@Belphegoer_"],
+    ["82.jpg", "https://x.com/Belphegoer_/status/1789004816091427141", "@Belphegoer_"],
+    ["83.jpg", "https://x.com/Belphegoer_/status/1791556161373626652", "@Belphegoer_"],
+    ["84.jpg", "https://x.com/Belphegoer_/status/1802443301758312878", "@Belphegoer_"],
+    ["85.jpg", "https://x.com/Belphegoer_/status/1815059147487867361", "@Belphegoer_"],
+    ["86.jpg", "https://x.com/grungoboi/status/1624382789343748099", "@grungoboi"],
+    ["87.jpg", "https://x.com/grungoboi/status/1663227188366262284", "@grungoboi"],
 ].map(value => ({ value, sort: Math.random() }))
 .sort((a, b) => a.sort - b.sort)
 .map(({ value }) => value);
