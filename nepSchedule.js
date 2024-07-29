@@ -1428,6 +1428,113 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-07-29T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuCool.png',
+            },
+            {
+                type: 'comment',
+                text: 'howdy!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-07-30T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'comment',
+                text: 'we win!!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-01T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuHmm.png',
+            },
+            {
+                type: 'title',
+                text: '???',
+            },
+            {
+                type: 'comment',
+                text: '+ summertime karaoke',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCheer.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-02T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mario64.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-02T22:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'watchalong: nisemonogatari ep 6-11',
+            },
+        ]
+    },
+    {
+        time: "2024-08-03T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'looong',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-04T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'pegglenights.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'comment',
+                text: 'neppie edition?!?!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
