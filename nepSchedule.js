@@ -36,11 +36,13 @@
  * Used to show a twitch emote slightly leaning to the right
  * type: 'rEmote',
  * image: 'name of image in twitchEmote folder, including filetype',
+ * wide: true, (optional, will make the emote wide if space allows it) 
  * 
  * LEmote
  * Used to show a twitch emote slightly leaning to the left
  * type: 'lEmote',
  * image: 'name of image in twitchEmote folder, including filetype',
+ * wide: true, (optional, will make the emote wide if space allows it) 
  * 
  * Comment
  * Used to display a text comment
@@ -1554,6 +1556,7 @@ const schedule = [
             {
                 type: 'rEmote',
                 image: 'nepuPog.png',
+                wide: true,
             },
         ]
     },
@@ -1633,6 +1636,7 @@ const schedule = [
             {
                 type: 'lEmote',
                 image: 'nepuPeek.png',
+                wide: true,
             },
             {
                 type: 'titleLogo',

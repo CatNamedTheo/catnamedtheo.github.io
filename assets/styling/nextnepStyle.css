@@ -296,6 +296,10 @@ header > div > p {
     align-self: center;
 }
 
+.nepClock-emote-right.nepClock-wideEmote, .nepClock-emote-left.nepClock-wideEmote {
+    width: 150px;
+}
+
 .nepClock-emote-right {
     transform: rotate(10deg);
 }
@@ -743,6 +747,10 @@ footer > a:hover {
     .nepClock-emote-right, .nepClock-emote-left {
         height: 8vh;
         width: 8vh;
+    }
+
+    .nepClock-emote-right.nepClock-wideEmote, .nepClock-emote-left.nepClock-wideEmote {
+        width: 16vh;
     }
 
     footer > a, .twitch {

@@ -84,12 +84,18 @@ class Stream {
                 case 'lEmote':
                     let lEmoteElement = document.createElement("img");
                     lEmoteElement.classList.add("nepClock-emote-left");
+                    if (layoutConfig.wide) {
+                        lEmoteElement.classList.add("nepClock-wideEmote");
+                    }
                     lEmoteElement.src = `./assets/images/twitchemotes/${layoutConfig.image}`;
                     this.streamElement.appendChild(lEmoteElement);
                     break;
                 case 'rEmote':
                     let rEmoteElement = document.createElement("img");
                     rEmoteElement.classList.add("nepClock-emote-right");
+                    if (layoutConfig.wide) {
+                        rEmoteElement.classList.add("nepClock-wideEmote");
+                    }
                     rEmoteElement.src = `./assets/images/twitchemotes/${layoutConfig.image}`;
                     this.streamElement.appendChild(rEmoteElement);
                     break;
