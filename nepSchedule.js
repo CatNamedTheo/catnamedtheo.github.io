@@ -6,6 +6,10 @@
  * A schedule layout HAS to include ONLY ONE of the "title" types
  * A schedule layout HAS to be accompanied with the scheduled time (Format example: 2024-04-08T16:00:00.000+01:00)
  * The components gets put on the schedule in the order specified
+ * A schedule can also have different settings set to true for additional display effects
+ * 
+ * There are two different settings:
+ * discord, glitter
  * 
  * There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
  * 
@@ -42,6 +46,7 @@
  * Used to display a text comment
  * type: 'comment',
  * text: 'text comment',
+ *
  */
 
 const schedule = [
@@ -1605,6 +1610,7 @@ const schedule = [
     },
     {
         time: "2024-08-09T17:00:00.000+01:00",
+        glitter: true,
         layout: [
             {
                 type: 'title',

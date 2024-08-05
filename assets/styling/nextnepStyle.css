@@ -435,9 +435,38 @@ footer > a:hover {
     background-color: #e1a2ab;
 }
 
+.nepClock-glitter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -41px;
+    left: -32px;
+    background-image: url(../images/glitter.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 82px;
+    width: 64px;
+}
+
+.nepClock-glitter::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -41px;
+    right: -32px;
+    background-image: url(../images/glitter.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 82px;
+    width: 64px;
+}
+
 .youtube::before {
     content: "";
     display: block;
+    position: absolute;
     background-image: url(../images/icons/youtube_icon.png);
     background-position: top left;
     background-repeat: no-repeat;

@@ -50,6 +50,9 @@ class Stream {
         if (this.streamConfig.discord) {
             this.streamElement.classList.add("nepClock-discordStream");
         }
+        if (this.streamConfig.glitter) {
+            this.streamElement.classList.add("nepClock-glitter");
+        }
 
         this.streamConfig.layout.forEach((layoutConfig) => {
             switch(layoutConfig.type) {
