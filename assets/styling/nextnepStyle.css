@@ -146,22 +146,23 @@ header > div > p {
     text-align: center;
     color: #e1a3ac;
     border: 2px solid #b16a75;
-    border: 2px solid #b16a75;
-    border: 2px solid #b16a75;
     border-radius: 40%;
     height: 2em;
     background-color: #fff;
     letter-spacing: 5px;
+    filter: drop-shadow(5px 6px 0px #e1a3ac);
 }
 
 .nepClock-weekDayWrapper:nth-child(3n+1) .nepClock-weekDay > h3 {
     color: #e1b58c;
     border-color: #c08666;
+    filter: drop-shadow(5px 6px 0px #e1b58c);
 }
 
 .nepClock-weekDayWrapper:nth-child(3n+2) .nepClock-weekDay > h3 {
     color: #b1a278;
     border-color: #7b7049;
+    filter: drop-shadow(5px 6px 0px #b1a278);
 }
 
 .nepClock-weekDaySchedule {
