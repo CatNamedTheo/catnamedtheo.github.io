@@ -1535,6 +1535,126 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-08-05T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.png',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of seasons!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPog.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-06T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuPray.png',
+            },
+            {
+                type: 'title',
+                text: 'banana bread',
+            },
+            {
+                type: 'comment',
+                text: 'handcam!'
+            }
+        ]
+    },
+    {
+        time: "2024-08-07T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'mmm stars',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuD.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mario64.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-08T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'finale!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCry.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-09T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'new outfit!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-09T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mariokart8.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-10T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuPeek.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffx-2.png',
+            },
+            {
+                type: 'comment',
+                text: 'yuna!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-11T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'subnautica.png',
+            },
+            {
+                type: 'comment',
+                text: 'eeee',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuSweat.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
