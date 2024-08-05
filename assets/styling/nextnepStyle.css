@@ -29,6 +29,7 @@ html {
 body {
     background: linear-gradient(0deg, rgba(230,199,174,1) 0%, rgba(242,216,191,1) 100%);
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -465,6 +466,7 @@ footer > a:hover {
     background-size: contain;
     height: 82px;
     width: 64px;
+    transform: rotate(180deg);
 }
 
 .youtube::before {
