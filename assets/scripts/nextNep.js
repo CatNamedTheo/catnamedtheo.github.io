@@ -247,6 +247,10 @@ const preloadImage = (index) => {
     }
 };
 
+const checkImageLink = (imageLink) => {
+    return imageLink === '-' || !imageLink ? 'javascript:void(0)' : imageLink;
+}
+
 const initFeaturedArt = () => {
     // Preload initial images
     preloadImage(currentArtIndex);
@@ -257,7 +261,7 @@ const initFeaturedArt = () => {
     const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
     const artImage = aElements[0].children[0];
     artImage.src = preloadedArt[currentArtIndex].src;
-    aElements[0].href = `${featuredArt.imageLink}`;
+    aElements[0].href = checkImageLink(featuredArt.imageLink);
     aElements[1].href = featuredArt.artistLink;
     aElements[1].innerHTML = `art: ${featuredArt.artist}`;
 
@@ -294,9 +298,10 @@ const initFeaturedArt = () => {
             } else {
                 oldArt.className = "slide-in-right";
             }
-            aElements[0].href = `${featuredArtList[newArtIndex].imageLink}`;
+
+            aElements[0].href = checkImageLink(featuredArtList[newArtIndex].imageLink);
             aElements[1].href = featuredArtList[newArtIndex].artistLink;
-            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex].artist}`;
+            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex].artist}`
 
             // Wait for the slide-in animation to complete before resetting
             setTimeout(() => {
