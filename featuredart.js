@@ -198,5 +198,3 @@ for (const [artist, images] of Object.entries(artSortedByArtist)) {
 }
 
 const featuredArtList = randomizeArray(Object.values(artSortedByArtist).flat());
-
-console.log(featuredArtList);
