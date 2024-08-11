@@ -259,7 +259,7 @@ const initFeaturedArt = () => {
     const artImage = aElements[0].children[0];
     artImage.src = preloadedArt[currentArtIndex].src;
     aElements[0].href = checkImageLink(featuredArt.imageLink);
-    aElements[1].href = featuredArt.artistLink;
+    aElements[1].href = checkImageLink(featuredArt.artistLink);
     aElements[1].innerHTML = `art: ${featuredArt.artist}`;
 
     const updateFeaturedArt = (direction) => {
@@ -297,7 +297,7 @@ const initFeaturedArt = () => {
             }
 
             aElements[0].href = checkImageLink(featuredArtList[newArtIndex].imageLink);
-            aElements[1].href = featuredArtList[newArtIndex].artistLink;
+            aElements[1].href = checkImageLink(featuredArtList[newArtIndex].artistLink);
             aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex].artist}`
 
             // Wait for the slide-in animation to complete before resetting
