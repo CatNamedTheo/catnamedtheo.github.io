@@ -180,18 +180,19 @@ const artSortedByArtist = unsortedArtList.reduce((acc, [image, imageLink, artist
     return acc;
 }, {});
 
-const startOfList = Object.keys(artSortedByArtist).map(artist => {
-    const randomIndex = Math.floor(Math.random() * artSortedByArtist[artist].length);
-    const [selectedImage] = artSortedByArtist[artist].splice(randomIndex, 1);
-    return selectedImage;
-}).sort(() => Math.random() - 0.5);
+const maxArtByArtist = 12;
 
-const endOfList = Object.keys(artSortedByArtist).map(artist => {
-    const randomIndex = Math.floor(Math.random() * artSortedByArtist[artist].length);
-    const [selectedImage] = artSortedByArtist[artist].splice(randomIndex, 1);
-    return selectedImage;
-}).sort(() => Math.random() - 0.5);
+for (const [artist, images] of Object.entries(artSortedByArtist)) {
+    artSortedByArtist[artist] = images.sort(() => 0.5 - Math.random()).slice(0, maxArtByArtist);
+}
 
-const remainingArt = Object.values(artSortedByArtist).flat().sort(() => Math.random() - 0.5);
+const featuredArtList = Object.values(artSortedByArtist).flat();
 
-const featuredArtList = [...startOfList, ...remainingArt, ...endOfList].filter((e) => { return e != null });
+for (let i = featuredArtList.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = featuredArtList[i];
+    featuredArtList[i] = featuredArtList[j];
+    featuredArtList[j] = temp;
+}
+
+console.log(featuredArtList);
