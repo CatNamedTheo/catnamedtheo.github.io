@@ -479,7 +479,6 @@ footer > a:hover {
 .youtube::before {
     content: "";
     display: block;
-    position: absolute;
     background-image: url(../images/icons/youtube_icon.png);
     background-position: top left;
     background-repeat: no-repeat;
