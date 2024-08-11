@@ -543,21 +543,6 @@ footer > a:hover {
     margin-left: -22px;
 }
 
-body:has(> .nepSweeper-secretContainer) {
-    overflow: hidden;
-}
-
-.nepSweeper-secretContainer {
-    display: block;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
 @media screen and (max-width: 879px) {
     #nepClock-featuredArt {
         display: flex;
