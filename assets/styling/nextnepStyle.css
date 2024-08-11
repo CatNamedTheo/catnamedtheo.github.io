@@ -137,7 +137,13 @@ header > div > p {
 }
 
 .nepClock-today > .nepClock-weekDay {
-    border: 5px solid red;
+    border: 5px solid #f5eda0;
+    box-shadow: #f5eda0 0 0 15px 8px;
+}
+
+.nepClock-today > .nepClock-weekDaySchedule > .nepClock-scheduleContent {
+    border: 3px solid #f5eda0;
+    box-shadow: #f5eda0 0 0 15px 8px;
 }
 
 .nepClock-weekDay > h3 {
