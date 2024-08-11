@@ -239,10 +239,10 @@ const appTick = () => {
     addWeekDates();
 };
 
-const preloadImage = (featuredArt, index) => {
+const preloadImage = (index) => {
     if (!preloadedArt[index]) {
         const img = new Image();
-        img.src = `./assets/images/featuredart/${featuredArt[0]}`;
+        img.src = `./assets/images/featuredart/${featuredArtList[index].image}`;
         preloadedArt[index] = img;
     }
 };
@@ -253,17 +253,17 @@ const checkImageLink = (imageLink) => {
 
 const initFeaturedArt = () => {
     // Preload initial images
-    preloadImage(featuredArtList[currentArtIndex], currentArtIndex);
-    preloadImage(featuredArtList[featuredArtList.length - 1], featuredArtList.length - 1);
-    preloadImage(featuredArtList[currentArtIndex + 1], currentArtIndex + 1);
+    preloadImage(currentArtIndex);
+    preloadImage(featuredArtList.length - 1);
+    preloadImage(currentArtIndex + 1);
     // Set the initial featured art without animation
     const featuredArt = featuredArtList[currentArtIndex];
     const aElements = document.querySelector("#nepClock-featuredArt").querySelectorAll("a");
     const artImage = aElements[0].children[0];
     artImage.src = preloadedArt[currentArtIndex].src;
-    aElements[0].href = checkImageLink(featuredArt[1]);
-    aElements[1].href = artists[featuredArt[2]];
-    aElements[1].innerHTML = `art: ${featuredArt[2]}`;
+    aElements[0].href = checkImageLink(featuredArt.imageLink);
+    aElements[1].href = featuredArt.artistLink;
+    aElements[1].innerHTML = `art: ${featuredArt.artist}`;
 
     const updateFeaturedArt = (direction) => {
         if (isAnimating) return; // Prevent animation if one is already in progress
@@ -275,7 +275,7 @@ const initFeaturedArt = () => {
 
         // Preload the next image in the same direciton
         const preloadIndex = (newArtIndex + direction + featuredArtList.length) % featuredArtList.length;
-        preloadImage(featuredArtList[preloadIndex], preloadIndex);
+        preloadImage(preloadIndex);
 
         // Set the appropriate classes for the animation direction
         if (direction === 1) {
@@ -298,9 +298,10 @@ const initFeaturedArt = () => {
             } else {
                 oldArt.className = "slide-in-right";
             }
-            aElements[0].href = checkImageLink(featuredArtList[newArtIndex][1]);
-            aElements[1].href = artists[featuredArtList[newArtIndex][2]];
-            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex][2]}`;
+
+            aElements[0].href = checkImageLink(featuredArtList[newArtIndex].imageLink);
+            aElements[1].href = featuredArtList[newArtIndex].artistLink;
+            aElements[1].innerHTML = `art: ${featuredArtList[newArtIndex].artist}`
 
             // Wait for the slide-in animation to complete before resetting
             setTimeout(() => {
