@@ -145,6 +145,7 @@ const unsortedArtList = [
     ["144.jpeg", "https://x.com/tsukimochiart/status/1818408034101522508", "@tsukimochiart"],
     ["145.jpg", "https://x.com/ACatNamedTheo1/status/1773438636995805664/", "@ACatNamedTheo1"],
     ["146.jpg", "https://x.com/ACatNamedTheo1", "@ACatNamedTheo1"],
+    ["147.jpg", "https://x.com/jollepoker/status/1676715049929285633", "@jollepoker"],
 ];
 
 const artists = {
