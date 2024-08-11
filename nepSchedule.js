@@ -1665,6 +1665,131 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-08-12T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.png',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of seasons!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-13T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ffxivdawntrail.png',
+            },
+            {
+                type: 'comment',
+                text: 'final!!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-14T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuBlush.png',
+            },
+            {
+                type: 'title',
+                text: 'drawing swimsuit neppie!!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-15T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: '70 stars..?',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuSalute.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mario64.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-16T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'puyopuyotetris2.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-16T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'Watchalong: 4 Movies!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-17T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'YRP!!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffx-2.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCheer.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-18T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'animalcrossingnewhorizons.png',
+            },
+            {
+                type: 'comment',
+                text: 'fish!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-18T24:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'ASMR YT upload',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

@@ -218,18 +218,15 @@ const addWeekDates = () => {
 const getFirstDateOfWeek = () => {
     const now = new Date();
     const firstDate = (new Date(now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? -6 : 1))));
-    firstDate.setHours(0);
-    firstDate.setMinutes(0);
-    firstDate.setSeconds(0);
+    firstDate.setHours(0,0,0);
     return firstDate;
 };
 
 const getLastDateOfWeek = () => {
     const now = new Date();
-    const lastDate = (new Date(now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? 0 : 7))));
-    lastDate.setHours(23);
-    lastDate.setMinutes(59);
-    lastDate.setSeconds(59);
+    now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? 0 : 8));
+    const lastDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
+    lastDate.setDate(lastDate.getDate() + 1);
     return lastDate;
 };
 

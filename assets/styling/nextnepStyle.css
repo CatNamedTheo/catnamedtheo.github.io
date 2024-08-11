@@ -59,44 +59,55 @@ header > div > p {
     border: 3px solid #c0a092;
 }
 
-header > div > .nepClock-links {
+.nepClock-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-header > div > .nepClock-links > a:not(.twitch) {
-    margin: 0.3em 0.1em;
-    text-align: center;
-    color: #e1a2ab;
-    padding: 0.5em 2em;
-    border-radius: 20px;
-    background-color: #fff;
-    border: 3px solid #c0a092;
+.nepClock-links > a {
+    display: block;
     text-decoration: none;
-}
-
-header > div > .nepClock-links > a:hover:not(.twitch) {
-    color: #fff;
-    background-color: #e1a2ab;
+    height: 5vh;
+    width: 5vw;
+    max-height: 100px;
+    max-width: 100px;
+    margin: 0 2em 0.5em 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .twitch {
-    display: block;
-    align-self: center;
-    width: fit-content;
-    padding: 0.5em 2em;
-    border-radius: 20px;
-    background-color: #a47e71;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 3px;
+    background-image: url(../images/icons/twitch.png);
 }
 
 .twitch:hover {
-    color: #a47e71;
-    background-color: white;
+    background-image: url(../images/icons/twitch_hover.png);
+}
+
+.youtube {
+    background-image: url(../images/icons/youtube.png);
+}
+
+.youtube:hover {
+    background-image: url(../images/icons/youtube_hover.png);
+}
+
+.twitter {
+    background-image: url(../images/icons/twitter.png);
+}
+
+.twitter:hover {
+    background-image: url(../images/icons/twitter_hover.png);
+}
+
+.discord {
+    background-image: url(../images/icons/discord.png);
+}
+
+.discord:hover {
+    background-image: url(../images/icons/discord_hover.png);
 }
 
 #nepClock-scheduleDate {
@@ -469,78 +480,6 @@ header > div > .nepClock-links > a:hover:not(.twitch) {
     transform: rotate(180deg);
 }
 
-.youtube::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/youtube_icon.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
-.twitter::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/x_icon.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
-.marshmallow::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/marshmallow_icon.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
-.streamelements::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/streamelements_icon.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
-.pixiv::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/pixiv_icon.jpeg);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
-.throne::before {
-    content: "";
-    display: block;
-    background-image: url(../images/icons/throne_icon.jpg);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 21px;
-    margin-top: -18px;
-    margin-left: -22px;
-}
-
 @media screen and (max-width: 879px) {
     #nepClock-featuredArt {
         display: flex;
@@ -654,8 +593,6 @@ header > div > .nepClock-links > a:hover:not(.twitch) {
     .nepClock-streamTitle {
         font-size: calc(1vw + 0.7vh);
     }
-	
-	
 }
 
 @media screen and (min-width: 1440px) {
