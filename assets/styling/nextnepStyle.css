@@ -70,7 +70,7 @@ header > div > p {
     text-decoration: none;
     height: 50px;
     width: 50px;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -371,9 +371,12 @@ header > div > p {
     padding-right: 0.3em;
 }
 
+.nepClock-streamTime > div, .nepClock-realTime > div {
+    font-size: calc(0.8vw + 0.8vh);
+}
+
 .nepClock-realTime {
     display: inline-block;
-    font-size: 0.8em;
     padding-right: 0.3em;
 }
 
