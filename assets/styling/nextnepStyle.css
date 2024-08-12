@@ -598,7 +598,7 @@ header > div > p {
 
 @media screen and (min-width: 1440px) {
     * {
-        font-size: calc(0.5vw + 0.5vh);
+        font-size: calc(0.5vw + 0.4vh);
     }
 
     header {
