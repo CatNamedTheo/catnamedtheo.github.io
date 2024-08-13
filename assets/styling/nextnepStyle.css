@@ -678,7 +678,7 @@ header > div > p {
 
     .nepClock-stream {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         font-size: 1.2em;
         align-items: center;
         padding-right: 1em;
