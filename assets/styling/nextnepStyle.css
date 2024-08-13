@@ -211,7 +211,7 @@ header > div > p {
     width: 100%;
 }
 
-.nepClock-weekDaySchedule:has(> .nepClock-scheduleContent > .nepClock-live)::before {
+.nepClock-weekDaySchedule:has(> .nepClock-scheduleContent > .nepClock-streamWrapper > .nepClock-live)::before {
     content: "LIVE";
     display: block;
     position: relative;
