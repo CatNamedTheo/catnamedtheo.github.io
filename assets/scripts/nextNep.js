@@ -112,9 +112,12 @@ class Stream {
 
         this.timeElement = document.createElement("div");
         this.timeElement.classList.add("nepClock-streamTime");
-        this.streamElement.appendChild(this.timeElement);
 
-        document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(this.streamElement);
+        let streamWrapper = document.createElement('div');
+        streamWrapper.classList.add("nepClock-streamWrapper");
+        streamWrapper.appendChild(this.streamElement);
+        document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
+        this.streamElement.parentNode.insertBefore(this.timeElement, this.streamElement.nextSibling);
     }
 
     printTime(updateTimer) {
@@ -176,10 +179,6 @@ class Stream {
                 const s = this.formatClockNumber(this.getSeconds(timeLeft));
 
                 this.timeStamp = "<div class='nepClock-countdown'>" + h + ":" + m + ":" + s + " </div><div class='nepClock-realTime'>" + this.getCombinedStartTime() + "</div>";
-
-                if (timeLeft < 3600000) {
-                    this.timeStamp += `<a href=${streamUrl}>[waiting room]</a>`;
-                }
             } else {
                 this.timeStamp = "<div class='nepClock-streamTime'>" + this.getCombinedStartTime() + "</div>";
             }
