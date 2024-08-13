@@ -85,7 +85,6 @@ const unsortedArtList = [
     ["84.jpg", "https://x.com/Belphegoer_/status/1802443301758312878", "@Belphegoer_"],
     ["85.jpg", "https://x.com/Belphegoer_/status/1815059147487867361", "@Belphegoer_"],
     ["86.jpg", "https://x.com/grungoboi/status/1624382789343748099", "@grungoboi"],
-    ["87.jpg", "https://x.com/grungoboi/status/1663227188366262284", "@grungoboi"],
     ["88.jpg", "https://x.com/ZXSTRLABORATORY/status/1781204272895385664", "@AmoebaLe"],
     ["89.jpg", "https://x.com/ZXSTRLABORATORY/status/1781204272895385664", "@AmoebaLe"],
     ["90.jpg", "https://x.com/ZXSTRLABORATORY/status/1781204272895385664", "@AmoebaLe"],
