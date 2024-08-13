@@ -202,6 +202,11 @@ header > div > p {
     filter: drop-shadow(5px 6px 0px #b1a278);
 }
 
+.nepClock-weekDayWrapper.nepClock-today > .nepClock-weekDay > h3 {
+    border: none;
+    filter: none;
+}
+
 .nepClock-weekDaySchedule {
     width: 100%;
 }
@@ -670,6 +675,7 @@ header > div > p {
         padding: 0;
         border: 0;
         border-right: 3px solid #c0a092;
+        height: 7.9vh;
     }
 
     .nepClock-streamWrapper:not(:last-child) {
