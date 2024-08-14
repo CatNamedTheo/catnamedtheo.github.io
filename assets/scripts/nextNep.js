@@ -216,7 +216,7 @@ const addWeekDates = () => {
 
 const getFirstDateOfWeek = () => {
     const now = new Date();
-    now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? -6 : 1));
+    now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? -6 : 2));
     const firstDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
     return firstDate;
 };
