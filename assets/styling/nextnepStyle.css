@@ -619,6 +619,7 @@ header > div > p {
     }
 
     header > img {
+        width: 320px;
         margin: 0;
         object-fit: contain;
     }
