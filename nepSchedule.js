@@ -1790,6 +1790,135 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-08-19T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuConfused.png',
+            },
+            {
+                type: 'comment',
+                text: 'Oracle of Seasons!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-20T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'painting handcam!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.png',
+            },
+            {
+                type: 'comment',
+                text: 'with nep ross!!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-21T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'touhou10.png',
+            },
+            {
+                type: 'comment',
+                text: 'touhou 10!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuRage.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-22T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'yippeee',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.png',
+            },
+            {
+                type: 'comment',
+                text: 'sunshine!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-23T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'segasuperstarstennis.png',
+            },
+            {
+                type: 'comment',
+                text: 'wii!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-23T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mhworld.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-24T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: '??? + chatting!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-24T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'planetarian.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-25T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuSalute.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffx-2.png',
+            },
+            {
+                type: 'comment',
+                text: 'sphere hunter neppie!!!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
