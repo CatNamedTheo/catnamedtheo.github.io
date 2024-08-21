@@ -161,7 +161,7 @@ const artists = {
     "@Heavic_": "https://x.com/Heavic_",
     "@SpookieJukes": "https://x.com/SpookieJukes",
     "@animated15265": "https://x.com/animated15265",
-    "@KMantidae": "https://x.com/KMantidae/status",
+    "@KMantidae": "https://x.com/KMantidae",
     "@Komeji_nouzy": "https://x.com/Komeji_nouzy",
     "@Laced_Ends": "https://x.com/Laced_Ends",
     "@meranyf__": "https://x.com/meranyf__",
