@@ -11,7 +11,7 @@ let today = new Date().getDay();
 let currentArtIndex = 0;
 let isAnimating = false;
 let featuredArtTiming = 10;
-let featuredArtTimer = 2;
+let featuredArtTimer = 2; // start on 2 since the sliding animation takes 2 seconds
 let pauseArtTimer = false;
 
 class Stream {
@@ -239,7 +239,6 @@ const appTick = () => {
     featuredArtTimer += window.matchMedia("(any-pointer: coarse)").matches ? 0 : 1;
     if (featuredArtTimer >= featuredArtTiming && !pauseArtTimer) {
         document.querySelector("#nepClock-featuredArt > .arrow-right").click();
-        featuredArtTimer = 0;
     }
 };
 
@@ -321,11 +320,13 @@ const initFeaturedArt = () => {
     document.querySelector("#nepClock-featuredArt > .arrow-left").addEventListener('click', () => {
         if (!isAnimating) {
             updateFeaturedArt(-1);
+            featuredArtTimer = 0;
         } 
     });
     document.querySelector("#nepClock-featuredArt > .arrow-right").addEventListener('click', () => {
         if (!isAnimating) {
             updateFeaturedArt(1);
+            featuredArtTimer = 0;
         }
     });
 
