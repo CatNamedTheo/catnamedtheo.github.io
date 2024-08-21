@@ -10,6 +10,9 @@ let lastLive = null;
 let today = new Date().getDay();
 let currentArtIndex = 0;
 let isAnimating = false;
+let featuredArtTiming = 10;
+let featuredArtTimer = 2;
+let pauseArtTimer = false;
 
 class Stream {
     constructor(streamConfig) {
@@ -215,17 +218,16 @@ const addWeekDates = () => {
 };
 
 const getFirstDateOfWeek = () => {
-    const now = new Date();
-    now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? -6 : 1));
-    const firstDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
+    const firstDate = new Date();
+    firstDate.setHours(2, 0, 0);
+    firstDate.setDate(firstDate.getDate() - firstDate.getDay() + (firstDate.getDay() == 0 ? -6 : 1));
     return firstDate;
 };
 
 const getLastDateOfWeek = () => {
-    const now = new Date();
-    now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? 0 : 8));
-    const lastDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
-    lastDate.setDate(lastDate.getDate() + 1);
+    const lastDate = new Date();
+    lastDate.setHours(2, 0, 0);
+    lastDate.setDate(lastDate.getDate() - lastDate.getDay() + (lastDate.getDay() == 0 ? 1 : 8));
     return lastDate;
 };
 
@@ -233,6 +235,12 @@ const appTick = () => {
     today = new Date().getDay();
     updateToday();
     addWeekDates();
+    // If the device cannot use a cursor, disable featuredArt slider
+    featuredArtTimer += window.matchMedia("(any-pointer: coarse)").matches ? 0 : 1;
+    if (featuredArtTimer >= featuredArtTiming && !pauseArtTimer) {
+        document.querySelector("#nepClock-featuredArt > .arrow-right").click();
+        featuredArtTimer = 0;
+    }
 };
 
 const preloadImage = (index) => {
@@ -320,6 +328,14 @@ const initFeaturedArt = () => {
             updateFeaturedArt(1);
         }
     });
+
+    document.querySelector("#nepClock-featuredArt").addEventListener('mouseover', () => {
+        pauseArtTimer = true;
+    })
+
+    document.querySelector("#nepClock-featuredArt").addEventListener('mouseout', () => {
+        pauseArtTimer = false;
+    })
 };
 
 const setStreamLive = () => {
