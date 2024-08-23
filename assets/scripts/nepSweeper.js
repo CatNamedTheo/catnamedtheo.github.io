@@ -26,6 +26,12 @@ class NepSweeper {
     masterButton = undefined;
     closeButton = undefined;
     secretContainer = undefined;
+    currentDifficulty = 'expert';
+    difficulties = [
+        {'name': 'beginner', 'x': 9, 'y': 9, 'mines': 10},
+        {'name': 'intermediate', 'x': 16, 'y': 16, 'mines': 40},
+        {'name': 'expert', 'x': 30, 'y': 16, 'mines': 99}
+    ];
 
     constructor() {
         window.addEventListener('keydown', (e) => {
@@ -376,13 +382,40 @@ class NepSweeper {
         }
 
         this.sanityCheck();
-        
+        // Game Options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('optionsContainer');
+
+        const difficultySelect = document.createElement('select');
+        difficultySelect.name = 'nepSweeper-difficultySelect';
+        difficultySelect.id = 'nepSweeper-difficultySelect';
+        this.difficulties.forEach((difficultySetting, index) => {
+            const difficulty = document.createElement('option');
+            difficulty.value = difficultySetting.name;
+            difficulty.innerHTML = difficultySetting.name;
+            difficultySelect.appendChild(difficulty);
+            if (difficultySetting.name === this.currentDifficulty) {
+                difficultySelect.selectedIndex = index;
+            }
+        });
+        difficultySelect.addEventListener('change', (event) => {
+            const newDifficulty = this.difficulties.find((diff) => diff.name === event.target.value);
+            this.xLength = newDifficulty.x;
+            this.yLength = newDifficulty.y;
+            this.mines = newDifficulty.mines;
+            this.currentDifficulty = newDifficulty.name;
+            this.start();
+        });
+        optionsContainer.appendChild(difficultySelect);
+
+        const gameWrapper = document.getElementsByClassName("nepSweeper-gameWrapper")[0];
+        gameWrapper.replaceChildren(optionsContainer);
+
         const gameContainer = document.createElement('div');
         gameContainer.classList.add('gameContainer');
         gameContainer.style.height = (this.yLength * 16) + 62 + "px";
         gameContainer.style.width = (this.xLength * 16) + 20 + "px";
-        const gameWrapper = document.getElementsByClassName("nepSweeper-gameWrapper")[0];
-        gameWrapper.replaceChildren(gameContainer);
+        gameWrapper.appendChild(gameContainer);
 
         // Top menu border
         gameContainer.appendChild(this.createGameSpriteElement('topLeftCornerBorder'));

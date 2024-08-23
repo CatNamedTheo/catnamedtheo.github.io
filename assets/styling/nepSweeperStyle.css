@@ -33,12 +33,15 @@ body:has(> .nepSweeper-secretContainer) {
     padding: 2vh;
 }
 
-.gameContainer {
-    background-color: #c88491;
+.nepSweeper-gameWrapper {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: scale(2) translate(-25%, -25%);
+}
+
+.gameContainer {
+    background-color: #c88491;
 }
 
 .gameSprite {
