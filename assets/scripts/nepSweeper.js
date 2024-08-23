@@ -6,9 +6,9 @@ let userSecret = "";
 class NepSweeper {
     xLength = 30;
     yLength = 16;
+    mines = 99;
     hiddenBoard = new Array(this.xLength * this.yLength);
     shownBoard = new Array(this.xLength * this.yLength);
-    mines = 99;
     hiddenTiles = this.xLength * this.yLength;
     minesLeft = this.mines;
     firstClick = true;
@@ -26,11 +26,11 @@ class NepSweeper {
     masterButton = undefined;
     closeButton = undefined;
     secretContainer = undefined;
-    currentDifficulty = 'expert';
+    currentDifficulty = 'nepxpert';
     difficulties = [
-        {'name': 'beginner', 'x': 9, 'y': 9, 'mines': 10},
-        {'name': 'intermediate', 'x': 16, 'y': 16, 'mines': 40},
-        {'name': 'expert', 'x': 30, 'y': 16, 'mines': 99}
+        {'name': 'beginnep', 'x': 9, 'y': 9, 'mines': 10},
+        {'name': 'internepiate', 'x': 16, 'y': 16, 'mines': 40},
+        {'name': 'nepxpert', 'x': 30, 'y': 16, 'mines': 99}
     ];
 
     constructor() {
@@ -377,7 +377,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=1.995';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.13';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -633,6 +633,7 @@ class NepSweeper {
         } else if (this.minesLeft === this.hiddenTiles) {
             this.masterButton.className += "gameSprite masterButtonWin";
             this.minesLeft = 0;
+            this.saveScore();
             this.printMinesLeft();
             this.gameEnd();
         }
@@ -643,6 +644,55 @@ class NepSweeper {
         this.revealRemainingMines();
         this.printTime();
         clearInterval(this.timeInterval);
+    }
+
+    saveScore = () => {
+        let difficultyData = document.cookie
+            .split("; ")
+            .find((row) => row.startsWith(this.currentDifficulty + "="))
+            ?.split("=")[1];
+        if (difficultyData) {
+            difficultyData = JSON.parse(difficultyData);
+        }
+        if (!Array.isArray(difficultyData)) {
+            difficultyData = [];
+        }
+        difficultyData.push(this.createScoreObject());
+        difficultyData.sort((a, b) => {
+            if (a.time < b.time) {
+                return -1;
+            }
+            if (a.time > b.time) {
+                return 1;
+            }
+            if (a.date < b.date) {
+                return -1;
+            }
+            if (a.date > b.date) {
+                return 1;
+            }
+            return 0;
+        })
+
+        if (difficultyData.length > 10) {
+            difficultyData.slice(-1);
+        }
+
+        let expireDate = new Date();
+        expireDate.setDate(400);
+        
+        document.cookie = this.currentDifficulty 
+            + "="
+            + JSON.stringify(difficultyData)
+            + ' ;SameSite=Lax ;expires='
+            + expireDate.toUTCString();
+    }
+
+    createScoreObject = () => {
+        return {
+            time: this.secondsSinceStart,
+            date: Date.now(),
+        }
     }
 
     resetBoard = () => {
