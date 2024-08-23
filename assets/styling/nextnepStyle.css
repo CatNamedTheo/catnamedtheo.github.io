@@ -80,32 +80,20 @@ header > div > p {
     background-image: url(../images/icons/twitch.png);
 }
 
-.twitch:hover {
-    background-image: url(../images/icons/twitch_hover.png);
-}
-
 .youtube {
     background-image: url(../images/icons/youtube.png);
-}
-
-.youtube:hover {
-    background-image: url(../images/icons/youtube_hover.png);
 }
 
 .twitter {
     background-image: url(../images/icons/twitter.png);
 }
 
-.twitter:hover {
-    background-image: url(../images/icons/twitter_hover.png);
-}
-
 .discord {
     background-image: url(../images/icons/discord.png);
 }
 
-.discord:hover {
-    background-image: url(../images/icons/discord_hover.png);
+.twitch:hover, .youtube:hover, .twitter:hover, .discord:hover {
+    filter: brightness(1.1);
 }
 
 #nepClock-scheduleDate {

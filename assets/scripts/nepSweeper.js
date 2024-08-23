@@ -377,7 +377,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.14';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.15';
             document.head.appendChild(nepSweeperStyle);
         }
 
