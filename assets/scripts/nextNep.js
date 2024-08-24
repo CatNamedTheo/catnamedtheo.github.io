@@ -10,7 +10,7 @@ let lastLive = null;
 let today = new Date().getDay();
 let currentArtIndex = 0;
 let isAnimating = false;
-let featuredArtTiming = 20;
+let featuredArtTiming = 15;
 let featuredArtTimer = 2; // start on 2 since the sliding animation takes 2 seconds
 let pauseArtTimer = false;
 
