@@ -1919,6 +1919,111 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-08-26T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuConfused.png',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of seasons!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-27T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'finishing!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'planetarian.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCry.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-28T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPog.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.png',
+            },
+            {
+                type: 'comment',
+                text: 'yahoooooo',
+            },
+        ]
+    },
+    {
+        time: "2024-08-29T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'pew pew',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ffx-2.png',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuCool.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-30T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'touhou10.png',
+            },
+        ]
+    },
+    {
+        time: "2024-08-30T21:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'karaoke!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-31T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'looking at ur outside pictures! + announcement!',
+            },
+        ]
+    },
+    {
+        time: "2024-08-31T21:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'lethalcompany.png',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

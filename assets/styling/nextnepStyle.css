@@ -219,17 +219,61 @@ header > div > p {
 
 .nepClock-discordStream::before {
     content: "";
-    position: absolute;
-    top: -28px;
-    right: -3px;
     display: block;
+    position: absolute;
+    top: -45px;
+    left: -34px;
     background-image: url(../images/icons/discord.png);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 45px;
-    width: 45px;
-    z-index: 2;
+    height: 63px;
+    width: 78px;
+    transform: rotate(-20deg);
+}
+
+.nepClock-discordStream::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -45px;
+    right: -34px;
+    background-image: url(../images/icons/discord.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 63px;
+    width: 78px;
+    transform: rotate(160deg);
+}
+
+.nepClock-glitter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -45px;
+    left: -32px;
+    background-image: url(../images/glitter.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 82px;
+    width: 64px;
+}
+
+.nepClock-glitter::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -45px;
+    right: -32px;
+    background-image: url(../images/glitter.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 82px;
+    width: 64px;
+    transform: rotate(180deg);
 }
 
 .nepClock-scheduleContent {
@@ -266,6 +310,7 @@ header > div > p {
 }
 
 .nepClock-streamWrapper {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -289,6 +334,7 @@ header > div > p {
     position: relative;
     height: 100px;
     width: 100%;
+    z-index: 2;
 }
 
 .nepClock-streamTime {
@@ -297,6 +343,7 @@ header > div > p {
     align-self: center;
     text-align: center;
     color: #b18073;
+    z-index: 2;
 }
 
 .nepClock-streamTitle {
@@ -450,35 +497,6 @@ header > div > p {
 .credit:hover {
     color: #dd9fa8;
     background-color: #fff;
-}
-
-.nepClock-glitter::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -41px;
-    left: -32px;
-    background-image: url(../images/glitter.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 82px;
-    width: 64px;
-}
-
-.nepClock-glitter::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -41px;
-    right: -32px;
-    background-image: url(../images/glitter.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 82px;
-    width: 64px;
-    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 879px) {

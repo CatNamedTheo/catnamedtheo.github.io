@@ -50,12 +50,6 @@ class Stream {
     initElements() {
         this.streamElement = document.createElement("div");
         this.streamElement.classList.add("nepClock-stream");
-        if (this.streamConfig.discord) {
-            this.streamElement.classList.add("nepClock-discordStream");
-        }
-        if (this.streamConfig.glitter) {
-            this.streamElement.classList.add("nepClock-glitter");
-        }
 
         this.streamConfig.layout.forEach((layoutConfig) => {
             switch(layoutConfig.type) {
@@ -118,6 +112,12 @@ class Stream {
 
         let streamWrapper = document.createElement('div');
         streamWrapper.classList.add("nepClock-streamWrapper");
+        if (this.streamConfig.discord) {
+            streamWrapper.classList.add("nepClock-discordStream");
+        }
+        if (this.streamConfig.glitter) {
+            streamWrapper.classList.add("nepClock-glitter");
+        }
         streamWrapper.appendChild(this.streamElement);
         document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
         this.streamElement.parentNode.insertBefore(this.timeElement, this.streamElement.nextSibling);
