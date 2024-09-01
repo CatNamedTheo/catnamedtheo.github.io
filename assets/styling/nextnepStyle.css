@@ -724,6 +724,7 @@ header > div > p {
     .nepClock-canceledStream:after {
         height: 4vh;
         font-size: calc(0.8vw + 0.8vh);
+        top: 1.2em;
     }
 
     .nepClock-streamWrapper {
