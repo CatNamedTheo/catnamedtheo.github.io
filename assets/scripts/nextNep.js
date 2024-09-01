@@ -118,6 +118,9 @@ class Stream {
         if (this.streamConfig.glitter) {
             streamWrapper.classList.add("nepClock-glitter");
         }
+        if (this.streamConfig.canceled) {
+            streamWrapper.classList.add("nepClock-canceledStream");
+        }
         streamWrapper.appendChild(this.streamElement);
         document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
         this.streamElement.parentNode.insertBefore(this.timeElement, this.streamElement.nextSibling);

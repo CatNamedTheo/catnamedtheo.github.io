@@ -7,9 +7,10 @@
  * A schedule layout HAS to be accompanied with the scheduled time (Format example: 2024-04-08T16:00:00.000+01:00)
  * The components gets put on the schedule in the order specified
  * A schedule can also have different settings set to true for additional display effects
+ * However, only one setting can be used at a time.
  * 
- * There are two different settings:
- * discord, glitter
+ * These are the settings:
+ * discord, glitter, canceled
  * 
  * There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
  * 
@@ -1989,6 +1990,7 @@ const schedule = [
     },
     {
         time: "2024-08-30T17:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
@@ -1998,6 +2000,7 @@ const schedule = [
     },
     {
         time: "2024-08-30T21:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'title',
@@ -2007,6 +2010,7 @@ const schedule = [
     },
     {
         time: "2024-08-31T17:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'title',
@@ -2016,7 +2020,7 @@ const schedule = [
     },
     {
         time: "2024-08-31T21:00:00.000+01:00",
-        discord: true,
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
