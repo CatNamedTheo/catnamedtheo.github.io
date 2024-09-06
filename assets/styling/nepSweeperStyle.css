@@ -179,7 +179,7 @@ body:has(> .nepSweeper-secretContainer) {
 
 .mineContainer div, .timeContainer div {
     width: 13px;
-    height: 23px;
+    height: 22px;
 }
 
 .gameSprite.counter0 {

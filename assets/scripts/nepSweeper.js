@@ -27,15 +27,17 @@ class NepSweeper {
     closeButton = undefined;
     secretContainer = undefined;
     currentDifficulty = 'nepxpert';
-    currentSpriteSheet = 'Spookyjukes';
+    currentSpriteSheet = 'spookyjukes';
     difficulties = [
         {'name': 'beginnep', 'x': 9, 'y': 9, 'mines': 10},
         {'name': 'internepiate', 'x': 16, 'y': 16, 'mines': 40},
         {'name': 'nepxpert', 'x': 30, 'y': 16, 'mines': 99}
     ];
     spriteSheets = [
-        {'name': 'Spookyjukes', 'url': 'jukessprite.png', 'color': '#c88491'},
-        {'name': 'JustAnimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'}
+        {'name': 'spookyjukes', 'url': 'jukessprite.png', 'color': '#c88491'},
+        {'name': 'justAnimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'},
+        {'name': 'minimalist', 'url': 'minimalist.png', 'color': '#ffffff'},
+        {'name': 'original', 'url': 'original.gif', 'color': '#bdbdbd'},
     ];
 
     constructor() {
@@ -428,7 +430,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.21';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.22';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -788,7 +790,7 @@ window.addEventListener("keydown", (e) => {
     if (userSecret !== secretString.slice(0, userSecret.length)) {
         userSecret = "";
     }
-    if (userSecret === secretString && !document.getElementsByClassName("nepSweeper-secretContainer")[0]) {
+    if (userSecret.toLowerCase() === secretString && !document.getElementsByClassName("nepSweeper-secretContainer")[0]) {
         const secretElement = document.createElement("div");
         secretElement.classList.add("nepSweeper-secretContainer");
         document.body.appendChild(secretElement);
