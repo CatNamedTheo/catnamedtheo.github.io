@@ -35,7 +35,7 @@ class NepSweeper {
     ];
     spriteSheets = [
         {'name': 'spookyjukes', 'url': 'jukessprite.png', 'color': '#c88491'},
-        {'name': 'justAnimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'},
+        {'name': 'justanimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'},
         {'name': 'minimalist', 'url': 'minimalist.png', 'color': '#ffffff'},
         {'name': 'original', 'url': 'original.gif', 'color': '#bdbdbd'},
     ];
