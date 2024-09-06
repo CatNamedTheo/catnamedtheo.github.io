@@ -1,3 +1,8 @@
+:root {
+    --nepSweeper-sprite-sheet: url('../images/minesweeper/jukessprite.png');
+    --nepSweeper-sprite-sheet-color: #c88491;
+}
+
 body:has(> .nepSweeper-secretContainer) {
     overflow: hidden;
 }
@@ -41,12 +46,13 @@ body:has(> .nepSweeper-secretContainer) {
 }
 
 .gameContainer {
-    background-color: #c88491;
+    background-color: var(--nepSweeper-sprite-sheet-color);
+    margin: 0 auto;
 }
 
 .gameSprite {
     float: left;
-    background-image: url('../images/minesweeper/jukessprite.png');
+    background-image: var(--nepSweeper-sprite-sheet);
     margin: 0;
     line-height: 0;
     font-size: 0;
@@ -104,14 +110,6 @@ body:has(> .nepSweeper-secretContainer) {
     background-position: -134px -39px;
     width: 10px;
     height: 32px;
-}
-
-.gameSprite.mineContainer {
-
-}
-
-.gameSprite.timeContainer {
-
 }
 
 .gameSprite.hiddenTile {

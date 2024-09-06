@@ -27,10 +27,15 @@ class NepSweeper {
     closeButton = undefined;
     secretContainer = undefined;
     currentDifficulty = 'nepxpert';
+    currentSpriteSheet = 'Spookyjukes';
     difficulties = [
         {'name': 'beginnep', 'x': 9, 'y': 9, 'mines': 10},
         {'name': 'internepiate', 'x': 16, 'y': 16, 'mines': 40},
         {'name': 'nepxpert', 'x': 30, 'y': 16, 'mines': 99}
+    ];
+    spriteSheets = [
+        {'name': 'Spookyjukes', 'url': 'jukessprite.png', 'color': '#c88491'},
+        {'name': 'JustAnimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'}
     ];
 
     constructor() {
@@ -85,6 +90,18 @@ class NepSweeper {
                 }
             }
         });
+
+        this.setDifficulty(document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("nepSweeperDifficulty="))
+            ?.split("=")[1]
+        );
+
+        this.setSpriteSheet(document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("nepSweeperSpriteSheet="))
+            ?.split("=")[1]
+        );
     }
 
     start = () => {
@@ -116,6 +133,40 @@ class NepSweeper {
             this.hiddenBoard[i] = i < this.mines ? 'M' : 0;
             this.shownBoard[i] = 'H';
         };
+    }
+
+    setDifficulty = (difficultyName) => {
+        if (!difficultyName) { return; }
+        const newDifficulty = this.difficulties.find((diff) => diff.name === difficultyName);
+        if (newDifficulty) {
+            this.xLength = newDifficulty.x;
+            this.yLength = newDifficulty.y;
+            this.mines = newDifficulty.mines;
+            this.currentDifficulty = newDifficulty.name;
+            let expireDate = new Date();
+            expireDate.setDate(400);
+            document.cookie = "nepSweeperDifficulty="
+                + newDifficulty.name
+                + ' ;SameSite=Lax ;expires='
+                + expireDate.toUTCString();
+        }
+    }
+
+    setSpriteSheet = (spriteSheetName) => {
+        if (!spriteSheetName) { return; }
+        const newSpriteSheet = this.spriteSheets.find((spriteSheet) => spriteSheet.name === spriteSheetName);
+        if (newSpriteSheet) {
+            const root = document.querySelector(':root');
+            root.style.setProperty('--nepSweeper-sprite-sheet', 'url("../images/minesweeper/' + newSpriteSheet.url + '")');
+            root.style.setProperty('--nepSweeper-sprite-sheet-color', newSpriteSheet.color);
+            this.currentSpriteSheet = newSpriteSheet.name;
+            let expireDate = new Date();
+            expireDate.setDate(400);
+            document.cookie = "nepSweeperSpriteSheet="
+                + newSpriteSheet.name
+                + ' ;SameSite=Lax ;expires='
+                + expireDate.toUTCString();
+        }
     }
 
     createNewGameBoard = (clickedIndex) => {
@@ -377,7 +428,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.20';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.21';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -399,14 +450,27 @@ class NepSweeper {
             }
         });
         difficultySelect.addEventListener('change', (event) => {
-            const newDifficulty = this.difficulties.find((diff) => diff.name === event.target.value);
-            this.xLength = newDifficulty.x;
-            this.yLength = newDifficulty.y;
-            this.mines = newDifficulty.mines;
-            this.currentDifficulty = newDifficulty.name;
+            this.setDifficulty(event.target.value);
             this.start();
         });
         optionsContainer.appendChild(difficultySelect);
+
+        const spriteSheetSelect = document.createElement('select');
+        spriteSheetSelect.name = 'nepSweeper-spriteSheetSelect';
+        spriteSheetSelect.id = 'nepSweeper-spriteSheetSelect';
+        this.spriteSheets.forEach((spriteSheetSetting, index) => {
+            const spriteSheet = document.createElement('option');
+            spriteSheet.value = spriteSheetSetting.name;
+            spriteSheet.innerHTML = spriteSheetSetting.name;
+            spriteSheetSelect.appendChild(spriteSheet);
+            if (spriteSheetSetting.name === this.currentSpriteSheet) {
+                spriteSheetSelect.selectedIndex = index;
+            }
+        });
+        spriteSheetSelect.addEventListener('change', (event) => {
+            this.setSpriteSheet(event.target.value);
+        });
+        optionsContainer.appendChild(spriteSheetSelect);
 
         const gameWrapper = document.getElementsByClassName("nepSweeper-gameWrapper")[0];
         gameWrapper.replaceChildren(optionsContainer);
