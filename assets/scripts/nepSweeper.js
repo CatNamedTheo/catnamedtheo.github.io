@@ -28,6 +28,7 @@ class NepSweeper {
     secretContainer = undefined;
     currentDifficulty = 'nepxpert';
     currentSpriteSheet = 'spookyjukes';
+    currentZoomLevel = '200%';
     difficulties = [
         {'name': 'beginnep', 'x': 9, 'y': 9, 'mines': 10},
         {'name': 'internepiate', 'x': 16, 'y': 16, 'mines': 40},
@@ -38,6 +39,12 @@ class NepSweeper {
         {'name': 'justanimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'},
         {'name': 'minimalist', 'url': 'minimalist.png', 'color': '#ffffff'},
         {'name': 'original', 'url': 'original.gif', 'color': '#bdbdbd'},
+    ];
+    zoomLevels = [
+        {'name': '100%', 'scale': 1, 'translate': 50},
+        {'name': '150%', 'scale': 1.5, 'translate': 35},
+        {'name': '200%', 'scale': 2, 'translate': 25},
+        {'name': '300%', 'scale': 3, 'translate': 15}
     ];
 
     constructor() {
@@ -104,6 +111,12 @@ class NepSweeper {
             .find((row) => row.startsWith("nepSweeperSpriteSheet="))
             ?.split("=")[1]
         );
+
+        this.setSpriteSheet(document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("nepSweeperZoomLevel="))
+            ?.split("=")[1]
+        );
     }
 
     start = () => {
@@ -166,6 +179,25 @@ class NepSweeper {
             expireDate.setDate(400);
             document.cookie = "nepSweeperSpriteSheet="
                 + newSpriteSheet.name
+                + ' ;SameSite=Lax ;expires='
+                + expireDate.toUTCString();
+        }
+    }
+
+    setZoomLevel = (zoomLevel) => {
+        if (!zoomLevel) { return; }
+        const newZoomLevel = this.zoomLevels.find((zoomSetting) => zoomSetting.name === zoomLevel);
+        if (newZoomLevel) {
+            const root = document.querySelector(':root');
+            root.style.setProperty('--nepSweeper-zoomLevel', 
+                'scale(' + newZoomLevel.scale + ') ' +
+                'translate(-' + newZoomLevel.translate + '%, -' + newZoomLevel.translate + '%)'
+            );
+            this.currentZoomLevel = newZoomLevel.name;
+            let expireDate = new Date();
+            expireDate.setDate(400);
+            document.cookie = "nepSweeperZoom="
+                + newZoomLevel.name
                 + ' ;SameSite=Lax ;expires='
                 + expireDate.toUTCString();
         }
@@ -439,6 +471,24 @@ class NepSweeper {
         const optionsContainer = document.createElement('div');
         optionsContainer.classList.add('optionsContainer');
 
+        const zoomSelect = document.createElement('select');
+        zoomSelect.name = 'nepSweeper-zoomSelect';
+        zoomSelect.id = 'nepSweeper-zoomSelect';
+        this.zoomLevels.forEach((zoomSetting, index) => {
+            const zoomLevel = document.createElement('option');
+            zoomLevel.value = zoomSetting.name;
+            zoomLevel.innerHTML = zoomSetting.name;
+            zoomSelect.appendChild(zoomLevel);
+            if (zoomSetting.name === this.currentZoomLevel) {
+                zoomSelect.selectedIndex = index;
+            }
+        });
+        zoomSelect.addEventListener('change', (event) => {
+            this.setZoomLevel(event.target.value);
+            event.target.blur();
+        });
+        optionsContainer.appendChild(zoomSelect);
+
         const difficultySelect = document.createElement('select');
         difficultySelect.name = 'nepSweeper-difficultySelect';
         difficultySelect.id = 'nepSweeper-difficultySelect';
@@ -453,6 +503,7 @@ class NepSweeper {
         });
         difficultySelect.addEventListener('change', (event) => {
             this.setDifficulty(event.target.value);
+            event.target.blur();
             this.start();
         });
         optionsContainer.appendChild(difficultySelect);
@@ -471,6 +522,7 @@ class NepSweeper {
         });
         spriteSheetSelect.addEventListener('change', (event) => {
             this.setSpriteSheet(event.target.value);
+            event.target.blur();
         });
         optionsContainer.appendChild(spriteSheetSelect);
 

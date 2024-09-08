@@ -1,6 +1,7 @@
 :root {
     --nepSweeper-sprite-sheet: url('../images/minesweeper/jukessprite.png');
     --nepSweeper-sprite-sheet-color: #c88491;
+    --nepSweeper-zoomLevel: scale(2) translate(-25%, -25%);
 }
 
 body:has(> .nepSweeper-secretContainer) {
@@ -42,7 +43,7 @@ body:has(> .nepSweeper-secretContainer) {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: scale(2) translate(-25%, -25%);
+    transform: var(--nepSweeper-zoomLevel);
 }
 
 .gameContainer {
