@@ -19,7 +19,7 @@ body:has(> .nepSweeper-secretContainer) {
     z-index: 100;
 }
 
-.nepSweeper-secretContainerClose {
+.nepSweeper-secretContainerClose, .nepSweeper-leaderBoardClose {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +29,7 @@ body:has(> .nepSweeper-secretContainer) {
     margin: 0 auto;
 }
 
-.nepSweeper-secretContainerClose::before {
+.nepSweeper-secretContainerClose::before, .nepSweeper-leaderBoardClose::before {
     content: "X";
     display: inline-block;
     height: 4vh;
@@ -255,4 +255,36 @@ body:has(> .nepSweeper-secretContainer) {
     background-position: -104px -55px;
     height: 26px;
     width: 26px;
+}
+
+.nepSweeper-leaderBoardWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 200;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.nepSweeper-leaderBoardWrapper * {
+    font-size: calc(0.8vw + 0.8vh);
+}
+
+.nepSweeper-leaderBoardScoresWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: calc(3vh + 3vw);
+}
+
+.nepSweeper-leaderBoardList {
+    padding-left: 20px;
+}
+
+.nepSweeper-leaderBoardDifficultyWrapper {
+    margin-right: 0.5vw;
 }

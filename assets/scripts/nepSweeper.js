@@ -457,12 +457,106 @@ class NepSweeper {
         }
     }
 
+    openLeaderBoard = () => {
+        if (document.querySelector('.nepSweeper-leaderBoardWrapper')) {
+            return;
+        }
+
+        const leaderBoardWrapper = document.createElement('div');
+        leaderBoardWrapper.classList.add('nepSweeper-leaderBoardWrapper');
+
+        const leaderBoardClose = document.createElement("div");
+        leaderBoardClose.classList.add("nepSweeper-leaderBoardClose");
+        leaderBoardClose.addEventListener('click', this.closeLeaderBoard);
+        leaderBoardWrapper.appendChild(leaderBoardClose);
+
+        const leaderBoardScoresWrapper = document.createElement('div');
+        leaderBoardScoresWrapper.classList.add('nepSweeper-leaderBoardScoresWrapper');
+
+        this.difficulties.forEach((difficultySetting) => {
+            const difficultyWrapper = document.createElement('div');
+            difficultyWrapper.classList.add('nepSweeper-leaderBoardDifficultyWrapper');
+
+            const difficultyTitle = document.createElement('h2');
+            difficultyTitle.classList.add('nepSweeper-leaderBoardDifficultyTitle');
+            difficultyTitle.innerHTML = difficultySetting.name;
+            difficultyWrapper.appendChild(difficultyTitle);
+
+            let difficultyScores = document.cookie
+                .split("; ")
+                .find((row) => row.startsWith(difficultySetting.name + "="))
+                ?.split("=")[1];
+            if (difficultyScores) {
+                difficultyScores = JSON.parse(difficultyScores);
+            }
+            if (Array.isArray(difficultyScores)) {
+                const scoreList = document.createElement('ol');
+                scoreList.classList.add('nepSweeper-leaderBoardList');
+                
+                difficultyScores.forEach((score) => {
+                    const scoreTime = new Date(score.date);
+                    const scoreElement = document.createElement('li');
+                    scoreElement.innerHTML = score.time + '\xa0\xa0 | ' + scoreTime.toLocaleString();
+                    scoreList.appendChild(scoreElement);
+                });
+                difficultyWrapper.appendChild(scoreList);
+            }
+            leaderBoardScoresWrapper.appendChild(difficultyWrapper);
+        });
+
+        leaderBoardWrapper.appendChild(leaderBoardScoresWrapper);
+        document.body.appendChild(leaderBoardWrapper);
+    }
+
+    closeLeaderBoard = () => {
+        const leaderBoardWrapper = document.getElementsByClassName('nepSweeper-leaderBoardWrapper')[0];
+        if (leaderBoardWrapper) {
+            leaderBoardWrapper.replaceChildren();
+            leaderBoardWrapper.remove();
+        }
+    }
+
+    showLeaderBoardDifficulty = (difficultyName) => {
+        const leaderBoardScoresWrapper = document.querySelector('.nepSweeper-leaderBoardScoresWrapper');
+        if (!leaderBoardScoresWrapper) {
+            return;
+        }
+
+        const difficultyTitle = document.createElement('h2');
+        difficultyTitle.classList.add('nepSweeper-leaderBoardDifficultyTitle');
+        difficultyTitle.innerHTML = difficultyName;
+        leaderBoardScoresWrapper.replaceChildren(difficultyTitle);
+
+        let leaderBoardScores = document.cookie
+            .split("; ")
+            .find((row) => row.startsWith(difficultyName + "="))
+            ?.split("=")[1];
+        if (leaderBoardScores) {
+            leaderBoardScores = JSON.parse(leaderBoardScores);
+        }
+        if (!Array.isArray(leaderBoardScores) || !leaderBoardScores) {
+            return;
+        }
+
+        const leaderBoardList = document.createElement('ol');
+        leaderBoardList.classList.add('nepSweeper-leaderBoardList');
+        
+        leaderBoardScores.forEach((score) => {
+            const scoreTime = new Date(score.date);
+            const scoreElement = document.createElement('li');
+            scoreElement.innerHTML = score.time + ' (' + scoreTime.toLocaleString() + ')';
+            leaderBoardList.appendChild(scoreElement);
+        });
+
+        leaderBoardScoresWrapper.appendChild(leaderBoardList);
+    }
+
     firstPrint = () => {
         if (!document.getElementById('nepSweeperStyle')) {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.23';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.24';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -525,6 +619,13 @@ class NepSweeper {
             event.target.blur();
         });
         optionsContainer.appendChild(spriteSheetSelect);
+
+        const leaderBoardButton = document.createElement('button');
+        leaderBoardButton.name = 'nepSweeper-leaderBoardButton';
+        leaderBoardButton.id = 'nepSweeper-leaderBoardButton';
+        leaderBoardButton.innerHTML = 'leaderboard';
+        leaderBoardButton.addEventListener('click', this.openLeaderBoard);
+        optionsContainer.appendChild(leaderBoardButton);
 
         const gameWrapper = document.getElementsByClassName("nepSweeper-gameWrapper")[0];
         gameWrapper.replaceChildren(optionsContainer);
