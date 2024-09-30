@@ -2028,6 +2028,116 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-09-30T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuHug.png',
+            },
+            {
+                type: 'comment',
+                text: 'making friends!!',
+            },
+        ]
+    },
+    {
+        time: "2024-10-02T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.png',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of seasons!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuHmm.png',
+            },
+        ]
+    },
+    {
+        time: "2024-10-03T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'comment',
+                text: 'ehe',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.png',
+            },
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+            {
+                type: 'comment',
+                text: 'probably crimes',
+            },
+        ]
+    },
+    {
+        time: "2024-10-04T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPog.png',
+            },
+            {
+                type: 'title',
+                text: 'Your Summer Pictures!',
+            },
+        ]
+    },
+    {
+        time: "2024-10-04T21:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'newvegas.png',
+            },
+        ]
+    },
+    {
+        time: "2024-10-05T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'legologo.svg',
+            },
+            {
+                type: 'comment',
+                text: 'Handcam',
+            },
+        ]
+    },
+    {
+        time: "2024-10-05T21:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'civilizationvi.png',
+            },
+            {
+                type: 'comment',
+                text: 'together!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

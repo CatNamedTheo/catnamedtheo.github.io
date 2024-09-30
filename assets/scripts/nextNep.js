@@ -20,6 +20,7 @@ class Stream {
         this.streamConfig = streamConfig;
         this.streamDate = new Date(streamConfig.time);
         this.weekDay = weekDays[this.streamDate.getUTCDay()];
+        this.hideDate = false;
         this.live = false;
         if (this.streamDate >= getFirstDateOfWeek() && this.streamDate <= getLastDateOfWeek()) {
             this.interval = setInterval(() => {
@@ -107,6 +108,9 @@ class Stream {
             }
         });
 
+        if (this.streamConfig.hideDate) {
+            this.hideDate = true;
+        } 
         this.timeElement = document.createElement("div");
         this.timeElement.classList.add("nepClock-streamTime");
 
@@ -121,12 +125,16 @@ class Stream {
         if (this.streamConfig.canceled) {
             streamWrapper.classList.add("nepClock-canceledStream");
         }
+        
         streamWrapper.appendChild(this.streamElement);
         document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
         this.streamElement.parentNode.insertBefore(this.timeElement, this.streamElement.nextSibling);
     }
 
     printTime(updateTimer) {
+        if (this.hideDate) {
+            return;
+        }
         if (updateTimer) {
             this.updateTimer();
         }
@@ -164,6 +172,9 @@ class Stream {
     }
 
     updateTimer() {
+        if (this.hideDate) {
+            return;
+        }
         const now = new Date();
         
         if (this.live) {
