@@ -62,7 +62,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuLove.png',
+                image: 'nepuLove.webp',
             },
             {
                 type: 'comment',
@@ -75,7 +75,7 @@ const schedule = [
         layout: [
             { 
                 type: 'rEmote',
-                image: 'nepuScared.png',
+                image: 'nepuScared.webp',
             },
             {
                 type: 'comment',
@@ -100,7 +100,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             }
         ]
     },
@@ -113,7 +113,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPray.png',
+                image: 'nepuPray.webp',
             },
             {
                 type: 'title',
@@ -139,7 +139,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'title',
@@ -160,7 +160,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuSweat.png',
+                image: 'nepuSweat.webp',
             }
         ]
     },
@@ -173,11 +173,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'ds2.png',
+                image: 'ds2.webp',
             },
         ]
     },
@@ -186,7 +186,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'oldschoolrs.png',
+                image: 'oldschoolrs.webp',
             },
             {
                 type: 'comment',
@@ -199,7 +199,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
             {
                 type: 'comment',
@@ -207,7 +207,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'linksawakening.png',
+                image: 'linksawakening.webp',
             },
         ]
     },
@@ -216,12 +216,12 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogoText',
-                image: 'warhammer40k.png',
+                image: 'warhammer40k.webp',
                 text: 'handcam',
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
         ]
     },
@@ -239,7 +239,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'civilizationvi.png',
+                image: 'civilizationvi.webp',
             },
             {
                 type: 'comment',
@@ -252,7 +252,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
             {
                 type: 'comment',
@@ -260,7 +260,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
         ]
     },
@@ -269,11 +269,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ds2.png',
+                image: 'ds2.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuF.png',
+                image: 'nepuF.webp',
             },
             {
                 type: 'comment',
@@ -286,7 +286,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuScared.png',
+                image: 'nepuScared.webp',
             },
             {
                 type: 'comment',
@@ -294,7 +294,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'projectzero.png',
+                image: 'projectzero.webp',
             },
         ]
     },
@@ -303,7 +303,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'hollowknight.png',
+                image: 'hollowknight.webp',
             },
             {
                 type: 'comment',
@@ -311,7 +311,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
             },
         ]
     },
@@ -324,11 +324,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
         ]
     },
@@ -337,11 +337,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'doom2.png',
+                image: 'doom2.webp',
             },
         ]
     },
@@ -351,7 +351,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'projectzomboid.png',
+                image: 'projectzomboid.webp',
             },
         ]
     },
@@ -360,11 +360,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mhworld.png',
+                image: 'mhworld.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png'
+                image: 'nepuBlanky.webp'
             },
         ]
     },
@@ -388,11 +388,11 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuSweat.png',
+                image: 'nepuSweat.webp',
             },
             {
                 type: 'rEmote',
-                image: 'duolingobird.png',
+                image: 'duolingobird.webp',
             }
         ]
     },
@@ -401,7 +401,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'hollowknight.png',
+                image: 'hollowknight.webp',
             },
             {
                 type: 'comment',
@@ -409,7 +409,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuNotlikethis.png',
+                image: 'nepuNotlikethis.webp',
             }
         ]
     },
@@ -418,7 +418,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'comment',
@@ -426,7 +426,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             }
         ]
     },
@@ -435,11 +435,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'doom2.png',
+                image: 'doom2.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuConfused.png',
+                image: 'nepuConfused.webp',
             },
             {
                 type: 'comment',
@@ -456,11 +456,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'nobeta.png',
+                image: 'nobeta.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuCry.png',
+                image: 'nepuCry.webp',
             }
         ]
     },
@@ -469,7 +469,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogoText',
-                image: 'warhammer40k.png',
+                image: 'warhammer40k.webp',
                 text: 'handcam!',
             },
         ]
@@ -479,11 +479,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuSalute.png',
+                image: 'nepuSalute.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'mhworld.png',
+                image: 'mhworld.webp',
             },
         ]
     },
@@ -492,7 +492,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'title',
@@ -505,7 +505,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuStraight.png',
+                image: 'nepuStraight.webp',
             },
             {
                 type: 'title',
@@ -513,7 +513,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
         ]
     },
@@ -522,7 +522,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'neppieshoppityhop.png',
+                image: 'neppieshoppityhop.webp',
             },
             {
                 type: 'comment',
@@ -530,7 +530,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -543,11 +543,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlush.png',
+                image: 'nepuBlush.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'nobeta.png',
+                image: 'nobeta.webp',
             },
         ]
     },
@@ -556,11 +556,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
             {
                 type: 'comment',
@@ -577,11 +577,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
             },
         ]
     },
@@ -608,11 +608,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'projectzero.png',
+                image: 'projectzero.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuScared.png',
+                image: 'nepuScared.webp',
             },
             {
                 type: 'comment',
@@ -625,7 +625,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuHmm.png',
+                image: 'nepuHmm.webp',
             },
             {
                 type: 'comment',
@@ -633,7 +633,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'shashingo.png',
+                image: 'shashingo.webp',
             },
         ]
     },
@@ -642,7 +642,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'pokemonmysterydungeonresuceteamdx.png',
+                image: 'pokemonmysterydungeonresuceteamdx.webp',
             },
             {
                 type: 'comment',
@@ -650,7 +650,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuHmm.png',
+                image: 'nepuHmm.webp',
             },
         ]
     },
@@ -663,11 +663,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
         ]
     },
@@ -676,11 +676,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuBlush.png',
+                image: 'nepuBlush.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'nobeta.png',
+                image: 'nobeta.webp',
             },
             {
                 type: 'comment',
@@ -693,7 +693,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -720,7 +720,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mhworld.png',
+                image: 'mhworld.webp',
             },
         ]
     },
@@ -729,7 +729,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'eledees.png',
+                image: 'eledees.webp',
             },
             {
                 type: 'comment',
@@ -737,7 +737,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -746,11 +746,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'comment',
@@ -763,7 +763,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'comment',
@@ -771,7 +771,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -784,7 +784,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuSalute.png',
+                image: 'nepuSalute.webp',
             },
         ]
     },
@@ -793,7 +793,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'nobeta.png',
+                image: 'nobeta.webp',
             },
         ]
     },
@@ -811,11 +811,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newoutfitreveal.png',
+                image: 'newoutfitreveal.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -824,7 +824,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
         ]
     },
@@ -833,11 +833,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuLove.png',
+                image: 'nepuLove.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'pokemonmysterydungeonresuceteamdx.png',
+                image: 'pokemonmysterydungeonresuceteamdx.webp',
             },
             {
                 type: 'comment',
@@ -850,11 +850,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuLove.png',
+                image: 'nepuLove.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'pokemonmysterydungeonresuceteamdx.png',
+                image: 'pokemonmysterydungeonresuceteamdx.webp',
             },
             {
                 type: 'comment',
@@ -867,11 +867,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'comment',
@@ -884,7 +884,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'comment',
@@ -892,7 +892,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -905,7 +905,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuSalute.png',
+                image: 'nepuSalute.webp',
             },
         ]
     },
@@ -914,7 +914,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'nobeta.png',
+                image: 'nobeta.webp',
             },
         ]
     },
@@ -932,11 +932,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newoutfitreveal.png',
+                image: 'newoutfitreveal.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -945,7 +945,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
         ]
     },
@@ -954,11 +954,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuCheer.png',
+                image: 'nepuCheer.webp',
             },
             {
                 type: 'comment',
@@ -975,11 +975,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuPray.png',
+                image: 'nepuPray.webp',
             },
         ]
     },
@@ -988,7 +988,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'comment',
@@ -996,7 +996,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -1009,7 +1009,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuCheer.png',
+                image: 'nepuCheer.webp',
             },
         ]
     },
@@ -1027,11 +1027,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuScared.png',
+                image: 'nepuScared.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'dontscream.png',
+                image: 'dontscream.webp',
             },
         ]
     },
@@ -1053,11 +1053,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'littlefriendsdogsandcats.png',
+                image: 'littlefriendsdogsandcats.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuLove.png',
+                image: 'nepuLove.webp',
             },
         ]
     },
@@ -1066,11 +1066,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
             {
                 type: 'comment',
@@ -1083,7 +1083,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuStare.png',
+                image: 'nepuStare.webp',
             },
             {
                 type: 'title',
@@ -1100,11 +1100,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'bloodborne.png',
+                image: 'bloodborne.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
         ]
     },
@@ -1117,11 +1117,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'minecraft.png',
+                image: 'minecraft.webp',
             },
         ]
     },
@@ -1130,7 +1130,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
         ]
     },
@@ -1148,7 +1148,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -1166,7 +1166,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1179,7 +1179,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1192,7 +1192,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1205,7 +1205,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1218,7 +1218,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1231,7 +1231,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuCheer.png',
+                image: 'nepuCheer.webp',
             }, 
             {
                 type: 'title',
@@ -1239,7 +1239,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
         ]
     },
@@ -1252,11 +1252,11 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
         ]
     },
@@ -1265,7 +1265,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1273,7 +1273,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
             },
         ]
     },
@@ -1286,11 +1286,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
         ]
     },
@@ -1299,11 +1299,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'grandia2.png',
+                image: 'grandia2.webp',
             },
             {
                 type: 'comment',
@@ -1316,7 +1316,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'enderlilies.png',
+                image: 'enderlilies.webp',
             },
         ]
     },
@@ -1334,7 +1334,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'comment',
@@ -1342,7 +1342,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
         ]
     },
@@ -1351,7 +1351,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuLove.png',
+                image: 'nepuLove.webp',
             },
             {
                 type: 'comment',
@@ -1359,7 +1359,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'pupperazzi.png',
+                image: 'pupperazzi.webp',
             },
         ]
     },
@@ -1368,7 +1368,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'thebouncer.png',
+                image: 'thebouncer.webp',
             },
             {
                 type: 'comment',
@@ -1376,7 +1376,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
             },
             {
                 type: 'comment',
@@ -1389,15 +1389,15 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'bloodborne.png',
+                image: 'bloodborne.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
         ]
     },
@@ -1406,7 +1406,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mario64.png',
+                image: 'mario64.webp',
             },
         ]
     },
@@ -1428,11 +1428,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
         ]
     },
@@ -1441,11 +1441,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
             {
                 type: 'comment',
@@ -1458,7 +1458,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'comment',
@@ -1466,7 +1466,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'bloodborne.png',
+                image: 'bloodborne.webp',
             },
         ]
     },
@@ -1475,7 +1475,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuHmm.png',
+                image: 'nepuHmm.webp',
             },
             {
                 type: 'title',
@@ -1487,7 +1487,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuCheer.png',
+                image: 'nepuCheer.webp',
             },
         ]
     },
@@ -1496,7 +1496,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mario64.png',
+                image: 'mario64.webp',
             },
         ]
     },
@@ -1518,11 +1518,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -1531,11 +1531,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'pegglenights.png',
+                image: 'pegglenights.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'comment',
@@ -1548,7 +1548,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'zeldaoracleofseasons.png',
+                image: 'zeldaoracleofseasons.webp',
             },
             {
                 type: 'comment',
@@ -1556,7 +1556,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
                 wide: true,
             },
         ]
@@ -1566,7 +1566,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuPray.png',
+                image: 'nepuPray.webp',
             },
             {
                 type: 'title',
@@ -1587,11 +1587,11 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuD.png',
+                image: 'nepuD.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'mario64.png',
+                image: 'mario64.webp',
             },
         ]
     },
@@ -1600,7 +1600,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1608,7 +1608,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuCry.png',
+                image: 'nepuCry.webp',
             },
         ]
     },
@@ -1627,7 +1627,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mariokart8.png',
+                image: 'mariokart8.webp',
             },
         ]
     },
@@ -1636,12 +1636,12 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
                 wide: true,
             },
             {
                 type: 'titleLogo',
-                image: 'ffx-2.png',
+                image: 'ffx-2.webp',
             },
             {
                 type: 'comment',
@@ -1654,7 +1654,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'subnautica.png',
+                image: 'subnautica.webp',
             },
             {
                 type: 'comment',
@@ -1662,7 +1662,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuSweat.png',
+                image: 'nepuSweat.webp',
             },
         ]
     },
@@ -1671,7 +1671,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuPeek.png',
+                image: 'nepuPeek.webp',
             },
             {
                 type: 'comment',
@@ -1679,7 +1679,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'zeldaoracleofseasons.png',
+                image: 'zeldaoracleofseasons.webp',
             },
         ]
     },
@@ -1688,7 +1688,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'ffxivdawntrail.png',
+                image: 'ffxivdawntrail.webp',
             },
             {
                 type: 'comment',
@@ -1696,7 +1696,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
         ]
     },
@@ -1705,7 +1705,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuBlush.png',
+                image: 'nepuBlush.webp',
             },
             {
                 type: 'title',
@@ -1722,11 +1722,11 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuSalute.png',
+                image: 'nepuSalute.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'mario64.png',
+                image: 'mario64.webp',
             },
         ]
     },
@@ -1735,7 +1735,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'puyopuyotetris2.png',
+                image: 'puyopuyotetris2.webp',
             },
         ]
     },
@@ -1757,11 +1757,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'ffx-2.png',
+                image: 'ffx-2.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuCheer.png',
+                image: 'nepuCheer.webp',
             },
         ]
     },
@@ -1770,7 +1770,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'animalcrossingnewhorizons.png',
+                image: 'animalcrossingnewhorizons.webp',
             },
             {
                 type: 'comment',
@@ -1778,7 +1778,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
         ]
     },
@@ -1796,7 +1796,7 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuConfused.png',
+                image: 'nepuConfused.webp',
             },
             {
                 type: 'comment',
@@ -1804,7 +1804,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'zeldaoracleofseasons.png',
+                image: 'zeldaoracleofseasons.webp',
             },
         ]
     },
@@ -1817,7 +1817,7 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuBlanky.png',
+                image: 'nepuBlanky.webp',
             },
             {
                 type: 'comment',
@@ -1830,7 +1830,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'touhou10.png',
+                image: 'touhou10.webp',
             },
             {
                 type: 'comment',
@@ -1838,7 +1838,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuRage.png',
+                image: 'nepuRage.webp',
             },
         ]
     },
@@ -1851,11 +1851,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuYay.png',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'mariosunshine.png',
+                image: 'mariosunshine.webp',
             },
             {
                 type: 'comment',
@@ -1868,7 +1868,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'segasuperstarstennis.png',
+                image: 'segasuperstarstennis.webp',
             },
             {
                 type: 'comment',
@@ -1881,7 +1881,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'mhworld.png',
+                image: 'mhworld.webp',
             },
         ]
     },
@@ -1899,7 +1899,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'planetarian.png',
+                image: 'planetarian.webp',
             },
         ]
     },
@@ -1908,11 +1908,11 @@ const schedule = [
         layout: [
             {
                 type: 'lEmote',
-                image: 'nepuSalute.png',
+                image: 'nepuSalute.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'ffx-2.png',
+                image: 'ffx-2.webp',
             },
             {
                 type: 'comment',
@@ -1925,11 +1925,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'zeldaoracleofseasons.png',
+                image: 'zeldaoracleofseasons.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuConfused.png',
+                image: 'nepuConfused.webp',
             },
             {
                 type: 'comment',
@@ -1946,11 +1946,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'planetarian.png',
+                image: 'planetarian.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuCry.png',
+                image: 'nepuCry.webp',
             },
         ]
     },
@@ -1959,11 +1959,11 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'mariosunshine.png',
+                image: 'mariosunshine.webp',
             },
             {
                 type: 'comment',
@@ -1980,11 +1980,11 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
-                image: 'ffx-2.png',
+                image: 'ffx-2.webp',
             },
             {
                 type: 'lEmote',
-                image: 'nepuCool.png',
+                image: 'nepuCool.webp',
             },
         ]
     },
@@ -1994,7 +1994,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'touhou10.png',
+                image: 'touhou10.webp',
             },
         ]
     },
@@ -2024,7 +2024,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'lethalcompany.png',
+                image: 'lethalcompany.webp',
             },
         ]
     },
@@ -2034,11 +2034,11 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'rEmote',
-                image: 'nepuHug.png',
+                image: 'nepuHug.webp',
             },
             {
                 type: 'comment',
@@ -2052,7 +2052,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'zeldaoracleofseasons.png',
+                image: 'zeldaoracleofseasons.webp',
             },
             {
                 type: 'comment',
@@ -2060,7 +2060,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                image: 'nepuHmm.png',
+                image: 'nepuHmm.webp',
             },
         ]
     },
@@ -2074,11 +2074,11 @@ const schedule = [
             },
             {
                 type: 'rEmote',
-                image: 'nepuMurder.png',
+                image: 'nepuMurder.webp',
             },
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
             {
                 type: 'comment',
@@ -2092,7 +2092,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuPog.png',
+                image: 'nepuPog.webp',
             },
             {
                 type: 'title',
@@ -2106,7 +2106,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'newvegas.png',
+                image: 'newvegas.webp',
             },
         ]
     },
@@ -2130,7 +2130,7 @@ const schedule = [
         layout: [
             {
                 type: 'titleLogo',
-                image: 'civilizationvi.png',
+                image: 'civilizationvi.webp',
             },
             {
                 type: 'comment',
