@@ -33,7 +33,7 @@ body {
 }
 
 header {
-    background: url(../images/topbackground.png);
+    background: url(../images/topbackground.webp);
     background-position: top left;
     background-position-x: 5%;
     background-repeat: repeat-x;
@@ -77,19 +77,19 @@ header > div > p {
 }
 
 .twitch {
-    background-image: url(../images/icons/twitch.png);
+    background-image: url(../images/icons/twitch.webp);
 }
 
 .youtube {
-    background-image: url(../images/icons/youtube.png);
+    background-image: url(../images/icons/youtube.webp);
 }
 
 .twitter {
-    background-image: url(../images/icons/twitter.png);
+    background-image: url(../images/icons/twitter.webp);
 }
 
 .discord {
-    background-image: url(../images/icons/discord.png);
+    background-image: url(../images/icons/discord.webp);
 }
 
 .twitch:hover, .youtube:hover, .twitter:hover, .discord:hover {
@@ -223,7 +223,7 @@ header > div > p {
     position: absolute;
     top: -45px;
     left: -34px;
-    background-image: url(../images/icons/discord.png);
+    background-image: url(../images/icons/discord.webp);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -238,7 +238,7 @@ header > div > p {
     position: absolute;
     bottom: -45px;
     right: -34px;
-    background-image: url(../images/icons/discord.png);
+    background-image: url(../images/icons/discord.webp);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -253,7 +253,7 @@ header > div > p {
     position: absolute;
     top: -45px;
     left: -32px;
-    background-image: url(../images/glitter.png);
+    background-image: url(../images/glitter.webp);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -267,7 +267,7 @@ header > div > p {
     position: absolute;
     bottom: -45px;
     right: -32px;
-    background-image: url(../images/glitter.png);
+    background-image: url(../images/glitter.webp);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -512,11 +512,11 @@ header > div > p {
 }
 
 #nepClock-featuredArt > .arrow-left {
-    background-image: url(../images/arrowleft.png);
+    background-image: url(../images/arrowleft.webp);
 }
 
 #nepClock-featuredArt > .arrow-right {
-    background-image: url(../images/arrowright.png);
+    background-image: url(../images/arrowright.webp);
 }
 
 .credit {
