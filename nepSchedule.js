@@ -2138,6 +2138,116 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-10-07T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuCool.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'babaisyou.webp',
+            },
+            {
+                type: 'comment',
+                text: 'locking in',
+            },
+        ]
+    },
+    {
+        time: "2024-10-08T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'comment',
+                text: 'cute spooky game?',
+            },
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuSweat.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-09T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPog.webp',
+            },
+            {
+                type: 'comment',
+                text: 'kissing women?',
+            },
+        ]
+    },
+    {
+        time: "2024-10-10T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+            {
+                type: 'comment',
+                text: 'escaping!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'awarenessrooms.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-11T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'your summer pictures! (real)',
+            },
+        ]
+    },
+    {
+        time: "2024-10-11T22:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofseasons.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-12T16:00:00.000+01:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'civilizationvi.webp',
+            },
+            {
+                type: 'comment',
+                text: 'together!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuHug.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

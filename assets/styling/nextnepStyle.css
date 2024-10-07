@@ -214,7 +214,7 @@ header > div > p {
     color: #fff;
     border-radius: 13px;
     user-select: none;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nepClock-discordStream::before {
