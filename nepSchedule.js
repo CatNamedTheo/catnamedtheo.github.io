@@ -2248,6 +2248,101 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-10-14T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'smarterthan5thgrader.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuHmm.webp',
+            },
+            {
+                type: 'comment',
+                text: 'yes! i am!',
+            },
+        ]
+    },
+    {
+        time: "2024-10-15T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuRage.webp',
+            },
+            {
+                type: 'comment',
+                text: 'war!!!!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'dawnofwar.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-16T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.webp',
+            },
+            {
+                type: 'comment',
+                text: 'sunshine in october',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPray.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-17T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'awarenessrooms.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-18T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'summer pics... real...',
+            },
+        ]
+    },
+    {
+        time: "2024-10-18T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-19T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'civilizationvi.webp',
+            },
+            {
+                type: 'comment',
+                text: 'together!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
