@@ -2343,6 +2343,97 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-10-21T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'signalis.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuSweat.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-22T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: '(1998)',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuScared.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 're2-1998.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-23T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+            {
+                type: 'comment',
+                text: 'finally!!',
+            },
+        ]
+    },
+    {
+        time: "2024-10-24T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'rozenmarine my beloved',
+            },
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-25T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'title',
+                effect: 'halloween',
+                text: 'scary movie night!*',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuBlanky.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-10-26T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
+            },
+            {
+                type: 'comment',
+                text: 'mmmblood',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
