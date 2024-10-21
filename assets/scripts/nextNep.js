@@ -57,7 +57,21 @@ class Stream {
                 case 'title':
                     this.titleElement = document.createElement("h4");
                     this.titleElement.classList.add("nepClock-streamTitle");
-                    this.titleElement.innerHTML = layoutConfig.text;
+                    if (layoutConfig.effect) {
+                        let characters = layoutConfig.text.split("");
+                        characters.forEach((letter) => {
+                            if (letter !== " ") {
+                                let spanElement = document.createElement("span");
+                                spanElement.classList.add(layoutConfig.effect);
+                                spanElement.innerHTML = letter;
+                                this.titleElement.appendChild(spanElement);
+                            } else {
+                                this.titleElement.innerHTML += " ";
+                            }
+                        });
+                    } else {
+                        this.titleElement.innerHTML = layoutConfig.text;
+                    }
                     this.streamElement.appendChild(this.titleElement);
                     break;
                 case 'titleLogo':

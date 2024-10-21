@@ -96,6 +96,14 @@ header > div > p {
     filter: brightness(1.1);
 }
 
+.halloween:nth-child(n) {
+    color: #e8874e;
+}
+
+.halloween:nth-child(2n) {
+    color: #a4636c;
+}
+
 #nepClock-scheduleDate {
     width: 100%;
     text-align: center;
