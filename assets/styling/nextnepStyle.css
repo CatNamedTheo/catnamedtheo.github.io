@@ -647,7 +647,7 @@ header > div > p {
     }
     
     .nepClock-streamTitle {
-        font-size: calc(1vw + 0.7vh);
+        font-size: calc(2vw + 1vh);
     }
 }
 
