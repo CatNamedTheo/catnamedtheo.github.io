@@ -391,7 +391,7 @@ header > div > p {
 
 .nepClock-streamTitle, .nepClock-streamTitle span {
     align-self: center;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 .nepClock-streamTitleImage {
@@ -452,6 +452,10 @@ header > div > p {
 
 .nepClock-streamTime > a:hover {
     color: #c0a092;
+}
+
+.nepClock-streamTime > div {
+    font-size: 1em;
 }
 
 .nepClock-analogTime {
