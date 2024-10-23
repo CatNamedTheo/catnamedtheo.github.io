@@ -391,6 +391,7 @@ header > div > p {
 
 .nepClock-streamTitle, .nepClock-streamTitle span {
     align-self: center;
+    text-align: center;
     font-size: 1.4em;
 }
 
@@ -440,6 +441,7 @@ header > div > p {
 
 .nepClock-streamComment {
     align-self: center;
+    text-align: center;
     transform: rotate(-5deg);
     font-size: 1.5em;
 }
@@ -468,7 +470,7 @@ header > div > p {
 }
 
 .nepClock-streamTime > div, .nepClock-realTime > div, .nepClock-streamTime > a {
-    font-size: calc(0.8vw + 0.8vh);
+    font-size: 1em;
 }
 
 .nepClock-realTime {
