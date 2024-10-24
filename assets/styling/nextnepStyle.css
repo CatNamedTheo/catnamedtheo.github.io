@@ -378,6 +378,7 @@ header > div > p {
     height: 100px;
     width: 100%;
     z-index: 2;
+    margin-right: 1em;
 }
 
 .nepClock-streamTime {
@@ -398,7 +399,7 @@ header > div > p {
 .nepClock-streamTitleImage {
     min-width: 30%;
     max-width: 75%;
-    max-height: 80px;
+    max-height: 16vh;
     filter: drop-shadow(0px 1px 0px #333);
     object-fit: contain;
     align-self: center;
