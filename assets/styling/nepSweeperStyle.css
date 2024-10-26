@@ -1,7 +1,8 @@
 :root {
     --nepSweeper-sprite-sheet: url('../images/minesweeper/jukessprite.png');
     --nepSweeper-sprite-sheet-color: #c88491;
-    --nepSweeper-zoomLevel: scale(2) translate(-25%, -25%);
+    --nepSweeper-zoomLevel: scale(1) translate(-50%, -50%);
+    --nepSweeper-menuZoomLevel: scale(1);
 }
 
 body:has(> .nepSweeper-secretContainer) {
@@ -46,215 +47,13 @@ body:has(> .nepSweeper-secretContainer) {
     transform: var(--nepSweeper-zoomLevel);
 }
 
+.optionsContainer {
+    transform: var(--nepSweeper-menuZoomLevel);
+}
+
 .gameContainer {
     background-color: var(--nepSweeper-sprite-sheet-color);
     margin: 0 auto;
-}
-
-.gameSprite {
-    float: left;
-    background-image: var(--nepSweeper-sprite-sheet);
-    margin: 0;
-    line-height: 0;
-    font-size: 0;
-    width: 16px;
-    height: 16px;
-}
-
-.gameSprite.topLeftCornerBorder {
-    background-position: 0 -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.topRightCornerBorder {
-    background-position: -10px -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.bottomLeftCornerBorder {
-    background-position: -20px -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.bottomRightCornerBorder {
-    background-position: -30px -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.leftConnectionBorder {
-    background-position: -66px -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.rightConnectionBorder {
-    background-position: -56px -81px;
-    width: 10px;
-    height: 10px;
-}
-
-.gameSprite.horizontalBorder {
-    background-position: -40px -81px;
-    height: 10px;
-}
-
-.gameSprite.verticalBorder {
-    background-position: -134px -39px;
-    width: 10px;
-}
-
-.gameSprite.longVerticalBorder {
-    background-position: -134px -39px;
-    width: 10px;
-    height: 32px;
-}
-
-.gameSprite.hiddenTile {
-    background-position: 0 -39px;
-}
-
-.gameSprite.hiddenTile.pressed {
-    background-position: 0 -23px;
-}
-
-.gameSprite.tile0 {
-    background-position: 0 -23px;
-}
-
-.gameSprite.tile1 {
-    background-position: -16px -23px;
-}
-
-.gameSprite.tile2 {
-    background-position: -32px -23px;
-}
-
-.gameSprite.tile3 {
-    background-position: -48px -23px;
-}
-
-.gameSprite.tile4 {
-    background-position: -64px -23px;
-}
-
-.gameSprite.tile5 {
-    background-position: -80px -23px;
-}
-
-.gameSprite.tile6 {
-    background-position: -96px -23px;
-}
-
-.gameSprite.tile7 {
-    background-position: -112px -23px;
-}
-
-.gameSprite.tile8 {
-    background-position: -128px -23px;
-}
-
-.gameSprite.tileM {
-    background-position: -64px -39px;
-}
-
-.gameSprite.tileMCross {
-    background-position: -48px -39px;
-}
-
-.gameSprite.tileMWrong {
-    background-position: -32px -39px;
-}
-
-.gameSprite.tileF {
-    background-position: -16px -39px;
-}
-
-.mineContainer, .timeContainer {
-    float: left;
-    margin: 4px 6px;
-}
-
-.mineContainer div, .timeContainer div {
-    width: 13px;
-    height: 22px;
-}
-
-.gameSprite.counter0 {
-    background-position: 0 0;
-}
-
-.gameSprite.counter1 {
-    background-position: -13px 0;
-}
-
-.gameSprite.counter2 {
-    background-position: -26px 0;
-}
-
-.gameSprite.counter3 {
-    background-position: -39px 0;
-}
-
-.gameSprite.counter4 {
-    background-position: -52px 0;
-}
-
-.gameSprite.counter5 {
-    background-position: -65px 0;
-}
-
-.gameSprite.counter6 {
-    background-position: -78px 0;
-}
-
-.gameSprite.counter7 {
-    background-position: -91px 0;
-}
-
-.gameSprite.counter8 {
-    background-position: -104px 0;
-}
-
-.gameSprite.counter9 {
-    background-position: -117px 0;
-}
-
-.gameSprite.counter- {
-    background-position: -130px 0;
-}
-
-.gameSprite.masterButton {
-    background-position: 0 -55px;
-    height: 26px;
-    width: 26px;
-}
-
-.gameSprite.masterButtonPressed {
-    background-position: -26px -55px;
-    height: 26px;
-    width: 26px;
-}
-
-.gameSprite.masterButtonO {
-    background-position: -52px -55px;
-    height: 26px;
-    width: 26px;
-}
-
-.gameSprite.masterButtonLose {
-    background-position: -78px -55px;
-    height: 26px;
-    width: 26px;
-}
-
-.gameSprite.masterButtonWin {
-    background-position: -104px -55px;
-    height: 26px;
-    width: 26px;
 }
 
 .nepSweeper-leaderBoardWrapper {
@@ -287,4 +86,416 @@ body:has(> .nepSweeper-secretContainer) {
 
 .nepSweeper-leaderBoardDifficultyWrapper {
     margin-right: 0.5vw;
+}
+
+.gameSprite1 {
+    float: left;
+    background-image: var(--nepSweeper-sprite-sheet);
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gameSprite1.topLeftCornerBorder {
+    background-position: 0 -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.topRightCornerBorder {
+    background-position: -10px -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.bottomLeftCornerBorder {
+    background-position: -20px -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.bottomRightCornerBorder {
+    background-position: -30px -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.leftConnectionBorder {
+    background-position: -66px -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.rightConnectionBorder {
+    background-position: -56px -81px;
+    width: 10px;
+    height: 10px;
+}
+
+.gameSprite1.horizontalBorder {
+    background-position: -40px -81px;
+    height: 10px;
+}
+
+.gameSprite1.verticalBorder {
+    background-position: -134px -39px;
+    width: 10px;
+}
+
+.gameSprite1.longVerticalBorder {
+    background-position: -134px -39px;
+    width: 10px;
+    height: 32px;
+}
+
+.gameSprite1.hiddenTile {
+    background-position: 0 -39px;
+}
+
+.gameSprite1.hiddenTile.pressed {
+    background-position: 0 -23px;
+}
+
+.gameSprite1.tile0 {
+    background-position: 0 -23px;
+}
+
+.gameSprite1.tile1 {
+    background-position: -16px -23px;
+}
+
+.gameSprite1.tile2 {
+    background-position: -32px -23px;
+}
+
+.gameSprite1.tile3 {
+    background-position: -48px -23px;
+}
+
+.gameSprite1.tile4 {
+    background-position: -64px -23px;
+}
+
+.gameSprite1.tile5 {
+    background-position: -80px -23px;
+}
+
+.gameSprite1.tile6 {
+    background-position: -96px -23px;
+}
+
+.gameSprite1.tile7 {
+    background-position: -112px -23px;
+}
+
+.gameSprite1.tile8 {
+    background-position: -128px -23px;
+}
+
+.gameSprite1.tileM {
+    background-position: -64px -39px;
+}
+
+.gameSprite1.tileMCross {
+    background-position: -48px -39px;
+}
+
+.gameSprite1.tileMWrong {
+    background-position: -32px -39px;
+}
+
+.gameSprite1.tileF {
+    background-position: -16px -39px;
+}
+
+.mineContainer1, .timeContainer1 {
+    float: left;
+    margin: 4px 6px;
+}
+
+.mineContainer1 div, .timeContainer1 div {
+    width: 13px;
+    height: 22px;
+}
+
+.gameSprite1.counter0 {
+    background-position: 0 0;
+}
+
+.gameSprite1.counter1 {
+    background-position: -13px 0;
+}
+
+.gameSprite1.counter2 {
+    background-position: -26px 0;
+}
+
+.gameSprite1.counter3 {
+    background-position: -39px 0;
+}
+
+.gameSprite1.counter4 {
+    background-position: -52px 0;
+}
+
+.gameSprite1.counter5 {
+    background-position: -65px 0;
+}
+
+.gameSprite1.counter6 {
+    background-position: -78px 0;
+}
+
+.gameSprite1.counter7 {
+    background-position: -91px 0;
+}
+
+.gameSprite1.counter8 {
+    background-position: -104px 0;
+}
+
+.gameSprite1.counter9 {
+    background-position: -117px 0;
+}
+
+.gameSprite1.counter- {
+    background-position: -130px 0;
+}
+
+.gameSprite1.masterButton {
+    background-position: 0 -55px;
+    height: 26px;
+    width: 26px;
+}
+
+.gameSprite1.masterButtonPressed {
+    background-position: -26px -55px;
+    height: 26px;
+    width: 26px;
+}
+
+.gameSprite1.masterButtonO {
+    background-position: -52px -55px;
+    height: 26px;
+    width: 26px;
+}
+
+.gameSprite1.masterButtonLose {
+    background-position: -78px -55px;
+    height: 26px;
+    width: 26px;
+}
+
+.gameSprite1.masterButtonWin {
+    background-position: -104px -55px;
+    height: 26px;
+    width: 26px;
+}
+
+.gameSprite2 {
+    float: left;
+    background-image: var(--nepSweeper-sprite-sheet);
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.gameSprite2.topLeftCornerBorder {
+    background-position: 0 -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.topRightCornerBorder {
+    background-position: -20px -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.bottomLeftCornerBorder {
+    background-position: -40px -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.bottomRightCornerBorder {
+    background-position: -60px -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.leftConnectionBorder {
+    background-position: -132px -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.rightConnectionBorder {
+    background-position: -112px -162px;
+    width: 20px;
+    height: 20px;
+}
+
+.gameSprite2.horizontalBorder {
+    background-position: -80px -162px;
+    height: 20px;
+}
+
+.gameSprite2.verticalBorder {
+    background-position: -268px -78px;
+    width: 20px;
+}
+
+.gameSprite2.longVerticalBorder {
+    background-position: -268px -78px;
+    width: 20px;
+    height: 64px;
+}
+
+.gameSprite2.hiddenTile {
+    background-position: 0 -78px;
+}
+
+.gameSprite2.hiddenTile.pressed {
+    background-position: 0 -46px;
+}
+
+.gameSprite2.tile0 {
+    background-position: 0 -46px;
+}
+
+.gameSprite2.tile1 {
+    background-position: -32px -46px;
+}
+
+.gameSprite2.tile2 {
+    background-position: -64px -46px;
+}
+
+.gameSprite2.tile3 {
+    background-position: -96px -46px;
+}
+
+.gameSprite2.tile4 {
+    background-position: -128px -46px;
+}
+
+.gameSprite2.tile5 {
+    background-position: -160px -46px;
+}
+
+.gameSprite2.tile6 {
+    background-position: -192px -46px;
+}
+
+.gameSprite2.tile7 {
+    background-position: -224px -46px;
+}
+
+.gameSprite2.tile8 {
+    background-position: -256px -46px;
+}
+
+.gameSprite2.tileM {
+    background-position: -128px -78px;
+}
+
+.gameSprite2.tileMCross {
+    background-position: -224px -78px;
+}
+
+.gameSprite2.tileMWrong {
+    background-position: -64px -78px;
+}
+
+.gameSprite2.tileF {
+    background-position: -32px -78px;
+}
+
+.mineContainer2, .timeContainer2 {
+    float: left;
+    margin: 8px 12px;
+}
+
+.mineContainer2 div, .timeContainer2 div {
+    width: 26px;
+    height: 44px;
+}
+
+.gameSprite2.counter0 {
+    background-position: 0 0;
+}
+
+.gameSprite2.counter1 {
+    background-position: -26px 0;
+}
+
+.gameSprite2.counter2 {
+    background-position: -52px 0;
+}
+
+.gameSprite2.counter3 {
+    background-position: -78px 0;
+}
+
+.gameSprite2.counter4 {
+    background-position: -104px 0;
+}
+
+.gameSprite2.counter5 {
+    background-position: -130px 0;
+}
+
+.gameSprite2.counter6 {
+    background-position: -156px 0;
+}
+
+.gameSprite2.counter7 {
+    background-position: -182px 0;
+}
+
+.gameSprite2.counter8 {
+    background-position: -208px 0;
+}
+
+.gameSprite2.counter9 {
+    background-position: -234px 0;
+}
+
+.gameSprite2.counter- {
+    background-position: -260px 0;
+}
+
+.gameSprite2.masterButton {
+    background-position: 0 -110px;
+    height: 52px;
+    width: 52px;
+}
+
+.gameSprite2.masterButtonPressed {
+    background-position: -52px -110px;
+    height: 52px;
+    width: 52px;
+}
+
+.gameSprite2.masterButtonO {
+    background-position: -104px -110px;
+    height: 52px;
+    width: 52px;
+}
+
+.gameSprite2.masterButtonLose {
+    background-position: -156px -110px;
+    height: 52px;
+    width: 52px;
+}
+
+.gameSprite2.masterButtonWin {
+    background-position: -208px -110px;
+    height: 52px;
+    width: 52px;
 }

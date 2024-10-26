@@ -29,23 +29,44 @@ class NepSweeper {
     currentDifficulty = 'nepxpert';
     currentSpriteSheet = 'spookyjukes';
     currentZoomLevel = '200%';
+    currentZoomScale = 2;
+    currentSpriteSheetZoomScale = 2;
     difficulties = [
         {'name': 'beginnep', 'x': 9, 'y': 9, 'mines': 10},
         {'name': 'internepiate', 'x': 16, 'y': 16, 'mines': 40},
         {'name': 'nepxpert', 'x': 30, 'y': 16, 'mines': 99}
     ];
     spriteSheets = [
-        {'name': 'spookyjukes', 'url': 'jukessprite.png', 'color': '#c88491'},
-        {'name': 'justanimated', 'url': 'justanimatedsprite.png', 'color': '#c762b8'},
-        {'name': 'minimalist', 'url': 'minimalist.png', 'color': '#ffffff'},
-        {'name': 'original', 'url': 'original.gif', 'color': '#bdbdbd'},
+        {'name': 'spookyjukes', 'color': '#c88491', 'sprites': {
+            "1": 'jukessprite.png', 
+        }},
+        {'name': 'justanimated', 'color': '#c762b8', 'sprites': {
+            "1": 'justanimatedsprite.png',
+            "2": 'justanimatedsprite2.webp',
+        }},
+        {'name': 'minimalist', 'color': '#ffffff', 'sprites': {
+            "1": 'minimalist.png',
+            "2": 'minimalist2.png',
+        }},
+        {'name': 'original', 'color': '#bdbdbd', 'sprites': {
+            "1": 'original.gif',
+            "2": 'original2.gif',
+        }},
     ];
     zoomLevels = [
-        {'name': '100%', 'scale': 1, 'translate': 50},
-        {'name': '150%', 'scale': 1.5, 'translate': 35},
-        {'name': '200%', 'scale': 2, 'translate': 25},
-        {'name': '300%', 'scale': 3, 'translate': 15}
+        {'name': '100%', 'scale': 1},
+        {'name': '150%', 'scale': 1.5},
+        {'name': '200%', 'scale': 2},
+        {'name': '300%', 'scale': 3}
     ];
+    translate = {
+        0.5: 100,
+        0.75: 66,
+        1: 50,
+        1.5: 33,
+        2: 24.5,
+        3: 16.7,
+    }
 
     constructor() {
         window.addEventListener('keydown', (e) => {
@@ -106,15 +127,13 @@ class NepSweeper {
             ?.split("=")[1]
         );
 
-        this.setSpriteSheet(document.cookie
+        this.setZoomLevel(document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("nepSweeperZoom="))
+            ?.split("=")[1],
+            document.cookie
             .split("; ")
             .find((row) => row.startsWith("nepSweeperSpriteSheet="))
-            ?.split("=")[1]
-        );
-
-        this.setSpriteSheet(document.cookie
-            .split("; ")
-            .find((row) => row.startsWith("nepSweeperZoomLevel="))
             ?.split("=")[1]
         );
     }
@@ -167,12 +186,50 @@ class NepSweeper {
         }
     }
 
+    setZoomLevel = (zoomLevel, spriteSheetName) => {
+        if (!zoomLevel) { return; }
+        const newZoomLevel = this.zoomLevels.find((zoomSetting) => zoomSetting.name === zoomLevel);
+        if (newZoomLevel) {
+            const root = document.querySelector(':root');
+            this.currentZoomLevel = newZoomLevel.name;
+            this.currentZoomScale = newZoomLevel.scale;
+            this.setSpriteSheet(spriteSheetName);
+            let zoomScale = newZoomLevel.scale / this.currentSpriteSheetZoomScale;
+            zoomScale = zoomScale <= 0 ? 0.5 : zoomScale;
+            root.style.setProperty('--nepSweeper-zoomLevel', 
+                'scale(' + zoomScale + ') ' +
+                'translate(-' + this.translate[zoomScale] + '%, -' + this.translate[zoomScale] + '%)'
+            );
+            if (this.currentSpriteSheetZoomScale == 1) {
+                root.style.setProperty('--nepSweeper-menuZoomLevel',  
+                    'scale(1)'
+                );
+            } else {
+                root.style.setProperty('--nepSweeper-menuZoomLevel', 
+                    'scale(2) translate(25%, -25%)'
+                );
+            }
+            
+            let expireDate = new Date();
+            expireDate.setDate(400);
+            document.cookie = "nepSweeperZoom="
+                + newZoomLevel.name
+                + ' ;SameSite=Lax ;expires='
+                + expireDate.toUTCString();
+            if (this.active) {
+                this.firstPrint();
+                this.resetBoard();
+            }
+        }
+    }
+
     setSpriteSheet = (spriteSheetName) => {
         if (!spriteSheetName) { return; }
         const newSpriteSheet = this.spriteSheets.find((spriteSheet) => spriteSheet.name === spriteSheetName);
         if (newSpriteSheet) {
             const root = document.querySelector(':root');
-            root.style.setProperty('--nepSweeper-sprite-sheet', 'url("../images/minesweeper/' + newSpriteSheet.url + '")');
+            const closestSprite = this.getClosestSpriteSheet(newSpriteSheet);
+            root.style.setProperty('--nepSweeper-sprite-sheet', 'url("../images/minesweeper/' + closestSprite + '")');
             root.style.setProperty('--nepSweeper-sprite-sheet-color', newSpriteSheet.color);
             this.currentSpriteSheet = newSpriteSheet.name;
             let expireDate = new Date();
@@ -184,23 +241,24 @@ class NepSweeper {
         }
     }
 
-    setZoomLevel = (zoomLevel) => {
-        if (!zoomLevel) { return; }
-        const newZoomLevel = this.zoomLevels.find((zoomSetting) => zoomSetting.name === zoomLevel);
-        if (newZoomLevel) {
-            const root = document.querySelector(':root');
-            root.style.setProperty('--nepSweeper-zoomLevel', 
-                'scale(' + newZoomLevel.scale + ') ' +
-                'translate(-' + newZoomLevel.translate + '%, -' + newZoomLevel.translate + '%)'
-            );
-            this.currentZoomLevel = newZoomLevel.name;
-            let expireDate = new Date();
-            expireDate.setDate(400);
-            document.cookie = "nepSweeperZoom="
-                + newZoomLevel.name
-                + ' ;SameSite=Lax ;expires='
-                + expireDate.toUTCString();
+    getClosestSpriteSheet = (spriteSheetConfig) => {
+        if (this.currentZoomScale in spriteSheetConfig.sprites) {
+            this.currentSpriteSheetZoomScale = this.currentZoomScale;
+            return spriteSheetConfig.sprites[this.currentZoomScale];
         }
+        let availableSpriteSheets = Object.keys(spriteSheetConfig.sprites);
+        if (availableSpriteSheets.length === 1) {
+            this.currentSpriteSheetZoomScale = availableSpriteSheets[0];
+            return spriteSheetConfig.sprites[availableSpriteSheets[0]];
+        }
+        availableSpriteSheets = availableSpriteSheets.map(Number).sort();
+        let foundSpriteSheet = availableSpriteSheets.find((key) => { return key > this.currentZoomScale; });
+        if (foundSpriteSheet === undefined) {
+            availableSpriteSheets.reverse();
+            foundSpriteSheet = availableSpriteSheets.find((key) => { return key < this.currentZoomScale; });
+        }
+        this.currentSpriteSheetZoomScale = foundSpriteSheet;
+        return spriteSheetConfig.sprites[foundSpriteSheet];
     }
 
     createNewGameBoard = (clickedIndex) => {
@@ -556,7 +614,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.37';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.38';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -578,7 +636,7 @@ class NepSweeper {
             }
         });
         zoomSelect.addEventListener('change', (event) => {
-            this.setZoomLevel(event.target.value);
+            this.setZoomLevel(event.target.value, this.currentSpriteSheet);
             event.target.blur();
         });
         optionsContainer.appendChild(zoomSelect);
@@ -615,7 +673,7 @@ class NepSweeper {
             }
         });
         spriteSheetSelect.addEventListener('change', (event) => {
-            this.setSpriteSheet(event.target.value);
+            this.setZoomLevel(this.currentZoomLevel, event.target.value);
             event.target.blur();
         });
         optionsContainer.appendChild(spriteSheetSelect);
@@ -632,8 +690,8 @@ class NepSweeper {
 
         const gameContainer = document.createElement('div');
         gameContainer.classList.add('gameContainer');
-        gameContainer.style.height = (this.yLength * 16) + 62 + "px";
-        gameContainer.style.width = (this.xLength * 16) + 20 + "px";
+        gameContainer.style.height = ((this.yLength * 16) + 62) * this.currentSpriteSheetZoomScale + "px";
+        gameContainer.style.width = ((this.xLength * 16) + 20) * this.currentSpriteSheetZoomScale + "px";
         gameWrapper.appendChild(gameContainer);
 
         // Top menu border
@@ -645,7 +703,7 @@ class NepSweeper {
         // Menu
         gameContainer.appendChild(this.createGameSpriteElement('longVerticalBorder'));
         const mineContainer = document.createElement('div');
-        mineContainer.classList.add('mineContainer');
+        mineContainer.classList.add(`mineContainer${this.currentSpriteSheetZoomScale}`);
         gameContainer.appendChild(mineContainer);
         for (let i = 3; i > 0; i--) {
             const mineNumber = this.createGameSpriteElement('counter0');
@@ -653,17 +711,17 @@ class NepSweeper {
         }
         const masterButton = this.createGameSpriteElement('masterButton');
         masterButton.addEventListener('mousedown', (e) => {
-            this.masterButton.className = "gameSprite masterButtonPressed";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonPressed`;
         });
         masterButton.addEventListener('mouseup', (e) => {
             this.resetBoard();
         });
         let horizontalMargin = (this.xLength - 8) * 8;
         horizontalMargin = horizontalMargin < 0 ? 0 : horizontalMargin;
-        masterButton.style.margin = "3px " + horizontalMargin + "px";
+        masterButton.style.margin = (3 * this.currentSpriteSheetZoomScale) + "px " + (horizontalMargin * this.currentSpriteSheetZoomScale) + "px";
         gameContainer.appendChild(masterButton);
         const timeContainer = document.createElement('div');
-        timeContainer.classList.add('timeContainer');
+        timeContainer.classList.add(`timeContainer${this.currentSpriteSheetZoomScale}`);
         gameContainer.appendChild(timeContainer);
         for (let i = 3; i > 0; i--) {
             const timeNumber = this.createGameSpriteElement('counter0');
@@ -702,7 +760,7 @@ class NepSweeper {
                 if (e.button === 1) {
                     this.leftPressed = true;
                     this.rightPressed = true;
-                    this.masterButton.className += "gameSprite masterButtonO";
+                    this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButton`;
                     this.addPressedState(tileIndex);
                     return false; // prevents the middle click scroll
                 } else if (e.button === 0) {
@@ -710,7 +768,7 @@ class NepSweeper {
                         this.flagTile(tileIndex);
                     } else {
                         this.leftPressed = true;
-                        this.masterButton.className += "gameSprite masterButtonO";
+                        this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButton`;
                         this.addPressedState(tileIndex);
                     }
                 } else if (e.button === 2) {
@@ -774,11 +832,11 @@ class NepSweeper {
 
     resetMasterButton = () => {
         if (this.gameLost) {
-            this.masterButton.className += "gameSprite masterButtonLose";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonLose`;
         } else if (this.gameOver) {
-            this.masterButton.className += "gameSprite masterButtonWin";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonWin`;
         } else {
-            this.masterButton.className += "gameSprite masterButton";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButton`;
         }
     }
 
@@ -806,12 +864,12 @@ class NepSweeper {
 
     createGameSpriteElement = (className) => {
         const spriteElement = document.createElement('div');
-        spriteElement.classList.add('gameSprite', className);
+        spriteElement.classList.add(`gameSprite${this.currentSpriteSheetZoomScale}`, className);
         return spriteElement;
     }
 
     printTime = () => {
-        const timeNumbers = document.querySelector(".timeContainer").children;
+        const timeNumbers = document.querySelector(`.timeContainer${this.currentSpriteSheetZoomScale}`).children;
         if (this.firstClickTime) {
             const now = new Date();
             this.secondsSinceStart = Math.floor((now - this.firstClickTime) / 1000);
@@ -832,7 +890,7 @@ class NepSweeper {
     }
 
     printMinesLeft = () => {
-        const mineNumbers = document.querySelector(".mineContainer").children;
+        const mineNumbers = document.querySelector(`.mineContainer${this.currentSpriteSheetZoomScale}`).children;
         if (this.minesLeft >= 0) {
             mineNumbers[0].className = mineNumbers[0].className.slice(0, -1) + Math.floor(((this.minesLeft / 10) / 10) % 10);
             mineNumbers[1].className = mineNumbers[0].className.slice(0, -1) + Math.floor((this.minesLeft / 10) % 10);
@@ -847,10 +905,10 @@ class NepSweeper {
 
     checkGameState = () => {
         if (this.gameLost) {
-            this.masterButton.className += "gameSprite masterButtonLose";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonLose`;
             this.gameEnd();
         } else if (this.minesLeft === this.hiddenTiles) {
-            this.masterButton.className += "gameSprite masterButtonWin";
+            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonWin`;
             this.minesLeft = 0;
             this.saveScore();
             this.printMinesLeft();
@@ -918,7 +976,7 @@ class NepSweeper {
         this.initBoardArrays();
         document.querySelectorAll("[tile]").forEach((tile) => {
             tile.className = '';
-            tile.classList.add('gameSprite', 'hiddenTile');
+            tile.classList.add(`gameSprite${this.currentSpriteSheetZoomScale}`, 'hiddenTile');
         });
         this.firstClick = true;
         this.firstClickTime = undefined;
