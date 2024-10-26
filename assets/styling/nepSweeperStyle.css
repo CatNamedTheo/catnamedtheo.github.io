@@ -405,7 +405,7 @@ body:has(> .nepSweeper-secretContainer) {
 }
 
 .gameSprite2.tileMCross {
-    background-position: -224px -78px;
+    background-position: -97px -78px;
 }
 
 .gameSprite2.tileMWrong {
