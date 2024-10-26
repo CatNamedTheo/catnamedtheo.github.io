@@ -71,7 +71,7 @@ class NepSweeper {
     constructor() {
         window.addEventListener('keydown', (e) => {
             if (this.active) {
-                if (e.key === " " && this.mouseHoverTile !== undefined) {
+                if (e.key === " " && this.mouseHoverTile !== undefined && !this.gameOver) {
                     if (this.shownBoard[this.mouseHoverTile] === "H" || this.shownBoard[this.mouseHoverTile] === "F") {
                         this.flagTile(this.mouseHoverTile);
                     } else {
@@ -614,7 +614,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.39';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.40';
             document.head.appendChild(nepSweeperStyle);
         }
 
@@ -711,7 +711,7 @@ class NepSweeper {
         }
         const masterButton = this.createGameSpriteElement('masterButton');
         masterButton.addEventListener('mousedown', (e) => {
-            this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonPressed`;
+            this.masterButton.className += ` masterButtonPressed`;
         });
         masterButton.addEventListener('mouseup', (e) => {
             this.resetBoard();
@@ -760,7 +760,7 @@ class NepSweeper {
                 if (e.button === 1) {
                     this.leftPressed = true;
                     this.rightPressed = true;
-                    this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButton`;
+                    this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonO`;
                     this.addPressedState(tileIndex);
                     return false; // prevents the middle click scroll
                 } else if (e.button === 0) {
@@ -768,7 +768,7 @@ class NepSweeper {
                         this.flagTile(tileIndex);
                     } else {
                         this.leftPressed = true;
-                        this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButton`;
+                        this.masterButton.className = `gameSprite${this.currentSpriteSheetZoomScale} masterButtonO`;
                         this.addPressedState(tileIndex);
                     }
                 } else if (e.button === 2) {

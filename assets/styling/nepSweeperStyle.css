@@ -217,7 +217,7 @@ body:has(> .nepSweeper-secretContainer) {
 
 .mineContainer1 div, .timeContainer1 div {
     width: 13px;
-    height: 22px;
+    height: 24px;
 }
 
 .gameSprite1.counter0 {
@@ -423,7 +423,7 @@ body:has(> .nepSweeper-secretContainer) {
 
 .mineContainer2 div, .timeContainer2 div {
     width: 26px;
-    height: 44px;
+    height: 46px;
 }
 
 .gameSprite2.counter0 {
