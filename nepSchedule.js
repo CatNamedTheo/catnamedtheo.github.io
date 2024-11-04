@@ -2434,6 +2434,106 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-11-04T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuScared.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'signalis.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-05T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: '(1998)',
+            },
+            {
+                type: 'titleLogo',
+                image: 're2-1998.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuNAILS.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-06T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'comment',
+                text: 'exploring a mansion!',
+            },
+        ]
+    },
+    {
+        time: "2024-11-08T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-08T22:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'amongus.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-09T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuPog.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'finalfantasy-pr.webp',
+            },
+            {
+                type: 'comment',
+                text: 'pixel remaster!',
+            },
+        ]
+    },
+    {
+        time: "2024-11-10T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'pooping myself',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuF.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
