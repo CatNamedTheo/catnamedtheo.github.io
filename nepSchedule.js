@@ -2509,6 +2509,7 @@ const schedule = [
             },
             {
                 type: 'titleLogo',
+                alignSelf: 'end',
                 image: 'finalfantasy-pr.webp',
             },
             {

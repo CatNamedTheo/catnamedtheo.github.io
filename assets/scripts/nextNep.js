@@ -78,6 +78,9 @@ class Stream {
                     this.titleElement = document.createElement("img");
                     this.titleElement.classList.add("nepClock-streamTitleImage");
                     this.titleElement.src = `./assets/images/titleimages/${layoutConfig.image}`;
+                    if (layoutConfig.alignSelf) {
+                        this.titleElement.style.alignSelf = layoutConfig.alignSelf;
+                    }
                     this.streamElement.appendChild(this.titleElement);
                     break;
                 case 'titleLogoText':
