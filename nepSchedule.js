@@ -2535,6 +2535,117 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-11-11T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'signalis.webp',
+            },
+            {
+                type: 'title',
+                text: '+',
+            },
+            {
+                type: 'titleLogo',
+                image: 'littlegoodytwoshoes.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-12T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ff14crossroads.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-13T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'nov 13th..',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPray.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'blasphemous.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-14T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+            {
+                type: 'comment',
+                text: 'uu uuu',
+            },
+            {
+                type: 'title',
+                text: 'u',
+            },
+        ]
+    },
+    {
+        time: "2024-11-15T15:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'chiikawa watchalong',
+            },
+            {
+                type: 'comment',
+                text: 'on mikan\'s channel',
+            },
+        ]
+    },
+    {
+        time: "2024-11-15T22:00:00.000+00:00",
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                alignSelf: 'end',
+                image: 'finalfantasy-pr.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-16T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'touhou10.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-16T21:00:00.000+00:00",
+        discord: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'crabgame.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
