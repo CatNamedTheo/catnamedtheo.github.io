@@ -2646,6 +2646,115 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-11-18T18:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuHmm.webp',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-19T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.webp',
+            },
+            {
+                type: 'comment',
+                text: 'its been 84 years...',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuPog.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-20T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'hola :D',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'blasphemous.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-21T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuYay.webp',
+            },
+            {
+                type: 'titleLogo',
+                alignSelf: 'end',
+                image: 'finalfantasy-pr.webp',
+            },
+            {
+                type: 'comment',
+                text: '1 down 3 to go!!',
+            },
+        ]
+    },
+    {
+        time: "2024-11-22T15:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'yap and draw! w/ <span class="mikanColour">mikan</span>, <span class="maikaColour">maika</span>, <span class="kikiColour">kiki</span> and <span class="chaiColour">chai</span>',
+            },
+        ]
+    },
+    {
+        time: "2024-11-22T20:00:00.000+00:00",
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'FFXIV Mount Farming',
+            },
+        ]
+    },
+    {
+        time: "2024-11-23T16:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'surprise? (maybe)',
+            },
+            {
+                type: 'title',
+                text: '+',
+            },
+            {
+                type: 'comment',
+                text: 'godzilla watchalong!*',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

@@ -104,6 +104,22 @@ header > div > p {
     color: #a4636c;
 }
 
+.mikanColour {
+    color: #de9056;
+}
+
+.maikaColour {
+    color: #81c9cf;
+}
+
+.kikiColour {
+    color: #678b63;
+}
+
+.chaiColour {
+    color: #cf3946;
+}
+
 #nepClock-scheduleDate {
     width: 100%;
     text-align: center;
@@ -444,7 +460,7 @@ header > div > p {
     align-self: center;
     text-align: center;
     transform: rotate(-5deg);
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .nepClock-streamTime > a {
@@ -657,12 +673,12 @@ header > div > p {
         max-height: 80px;
     }
 
-    .nepClock-streamComment {
+    .nepClock-streamComment, .nepClock-streamComment span {
         font-size: calc(1vw + 0.9vh);
     }
     
     .nepClock-streamTitle, .nepClock-streamTitle span {
-        font-size: calc(2vw + 1vh);
+        font-size: calc(1.8vw + 1vh);
     }
 }
 
@@ -712,7 +728,7 @@ header > div > p {
         column-gap: 1em;
     }
 
-    .nepClock-streamComment {
+    .nepClock-streamComment, .nepClock-streamComment span {
         letter-spacing: 6px;
     }
 
