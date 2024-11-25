@@ -33,17 +33,19 @@
  * image: 'name of image in titleimages folder, including filetype',
  * text: 'text to accompany the image'
  * 
- * REmote
+ * rEmote
  * Used to show a twitch emote slightly leaning to the right
  * type: 'rEmote',
  * image: 'name of image in twitchEmote folder, including filetype',
- * wide: true, (optional, will make the emote wide if space allows it) 
+ * wide: true, (optional, will make the emote wide if space allows it)
+ * big: true, (optional, will render the emote a bit bigger if space allows it)
  * 
- * LEmote
+ * lEmote
  * Used to show a twitch emote slightly leaning to the left
  * type: 'lEmote',
  * image: 'name of image in twitchEmote folder, including filetype',
- * wide: true, (optional, will make the emote wide if space allows it) 
+ * wide: true, (optional, will make the emote wide if space allows it)
+ * big: true, (optional, will render the emote a bit bigger if space allows it)
  * 
  * Comment
  * Used to display a text comment
@@ -2752,6 +2754,89 @@ const schedule = [
             {
                 type: 'rEmote',
                 image: 'nepuBlanky.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-25T15:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'drawing together!',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="mikanColour">mikan</span>, <span class="maikaColour">maika</span>, <span class="kikiColour">kiki</span> and <span class="chaiColour">chai</span>',
+            },
+        ]
+    },
+    {
+        time: "2024-11-26T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.webp',
+            },
+            {
+                type: 'comment',
+                text: 'sunshine in november!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuCool.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-27T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'oracles of ages!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuBlanky.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-11-29T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuConfused.webp',
+            },
+            {
+                type: 'titleLogo',
+                alignSelf: 'end',
+                image: 'finalfantasy-pr.webp',
+            },
+            {
+                type: 'comment',
+                text: '2 moreee!!!',
+            },
+        ]
+    },
+    {
+        time: "2024-12-01T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'Surprise + Christmas Karaoke!',
+            },
+            {
+                type: 'comment',
+                text: '<span class="twitchColour">twitch only!</span>',
+            },
+            {
+                type: 'rEmote',
+                big: true,
+                image: 'nepuCheer.webp',
             },
         ]
     },

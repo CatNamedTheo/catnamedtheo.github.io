@@ -102,6 +102,9 @@ class Stream {
                     if (layoutConfig.wide) {
                         lEmoteElement.classList.add("nepClock-wideEmote");
                     }
+                    if (layoutConfig.big) {
+                        lEmoteElement.classList.add("nepClock-bigEmote");
+                    }
                     lEmoteElement.src = `./assets/images/twitchemotes/${layoutConfig.image}`;
                     this.streamElement.appendChild(lEmoteElement);
                     break;
@@ -110,6 +113,9 @@ class Stream {
                     rEmoteElement.classList.add("nepClock-emote-right");
                     if (layoutConfig.wide) {
                         rEmoteElement.classList.add("nepClock-wideEmote");
+                    }
+                    if (layoutConfig.big) {
+                        rEmoteElement.classList.add("nepClock-bigEmote");
                     }
                     rEmoteElement.src = `./assets/images/twitchemotes/${layoutConfig.image}`;
                     this.streamElement.appendChild(rEmoteElement);

@@ -120,6 +120,10 @@ header > div > p {
     color: #cf3946;
 }
 
+.twitchColour {
+    color: #a087c6;
+}
+
 #nepClock-scheduleDate {
     width: 100%;
     text-align: center;
@@ -130,7 +134,7 @@ header > div > p {
     display: inline-block;
     font-size: 34px;
     color: #8b8549;
-    transform:rotate(-5deg);
+    rotate: -5deg;
     vertical-align: baseline;
 }
 
@@ -138,7 +142,7 @@ header > div > p {
     display: inline-block;
     font-size: 34px;
     color: #605c36;
-    transform:rotate(5deg);
+    rotate: 5deg;
     vertical-align: middle;
 }
 
@@ -253,7 +257,7 @@ header > div > p {
     background-size: contain;
     height: 63px;
     width: 78px;
-    transform: rotate(-20deg);
+    rotate: -20deg;
 }
 
 .nepClock-discordStream::after {
@@ -268,7 +272,7 @@ header > div > p {
     background-size: contain;
     height: 63px;
     width: 78px;
-    transform: rotate(160deg);
+    rotate: 160deg;
 }
 
 .nepClock-glitter::before {
@@ -297,7 +301,7 @@ header > div > p {
     background-size: contain;
     height: 82px;
     width: 64px;
-    transform: rotate(180deg);
+    rotate: 180deg;
 }
 
 .nepClock-scheduleContent {
@@ -448,18 +452,22 @@ header > div > p {
     width: 150px;
 }
 
+.nepClock-emote-right.nepClock-bigEmote, .nepClock-emote-left.nepClock-bigEmote {
+    scale: 130%;
+}
+
 .nepClock-emote-right {
-    transform: rotate(10deg);
+    rotate: 10deg;
 }
 
 .nepClock-emote-left {
-    transform: rotate(-10deg);
+    rotate: -10deg;
 }
 
 .nepClock-streamComment {
     align-self: center;
     text-align: center;
-    transform: rotate(-5deg);
+    rotate: -5deg;
     font-size: 1.3em;
 }
 
