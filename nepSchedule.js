@@ -2840,6 +2840,112 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-12-02T17:30:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                big: true,
+                image: 'nepuPadoru.webp',
+            },
+            {
+                type: 'title',
+                text: 'Surprise + Christmas Karaoke!',
+            },
+        ]
+    },
+    {
+        time: "2024-12-03T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuHmm.webp',
+            },
+            
+        ]
+    },
+    {
+        time: "2024-12-04T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuConfused.webp',
+            },
+            {
+                type: 'comment',
+                text: '<--- lost',
+            },
+            {
+                type: 'titleLogo',
+                alignSelf: 'end',
+                image: 'finalfantasy-pr.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-05T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'harvester.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'comment',
+                text: 'farming?',
+            },
+        ]
+    },
+    {
+        time: "2024-12-06T12:30:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'portal2.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>',
+            },
+        ]
+    },
+    {
+        time: "2024-12-06T18:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'making a christmas song!',
+            },
+        ]
+    },
+    {
+        time: "2024-12-07T16:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'Ys Origin (first time!)',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ysorigin.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
