@@ -2931,6 +2931,7 @@ const schedule = [
     },
     {
         time: "2024-12-07T16:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'comment',
@@ -2943,6 +2944,119 @@ const schedule = [
             {
                 type: 'rEmote',
                 image: 'nepuPeek.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-09T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ysorigin.webp',
+            },
+            {
+                type: 'comment',
+                text: 'Ys origin first time!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-10T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'meat!',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'harvester.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-11T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuConfused.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+        ]
+    },
+    {
+        time: "2024-12-12T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'i wont fall asleep',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuBlanky.webp',
+            },
+            {
+                type: 'titleLogo',
+                alignSelf: 'end',
+                image: 'finalfantasy-pr.webp',
+            },
+            {
+                type: 'comment',
+                text: 'then THE GAME AWARDS!',
+            },
+        ]
+    },
+    {
+        time: "2024-12-13T12:30:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'portal2.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>',
+            },
+        ]
+    },
+    {
+        time: "2024-12-13T20:00:00.000+00:00",
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'FFXIV mount farm',
+            },
+        ]
+    },
+    {
+        time: "2024-12-14T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'full body exploration!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'vrchat.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
             },
         ]
     },
