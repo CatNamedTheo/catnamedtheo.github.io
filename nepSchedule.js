@@ -2966,6 +2966,7 @@ const schedule = [
     },
     {
         time: "2024-12-10T17:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'comment',
@@ -3021,7 +3022,7 @@ const schedule = [
         ]
     },
     {
-        time: "2024-12-13T12:30:00.000+00:00",
+        time: "2024-12-13T11:30:00.000+00:00",
         layout: [
             {
                 type: 'titleLogo',
