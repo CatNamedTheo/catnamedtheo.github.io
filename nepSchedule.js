@@ -3046,6 +3046,24 @@ const schedule = [
     },
     {
         time: "2024-12-14T17:00:00.000+00:00",
+        canceled: true,
+        layout: [
+            {
+                type: 'comment',
+                text: 'full body exploration!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'vrchat.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-15T17:00:00.000+00:00",
         layout: [
             {
                 type: 'comment',
