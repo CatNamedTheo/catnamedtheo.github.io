@@ -3062,23 +3062,6 @@ const schedule = [
             },
         ]
     },
-    {
-        time: "2024-12-15T17:00:00.000+00:00",
-        layout: [
-            {
-                type: 'comment',
-                text: 'full body exploration!',
-            },
-            {
-                type: 'titleLogo',
-                image: 'vrchat.webp',
-            },
-            {
-                type: 'rEmote',
-                image: 'nepuYay.webp',
-            },
-        ]
-    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
