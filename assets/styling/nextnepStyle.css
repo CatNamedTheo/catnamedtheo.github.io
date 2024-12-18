@@ -120,8 +120,16 @@ header > div > p {
     color: #cf3946;
 }
 
+.irinaColour {
+    color: #f3a6aa;
+}
+
 .twitchColour {
     color: #a087c6;
+}
+
+.nepClock-reverseEmote {
+    transform: scaleX(-1);
 }
 
 #nepClock-scheduleDate {

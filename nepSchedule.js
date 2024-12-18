@@ -3062,6 +3062,79 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-12-19T22:30:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+            {
+                type: 'title',
+                text: '<span class="kikiColour">/pyon/</span>craft',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>, <span class="maikaColour">maika</span>, <span class="irinaColour">irina</span> and <span class="chaiColour">chai</span>',
+            },
+        ]
+    },
+    {
+        time: "2024-12-20T12:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuHmm.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'portal2.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>',
+            },
+            {
+                type: 'rEmote',
+                reverse: true,
+                image: 'nepuHmm.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-21T20:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'full body exploration!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'vrchat.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-22T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ysorigin.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'comment',
+                text: 'Ys origin!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
