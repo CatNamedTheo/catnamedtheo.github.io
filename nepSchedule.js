@@ -3157,7 +3157,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
-                image: 'nepuHmm.webp',
+                image: 'nepuYay.webp',
             },
             {
                 type: 'title',
