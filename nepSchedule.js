@@ -3135,6 +3135,114 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2024-12-30T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuHmm.webp',
+            },
+        ]
+    },
+    {
+        time: "2024-12-31T15:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuHmm.webp',
+            },
+            {
+                type: 'title',
+                text: '12 hr new years hangout!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-01T16:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'gingerbread straightface handcam',
+            },
+            {
+                type: 'comment',
+                text: '+ raising a baby!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-01T19:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-02T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'horror game?',
+            },
+            {
+                type: 'titleLogo',
+                image: 'miside.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuScared.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-04T16:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ysorigin.webp',
+            },
+            {
+                type: 'comment',
+                text: 'ys origin!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-04T21:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'Godzilla watchalong!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-05T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'harvester.webp',
+            },
+            {
+                type: 'comment',
+                text: 'harvesting commies!',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
