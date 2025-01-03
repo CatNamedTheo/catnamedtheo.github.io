@@ -13,6 +13,8 @@ let isAnimating = false;
 let featuredArtTiming = 15;
 let featuredArtTimer = 2; // start on 2 since the sliding animation takes 2 seconds
 let pauseArtTimer = false;
+let firstDateOfWeek = null;
+let lastDateOfWeek = null;
 
 class Stream {
     constructor(streamConfig) {
@@ -22,9 +24,9 @@ class Stream {
         this.weekDay = weekDays[this.streamDate.getUTCDay()];
         this.hideDate = false;
         this.live = false;
-        if (this.streamDate >= getFirstDateOfWeek() && this.streamDate <= getLastDateOfWeek()) {
+        if (this.streamDate >= firstDateOfWeek && this.streamDate <= lastDateOfWeek) {
             this.interval = setInterval(() => {
-                that.printTime(true)
+                that.intervalLoop();
             }, 1000);
             this.initElements();
             this.printTime(true);
@@ -36,14 +38,27 @@ class Stream {
         }
     }
 
+    intervalLoop() {
+        if (this.streamDate <= firstDateOfWeek || this.streamDate >= lastDateOfWeek) {
+            const that = this;
+            this.standbyInterval = setInterval(() => {
+                that.onStandby();
+            });
+            this.onStandby();
+            clearInterval(this.interval);
+        } else {
+            this.printTime(true);
+        }
+    }
+
     onStandby() {
-        if (this.streamDate >= getFirstDateOfWeek() && this.streamDate <= getLastDateOfWeek()) {
+        if (this.streamDate >= firstDateOfWeek && this.streamDate <= lastDateOfWeek) {
             const that = this;
             this.interval = setInterval(() => {
-                that.printTime()
+                that.intervalLoop();
             }, 1000);
             this.initElements();
-            this.printTime();
+            this.printTime(true);
             clearInterval(this.standbyInterval);
         }
     }
@@ -264,18 +279,31 @@ const getFirstDateOfWeek = () => {
     const firstDate = new Date();
     firstDate.setHours(2, 0, 0);
     firstDate.setDate(firstDate.getDate() - firstDate.getDay() + (firstDate.getDay() == 0 ? -6 : 1));
-    return firstDate;
+    firstDateOfWeek = firstDate;
 };
 
 const getLastDateOfWeek = () => {
     const lastDate = new Date();
     lastDate.setHours(2, 0, 0);
     lastDate.setDate(lastDate.getDate() - lastDate.getDay() + (lastDate.getDay() == 0 ? 1 : 8));
-    return lastDate;
+    lastDateOfWeek = lastDate;
 };
 
+const updateFirstLastDates = () => {
+    getFirstDateOfWeek();
+    getLastDateOfWeek();
+}
+
+const checkNewWeek = () => {
+    if (new Date() >= lastDateOfWeek || new Date() <= firstDateOfWeek) {
+        updateFirstLastDates();
+        document.querySelectorAll(".nepClock-scheduleContent").forEach((element) => {
+            element.innerHTML = "";
+        });
+    }
+}
+
 const appTick = () => {
-    today = new Date().getDay();
     updateToday();
     addWeekDates();
     // If the device cannot use a cursor, disable featuredArt slider
@@ -435,6 +463,8 @@ const checkIfLive = async () => {
 };
 
 const startUp = () => {
+    updateFirstLastDates();
+
     schedule.slice(0).forEach((stream) => {
         streams.push(new Stream(stream));
     });
@@ -445,6 +475,7 @@ const startUp = () => {
     addWeekDates();
     initFeaturedArt();
 
+    setInterval(checkNewWeek, 500);
     setInterval(appTick, 1000);
     setInterval(checkIfLive, 120000);
     appTick();
