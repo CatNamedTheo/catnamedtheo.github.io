@@ -28,7 +28,7 @@ class NepSweeper {
     secretContainer = undefined;
     currentDifficulty = 'nepxpert';
     currentSpriteSheet = 'spookyjukes';
-    currentZoomLevel = '200%';
+    currentZoomLevel = '100%';
     currentZoomScale = 2;
     currentSpriteSheetZoomScale = 2;
     difficulties = [
@@ -614,7 +614,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.56';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.57';
             document.head.appendChild(nepSweeperStyle);
         }
 
