@@ -3243,6 +3243,99 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-01-07T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuConfused.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-09T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'oracle of ages!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'zeldaoracleofages.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-10T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.webp',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuSweat.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-10T17:00:00.000+00:00",
+        discord: true,
+        hideDate: true,
+        layout: [
+            {
+                type: 'titleLogo',
+                filter: 'drop-shadow(0px 4px 4px #333)',
+                image: 'l4d2.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-11T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuScared.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ysorigin.webp',
+            },
+            {
+                type: 'comment',
+                text: 'Ys Origin! (im scared)',
+            },
+        ]
+    },
+    {
+        time: "2025-01-12T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'Warhammer 40k: Dawn of War',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'dawnofwar.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

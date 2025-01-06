@@ -96,6 +96,9 @@ class Stream {
                     if (layoutConfig.alignSelf) {
                         this.titleElement.style.alignSelf = layoutConfig.alignSelf;
                     }
+                    if (layoutConfig.filter) {
+                        this.titleElement.style.filter = layoutConfig.filter;
+                    }
                     this.streamElement.appendChild(this.titleElement);
                     break;
                 case 'titleLogoText':
