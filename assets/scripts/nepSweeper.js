@@ -27,8 +27,8 @@ class NepSweeper {
     closeButton = undefined;
     secretContainer = undefined;
     currentDifficulty = 'nepxpert';
-    currentSpriteSheet = 'spookyjukes';
-    currentZoomLevel = '100%';
+    currentSpriteSheet = 'original';
+    currentZoomLevel = '200%';
     currentZoomScale = 2;
     currentSpriteSheetZoomScale = 2;
     difficulties = [
@@ -134,7 +134,8 @@ class NepSweeper {
             document.cookie
             .split("; ")
             .find((row) => row.startsWith("nepSweeperSpriteSheet="))
-            ?.split("=")[1]
+            ?.split("=")[1],
+            true
         );
     }
 
@@ -187,7 +188,9 @@ class NepSweeper {
     }
 
     setZoomLevel = (zoomLevel, spriteSheetName) => {
-        if (!zoomLevel) { return; }
+        if (!zoomLevel) { 
+            zoomLevel = this.currentZoomLevel;
+        }
         const newZoomLevel = this.zoomLevels.find((zoomSetting) => zoomSetting.name === zoomLevel);
         if (newZoomLevel) {
             const root = document.querySelector(':root');
@@ -224,7 +227,9 @@ class NepSweeper {
     }
 
     setSpriteSheet = (spriteSheetName) => {
-        if (!spriteSheetName) { return; }
+        if (!spriteSheetName) { 
+            spriteSheetName = this.currentSpriteSheet;
+        }
         const newSpriteSheet = this.spriteSheets.find((spriteSheet) => spriteSheet.name === spriteSheetName);
         if (newSpriteSheet) {
             const root = document.querySelector(':root');
@@ -614,7 +619,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.59';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.60';
             document.head.appendChild(nepSweeperStyle);
         }
 

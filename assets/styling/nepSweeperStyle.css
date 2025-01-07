@@ -1,5 +1,5 @@
 :root {
-    --nepSweeper-sprite-sheet: url('../images/minesweeper/jukessprite.png');
+    --nepSweeper-sprite-sheet: url('../images/minesweeper/original2.gif');
     --nepSweeper-sprite-sheet-color: #c88491;
     --nepSweeper-zoomLevel: scale(1) translate(-50%, -50%);
     --nepSweeper-menuZoomLevel: scale(1);
