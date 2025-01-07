@@ -224,7 +224,9 @@ class Stream {
         }
         const now = new Date();
         
-        if (this.live) {
+        if (this.streamConfig?.canceled) {
+            this.timeStamp = "<div class='nepClock-streamTime'>" + this.getCombinedStartTime() + "</div>";
+        } else if (this.live && !this.streamConfig?.canceled) {
             const timeSince = now - lastLive;
             const h = this.formatClockNumber(this.getHours(timeSince));
             const m = this.formatClockNumber(this.getMinutes(timeSince));
