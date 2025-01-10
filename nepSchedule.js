@@ -3281,6 +3281,7 @@ const schedule = [
     },
     {
         time: "2025-01-10T17:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
